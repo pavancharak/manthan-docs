@@ -32,6 +32,7 @@ nav:
   - Home: index.md
   - How It Works: how-it-works.md
   - Example Walkthrough: example.md
+  - API Reference: api.md
   - Architecture: architecture.md
   - Decision Engine: decision-engine.md
   - Intelligence Layer: intelligence.md
