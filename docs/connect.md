@@ -14,9 +14,9 @@ Manthan is being built as a \*\*deterministic decision system for AI\*\*.
 
 
 
-> This is not another AI tool.  
+This is not another AI tool.  
 
-> This is infrastructure for \*\*trustworthy decisions\*\*.
+This is infrastructure for \*\*trustworthy decisions\*\*.
 
 
 
@@ -28,7 +28,7 @@ Manthan is being built as a \*\*deterministic decision system for AI\*\*.
 
 
 
-AI systems today are fundamentally broken at the decision layer.
+AI systems today are fundamentally broken:
 
 
 
@@ -38,11 +38,7 @@ AI systems today are fundamentally broken at the decision layer.
 
 \- No enforcement  
 
-\- No system guarantees  
-
-
-
-This creates systems that cannot be trusted.
+\- No guarantees  
 
 
 
@@ -54,9 +50,9 @@ This creates systems that cannot be trusted.
 
 
 
-> Systems should not guess.  
+Systems should not guess.  
 
-> They should decide deterministically.
+They should decide deterministically.
 
 
 
@@ -86,19 +82,7 @@ This creates systems that cannot be trusted.
 
 
 
-If you are:
-
-
-
-\- Building AI systems  
-
-\- Thinking about reliability \& governance  
-
-\- Exploring system-level architecture  
-
-
-
-We should connect.
+If you are building AI systems or thinking about reliability, we should connect.
 
 
 
@@ -110,11 +94,15 @@ We should connect.
 
 
 
-👉 \[GitHub Profile](https://github.com/pavancharak)  
+GitHub: https://github.com/pavancharak  
 
-👉 \[LinkedIn Profile](https://www.linkedin.com/in/pavancharak/)  
 
-👉 \[Manthan GitHub App](https://github.com/apps/manthan-pr-gate)
+
+LinkedIn: https://www.linkedin.com/in/pavancharak/  
+
+
+
+Manthan App: https://github.com/apps/manthan-pr-gate  
 
 
 
@@ -126,15 +114,7 @@ We should connect.
 
 
 
-Open to:
-
-
-
-\- Deep technical discussions  
-
-\- System design conversations  
-
-\- Collaboration on deterministic systems  
+Open to discussions, system design, and collaboration.
 
 
 
@@ -146,13 +126,5 @@ Open to:
 
 
 
-Manthan is not just a project.
-
-
-
-It is an attempt to define:
-
-
-
-> \*\*How decisions should be made in software systems.\*\*
+Manthan is an attempt to define how decisions should be made in software systems.
 
