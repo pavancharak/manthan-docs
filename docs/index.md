@@ -1,17 +1,90 @@
-# Welcome to MkDocs
+# Manthan — Decision Operating System
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Deterministic, auditable decision infrastructure for AI systems.
 
-## Commands
+---
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## The Problem
 
-## Project layout
+AI systems are non-deterministic.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- Same input → different outputs  
+- No traceability  
+- No enforcement  
+- No trust  
+
+---
+
+## The Solution
+
+Manthan introduces a deterministic decision layer.
+
+- Rule-based execution  
+- Immutable contracts  
+- Full audit logs  
+- Enforceable outcomes  
+
+---
+
+## Core Principle
+
+
+Same Input → Same Decision → Always
+
+
+---
+
+## System Overview
+
+
+Input
+↓
+Canonicalization
+↓
+Decision Engine
+↓
+Intelligence Layer
+↓
+Enforcement
+
+
+---
+
+## Key Capabilities
+
+- Deterministic decision engine  
+- Decision intelligence (score, priority, explanation)  
+- Decision graphs (dependency execution)  
+- Contract-based evolution  
+- GitHub PR enforcement  
+
+---
+
+## Example
+
+### Input
+
+```json
+{
+  "risk": 8,
+  "amount": 12000
+}
+Decision
+{
+  "decision": "REJECT",
+  "score": 85,
+  "priority": "HIGH"
+}
+Why It Matters
+
+Without Manthan:
+
+AI = unpredictable system
+
+With Manthan:
+
+AI = controlled, auditable infrastructure
+Links
+GitHub: https://github.com/pavancharak
+
+---
