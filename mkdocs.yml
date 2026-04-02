@@ -14,17 +14,24 @@ theme:
 
 plugins:
   - search
-  - mermaid2
 
 markdown_extensions:
   - attr_list
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - admonition
   - pymdownx.details
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid.js
 
 nav:
   - Home: index.md

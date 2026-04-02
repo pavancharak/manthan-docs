@@ -1,132 +1,160 @@
-\# Example Walkthrough
+# Example Walkthrough
 
+This section demonstrates how Manthan produces **deterministic decisions** using real scenarios.
 
+---
 
-This example shows how a decision flows through Manthan.
+## Example 1 — High Transaction Risk
 
-
-
-\---
-
-
-
-\## Step 1: Input
-
-
-
+### Input
 ```json
-
 {
-
-&#x20; "risk": 8,
-
-&#x20; "amount": 12000,
-
-&#x20; "type": "loan"
-
+  "amount": 15000,
+  "country": "high_risk",
+  "user_verified": false
 }
+```
 
-Step 2: Canonicalization
+### Rules
+```text
+IF amount > 10000 → reject
+IF country == high_risk → reject
+```
 
+### Decision Flow
+- amount > 10000 → TRUE  
+- First match → reject  
 
-
-Transform input into deterministic format:
-
-
-
+### Output
+```json
 {
-
-&#x20; "amount": 12000,
-
-&#x20; "risk": 8,
-
-&#x20; "type": "loan"
-
+  "decision": "reject",
+  "reason": "amount threshold exceeded"
 }
+```
 
-Keys sorted
+---
 
-Values normalized
+## Example 2 — Safe Transaction
 
-Step 3: Decision Engine
-
-
-
-Rules evaluated in fixed order:
-
-
-
-Rule 1: risk > 7 → REJECT
-
-Rule 2: amount > 10000 → REVIEW
-
-Rule 3: default → APPROVE
-
-
-
-Evaluation:
-
-
-
-risk = 8 → matches Rule 1
-
-Step 4: Decision Output
-
+### Input
+```json
 {
-
-&#x20; "decision": "REJECT"
-
+  "amount": 2000,
+  "country": "low_risk",
+  "user_verified": true
 }
+```
 
-Step 5: Intelligence Layer
+### Rules
+```text
+IF amount > 10000 → reject
+ELSE → approve
+```
 
+### Decision Flow
+- amount > 10000 → FALSE  
+- No reject rule matched → approve  
 
-
-Enhance decision:
-
-
-
+### Output
+```json
 {
-
-&#x20; "score": 85,
-
-&#x20; "confidence": 0.85,
-
-&#x20; "priority": "HIGH"
-
+  "decision": "approve",
+  "reason": "within safe limits"
 }
+```
 
-Step 6: Final Output
+---
 
+## Example 3 — Decision Graph Execution
+
+### Input
+```json
 {
-
-&#x20; "decision": "REJECT",
-
-&#x20; "score": 85,
-
-&#x20; "confidence": 0.85,
-
-&#x20; "priority": "HIGH"
-
+  "user_age": 17,
+  "document_verified": false
 }
+```
 
-Step 7: Enforcement
+### Graph
 
+```mermaid
+flowchart LR
 
+A[Age Check] --> B[Eligibility]
+A --> C[Document Verification]
 
-Example:
+B --> D[Decision]
+C --> D
 
+classDef node fill:#020617,stroke:#a78bfa,stroke-width:3px,color:#ffffff;
+class A,B,C,D node;
+```
 
+### Logic
+- user_age < 18 → not eligible  
+- document_verified = false → fail  
 
-GitHub PR is blocked
+### Output
+```json
+{
+  "decision": "reject",
+  "reason": "age and verification failure"
+}
+```
 
-Workflow is stopped
+---
 
-Full Flow
+## Example 4 — Contract-Based Decision
 
-Guarantee
+### Contract (v1.0)
+```yaml
+rules:
+  - condition: "score < 50"
+    action: "reject"
+  - condition: "score >= 50"
+    action: "approve"
+```
 
+### Input
+```json
+{
+  "score": 72
+}
+```
 
+### Evaluation
+- score < 50 → FALSE  
+- score >= 50 → TRUE  
 
-Same input → Same output → Always
+### Output
+```json
+{
+  "decision": "approve",
+  "contract_version": "v1.0"
+}
+```
 
+---
+
+## Determinism Proof
+
+For ALL examples:
+
+```text
+Same Input → Same Rules → Same Output
+```
+
+No randomness  
+No ambiguity  
+No hidden state  
+
+---
+
+## Key Takeaway
+
+Manthan converts:
+
+> Inputs → Rules → Decisions  
+
+Into a **fully deterministic system**.
