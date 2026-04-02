@@ -14,15 +14,11 @@ Manthan is a \*\*deterministic decision infrastructure\*\* built as layered comp
 
 
 
-=== "Flow"
 
 
+Input → Canonicalization → Decision Engine → Intelligence → Enforcement
 
-&#x20;   ```
 
-&#x20;   Input → Canonicalization → Decision Engine → Intelligence → Enforcement
-
-&#x20;   ```
 
 
 
@@ -34,15 +30,9 @@ Manthan is a \*\*deterministic decision infrastructure\*\* built as layered comp
 
 
 
-\---
-
-
-
 \### Canonicalization
 
-
-
-\*\*Purpose:\*\* Normalize input into a stable format  
+\*\*Purpose:\*\* Normalize input into a stable format
 
 
 
@@ -64,9 +54,7 @@ Manthan is a \*\*deterministic decision infrastructure\*\* built as layered comp
 
 \### Decision Engine
 
-
-
-\*\*Purpose:\*\* Core decision computation  
+\*\*Purpose:\*\* Core decision computation
 
 
 
@@ -86,9 +74,7 @@ Manthan is a \*\*deterministic decision infrastructure\*\* built as layered comp
 
 \### Intelligence Layer
 
-
-
-\*\*Purpose:\*\* Add structured metadata  
+\*\*Purpose:\*\* Add structured metadata
 
 
 
@@ -108,9 +94,7 @@ Manthan is a \*\*deterministic decision infrastructure\*\* built as layered comp
 
 \### Decision Graphs
 
-
-
-\*\*Purpose:\*\* Handle dependencies  
+\*\*Purpose:\*\* Handle dependencies
 
 
 
@@ -128,9 +112,7 @@ Manthan is a \*\*deterministic decision infrastructure\*\* built as layered comp
 
 \### Contracts
 
-
-
-\*\*Purpose:\*\* Define decision behavior  
+\*\*Purpose:\*\* Define decision behavior
 
 
 
@@ -148,9 +130,7 @@ Manthan is a \*\*deterministic decision infrastructure\*\* built as layered comp
 
 \### Enforcement
 
-
-
-\*\*Purpose:\*\* Apply decisions externally  
+\*\*Purpose:\*\* Apply decisions externally
 
 
 

@@ -5,6 +5,20 @@ theme:
   name: material
   palette:
     scheme: slate
+  features:
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+    - content.tabs.link
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - admonition
+  - pymdownx.details
 
 nav:
   - Home: index.md
@@ -13,12 +27,3 @@ nav:
   - Intelligence Layer: intelligence.md
   - Decision Graphs: graphs.md
   - Contracts: contracts.md
-theme:
-  name: material
-  palette:
-    scheme: slate
-  features:
-    - content.tabs.link
-    - navigation.sections
-    - navigation.expand
-    - content.code.copy
