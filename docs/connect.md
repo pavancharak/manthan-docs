@@ -2,35 +2,11 @@
 
 
 
-\## Built by a Builder
+\## Building Decision Infrastructure
 
 
 
-Manthan is being built as a \*\*Decision Operating System for AI systems\*\*.
-
-
-
-\---
-
-
-
-\## Why This Exists
-
-
-
-AI systems today lack:
-
-
-
-\- Determinism  
-
-\- Traceability  
-
-\- Enforcement  
-
-
-
-Manthan is an attempt to solve this at the \*\*system level\*\*.
+Manthan is being built as a \*\*deterministic decision system for AI\*\*.
 
 
 
@@ -38,15 +14,9 @@ Manthan is an attempt to solve this at the \*\*system level\*\*.
 
 
 
-\## About the Builder
+> This is not another AI tool.  
 
-
-
-\- Focus: Decision Infrastructure  
-
-\- Approach: Deterministic systems  
-
-\- Goal: Build systems that can be trusted  
+> This is infrastructure for \*\*trustworthy decisions\*\*.
 
 
 
@@ -54,7 +24,65 @@ Manthan is an attempt to solve this at the \*\*system level\*\*.
 
 
 
-\## Open to Connect
+\## Why I’m Building This
+
+
+
+AI systems today are fundamentally broken at the decision layer.
+
+
+
+\- Same input → different outputs  
+
+\- No traceability  
+
+\- No enforcement  
+
+\- No system guarantees  
+
+
+
+This creates systems that cannot be trusted.
+
+
+
+\---
+
+
+
+\## What I Believe
+
+
+
+> Systems should not guess.  
+
+> They should decide deterministically.
+
+
+
+\---
+
+
+
+\## What I’m Focused On
+
+
+
+\- Decision Infrastructure  
+
+\- Deterministic Systems  
+
+\- Auditable Architectures  
+
+\- Enforceable Logic  
+
+
+
+\---
+
+
+
+\## Who This Is For
 
 
 
@@ -66,11 +94,11 @@ If you are:
 
 \- Thinking about reliability \& governance  
 
-\- Interested in deterministic architectures  
+\- Exploring system-level architecture  
 
 
 
-Let’s connect.
+We should talk.
 
 
 
@@ -78,17 +106,15 @@ Let’s connect.
 
 
 
-\## Reach Out
+\## Connect
 
 
 
-\- GitHub: https://github.com/pavancharak  
+\- GitHub: https://github.com/pavancharak
 
 \- LinkedIn: https://www.linkedin.com/in/pavancharak/
 
-\- Live GitHub app by Manthan : https://github.com/apps/manthan-pr-gate  
-
-
+\- Live GitHub app by Manthan : https://github.com/apps/manthan-pr-gate
 
 \---
 
@@ -102,27 +128,11 @@ Open to:
 
 
 
-\- Discussions  
-
-\- Feedback  
-
-\- Collaboration  
+\- Deep technical discussions  
 
 \- System design conversations  
 
-
-
-\---
-
-
-
-\## Core Belief
-
-
-
-> Systems should not guess.  
-
-> They should decide deterministically.
+\- Collaboration on deterministic systems  
 
 
 
@@ -138,5 +148,11 @@ Manthan is not just a project.
 
 
 
-It is a step toward \*\*trustworthy decision systems\*\*.
+It is an attempt to define:
+
+
+
+> \*\*How decisions should be made in software systems.\*\*
+
+
 
