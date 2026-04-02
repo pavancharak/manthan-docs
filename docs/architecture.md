@@ -26,119 +26,207 @@ flowchart TD
 
 &#x20;   D --> E\[Enforcement]
 
-Component Overview
+```
 
-Canonicalization
 
 
+\---
 
-Purpose: Normalize input into a stable format
 
 
+\## Execution Pipeline
 
-Sort keys
 
-Normalize values
 
-Remove ambiguity
+```mermaid
 
+flowchart TD
 
+&#x20;   I\[Raw Input] --> C1\[Canonicalization]
 
-Output: Stable hash
+&#x20;   C1 --> H\[Hash Generation]
 
+&#x20;   H --> D1\[Decision Engine]
 
+&#x20;   D1 --> I1\[Intelligence Layer]
 
-Decision Engine
+&#x20;   I1 --> O\[Final Output]
 
+&#x20;   O --> E1\[Enforcement]
 
+```
 
-Purpose: Core decision computation
 
 
+\---
 
-Rule-based
 
-Fixed execution order
 
-First-match wins
+\## Decision Graph Example
 
-No randomness
 
-Intelligence Layer
 
+```mermaid
 
+flowchart LR
 
-Purpose: Add structured metadata
+&#x20;   A\[Node A] --> B\[Node B]
 
+&#x20;   A --> C\[Node C]
 
+&#x20;   B --> D\[Final Decision]
 
-Score
+&#x20;   C --> D
 
-Confidence
+```
 
-Priority
 
-Explanation
 
-Decision Graphs
+\---
 
 
 
-Purpose: Handle multi-step dependencies
+\## Component Overview
 
 
 
-DAG only
+\### Canonicalization
 
-Topological execution
+\*\*Purpose:\*\* Normalize input into a stable format
 
-No cycles
 
-Contracts
 
+\- Sort keys  
 
+\- Normalize values  
 
-Purpose: Define decision behavior
+\- Remove ambiguity  
 
 
 
-Versioned
+\*\*Output:\*\* Stable hash
 
-Immutable
 
-Auditable
 
-Enforcement
+\---
 
 
 
-Purpose: Apply decisions externally
+\### Decision Engine
 
+\*\*Purpose:\*\* Core decision computation
 
 
-GitHub PR blocking
 
-API enforcement
+\- Rule-based  
 
-Workflow control
+\- Fixed execution order  
 
-Execution Pipeline
+\- First-match wins  
 
-System Guarantee
+\- No randomness  
 
 
 
-Same Input → Same Output → Always
+\---
 
 
 
-Design Principles
+\### Intelligence Layer
 
-Determinism over intelligence
+\*\*Purpose:\*\* Add structured metadata
 
-Explicit over implicit
 
-Versioned over mutable
 
-Auditability over performance
+\- Score  
+
+\- Confidence  
+
+\- Priority  
+
+\- Explanation  
+
+
+
+\---
+
+
+
+\### Decision Graphs
+
+\*\*Purpose:\*\* Handle multi-step dependencies
+
+
+
+\- DAG only  
+
+\- Topological execution  
+
+\- No cycles  
+
+
+
+\---
+
+
+
+\### Contracts
+
+\*\*Purpose:\*\* Define decision behavior
+
+
+
+\- Versioned  
+
+\- Immutable  
+
+\- Auditable  
+
+
+
+\---
+
+
+
+\### Enforcement
+
+\*\*Purpose:\*\* Apply decisions externally
+
+
+
+\- GitHub PR blocking  
+
+\- API enforcement  
+
+\- Workflow control  
+
+
+
+\---
+
+
+
+\## System Guarantee
+
+
+
+> \*\*Same Input → Same Output → Always\*\*
+
+
+
+\---
+
+
+
+\## Design Principles
+
+
+
+\- Determinism over intelligence  
+
+\- Explicit over implicit  
+
+\- Versioned over mutable  
+
+\- Auditability over performance  
 
