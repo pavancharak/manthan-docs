@@ -1,90 +1,40 @@
-# Manthan — Decision Operating System
+# Decision Operating System for AI
 
-Deterministic, auditable decision infrastructure for AI systems.
+Deterministic, auditable, and enforceable decision infrastructure.
 
 ---
 
-## The Problem
+## Problem
 
 AI systems are non-deterministic.
 
 - Same input → different outputs  
 - No traceability  
 - No enforcement  
-- No trust  
 
 ---
 
-## The Solution
+## Solution
 
 Manthan introduces a deterministic decision layer.
 
-- Rule-based execution  
-- Immutable contracts  
-- Full audit logs  
-- Enforceable outcomes  
+---
+
+## How it Works
+
+
+Input → Canonicalization → Decision Engine → Intelligence → Enforcement
+
 
 ---
 
 ## Core Principle
 
-
-Same Input → Same Decision → Always
-
+> Same Input → Same Decision → Always
 
 ---
 
-## System Overview
+## Links
 
-
-Input
-↓
-Canonicalization
-↓
-Decision Engine
-↓
-Intelligence Layer
-↓
-Enforcement
-
-
----
-
-## Key Capabilities
-
-- Deterministic decision engine  
-- Decision intelligence (score, priority, explanation)  
-- Decision graphs (dependency execution)  
-- Contract-based evolution  
-- GitHub PR enforcement  
-
----
-
-## Example
-
-### Input
-
-```json
-{
-  "risk": 8,
-  "amount": 12000
-}
-Decision
-{
-  "decision": "REJECT",
-  "score": 85,
-  "priority": "HIGH"
-}
-Why It Matters
-
-Without Manthan:
-
-AI = unpredictable system
-
-With Manthan:
-
-AI = controlled, auditable infrastructure
-Links
-GitHub: https://github.com/pavancharak
-
----
+- [GitHub](https://github.com/pavancharak)
+- [Documentation](./architecture/)
