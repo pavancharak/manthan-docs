@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://pavancharak.github.io/manthan-docs/graphs/">
+        <link rel="canonical" href="https://pavancharak.github.io/manthan-docs/test/">
       
       
-        <link rel="prev" href="../intelligence/">
-      
-      
-        <link rel="next" href="../contracts/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>Decision Graphs - Manthan</title>
+        <title>Test - Manthan</title>
       
     
     
@@ -107,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Decision Graphs
+              Test
             
           </span>
         </div>
@@ -389,17 +385,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../graphs/" class="md-nav__link">
         
   
   
@@ -415,7 +404,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -480,41 +468,14 @@
 
 
 
-  <h1>Decision Graphs</h1>
+  <h1>Test</h1>
 
-<p># Decision Graphs</p>
-<p>Defines dependency-based execution.</p>
-<p>---</p>
-<p>## Graph</p>
+<p># Test Mermaid</p>
 <pre class="mermaid"><code>
 flowchart LR
 
-
-
-A\[Input] --&gt; B\[Risk]
-
-A --&gt; C\[Fraud]
-
-B --&gt; D\[Decision]
-
-C --&gt; D
-
-
-
-classDef main fill:#020617,stroke:#a78bfa,stroke-width:3px,color:#ffffff;
-
-class A,B,C,D main;
+A --&gt; B --&gt; C
 </code></pre>
-<p>---</p>
-<p>## Rules</p>
-<p>- DAG only  </p>
-<p>- No cycles  </p>
-<p>- Fixed order  </p>
-<p>---</p>
-<p>## Guarantee</p>
-<blockquote>
-<p>Deterministic dependency execution</p>
-</blockquote>
 
 
 
