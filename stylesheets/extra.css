@@ -1,38 +1,84 @@
-/* Centered layout */
+/* ============================= */
+/* LAYOUT */
+/* ============================= */
+
 .md-typeset {
   max-width: 880px;
   margin: auto;
+  letter-spacing: 0.2px;
 }
 
-/* Hero title */
+/* ============================= */
+/* TYPOGRAPHY */
+/* ============================= */
+
 .md-typeset h1 {
   font-size: 2.4rem;
   text-align: center;
   font-weight: 700;
 }
 
-/* Subtitle */
 .md-typeset h2 {
-  margin-top: 2.2rem;
+  margin-top: 2.5rem;
   font-weight: 600;
 }
 
-/* Strong paragraph spacing */
 .md-typeset p {
   line-height: 1.6;
 }
 
-/* Lists */
-.md-typeset ul {
-  margin-left: 1rem;
+.md-typeset li {
+  margin-bottom: 6px;
 }
 
-/* Mermaid spacing */
+/* ============================= */
+/* LINKS (FIX CLICK ISSUE) */
+/* ============================= */
+
+.md-typeset a {
+  color: #60a5fa;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.md-typeset a:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* MERMAID FIX */
+/* ============================= */
+
 .mermaid {
   margin: 2.5rem 0;
+  position: relative;
+  z-index: 1;
 }
 
-/* Mobile optimization */
+/* ============================= */
+/* CONTENT LAYER FIX */
+/* ============================= */
+
+.md-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================= */
+/* CODE BLOCKS */
+/* ============================= */
+
+.md-typeset pre {
+  border-radius: 8px;
+}
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
 @media screen and (max-width: 768px) {
   .md-typeset {
     padding: 0 16px;
