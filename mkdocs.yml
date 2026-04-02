@@ -1,0 +1,15 @@
+site_name: Manthan
+site_description: Deterministic Decision Operating System for AI
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Decision Engine: decision-engine.md
+  - Intelligence Layer: intelligence.md
+  - Decision Graphs: graphs.md
+  - Contracts: contracts.md
