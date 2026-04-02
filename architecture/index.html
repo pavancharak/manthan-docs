@@ -486,58 +486,54 @@
 <p>Manthan is a **deterministic decision infrastructure** built as layered components.</p>
 <p>---</p>
 <p>## System Flow</p>
-<p>Input → Canonicalization → Decision Engine → Intelligence → Enforcement</p>
-<p>---</p>
-<p>## Components</p>
-<p>### Canonicalization</p>
-<p>**Purpose:** Normalize input into a stable format</p>
-<p>- Sort keys  </p>
-<p>- Normalize values  </p>
-<p>- Remove ambiguity  </p>
-<p>**Output:** Stable hash</p>
-<p>---</p>
-<p>### Decision Engine</p>
-<p>**Purpose:** Core decision computation</p>
-<p>- Rule-based  </p>
-<p>- Fixed execution order  </p>
-<p>- First-match wins  </p>
-<p>- No randomness  </p>
-<p>---</p>
-<p>### Intelligence Layer</p>
-<p>**Purpose:** Add structured metadata</p>
-<p>- Score  </p>
-<p>- Confidence  </p>
-<p>- Priority  </p>
-<p>- Explanation  </p>
-<p>---</p>
-<p>### Decision Graphs</p>
-<p>**Purpose:** Handle dependencies</p>
-<p>- DAG only  </p>
-<p>- Topological execution  </p>
-<p>- No cycles  </p>
-<p>---</p>
-<p>### Contracts</p>
-<p>**Purpose:** Define decision behavior</p>
-<p>- Versioned  </p>
-<p>- Immutable  </p>
-<p>- Auditable  </p>
-<p>---</p>
-<p>### Enforcement</p>
-<p>**Purpose:** Apply decisions externally</p>
-<p>- GitHub PR blocking  </p>
-<p>- API enforcement  </p>
-<p>- Workflow control  </p>
-<p>---</p>
-<p>## System Guarantee</p>
-<blockquote>
-<p>**Same Input → Same Output → Always**</p>
-</blockquote>
-<p>---</p>
-<p>## Design Principles</p>
-<p>- Determinism over intelligence  </p>
-<p>- Explicit over implicit  </p>
-<p>- Versioned over mutable  </p>
-<p>- Auditability over performance  </p>
+<p>```mermaid</p>
+<p>flowchart TD</p>
+<p>&#x20;   A[Input] --&gt; B[Canonicalization]</p>
+<p>&#x20;   B --&gt; C[Decision Engine]</p>
+<p>&#x20;   C --&gt; D[Intelligence Layer]</p>
+<p>&#x20;   D --&gt; E[Enforcement]</p>
+<p>Component Overview</p>
+<p>Canonicalization</p>
+<p>Purpose: Normalize input into a stable format</p>
+<p>Sort keys</p>
+<p>Normalize values</p>
+<p>Remove ambiguity</p>
+<p>Output: Stable hash</p>
+<p>Decision Engine</p>
+<p>Purpose: Core decision computation</p>
+<p>Rule-based</p>
+<p>Fixed execution order</p>
+<p>First-match wins</p>
+<p>No randomness</p>
+<p>Intelligence Layer</p>
+<p>Purpose: Add structured metadata</p>
+<p>Score</p>
+<p>Confidence</p>
+<p>Priority</p>
+<p>Explanation</p>
+<p>Decision Graphs</p>
+<p>Purpose: Handle multi-step dependencies</p>
+<p>DAG only</p>
+<p>Topological execution</p>
+<p>No cycles</p>
+<p>Contracts</p>
+<p>Purpose: Define decision behavior</p>
+<p>Versioned</p>
+<p>Immutable</p>
+<p>Auditable</p>
+<p>Enforcement</p>
+<p>Purpose: Apply decisions externally</p>
+<p>GitHub PR blocking</p>
+<p>API enforcement</p>
+<p>Workflow control</p>
+<p>Execution Pipeline</p>
+<p>System Guarantee</p>
+<p>Same Input → Same Output → Always</p>
+<p>Design Principles</p>
+<p>Determinism over intelligence</p>
+<p>Explicit over implicit</p>
+<p>Versioned over mutable</p>
+<p>Auditability over performance</p>
 
 
 
