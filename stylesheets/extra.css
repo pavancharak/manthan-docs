@@ -1,0 +1,40 @@
+/* Layout width */
+.md-typeset {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Typography */
+.md-typeset h1 {
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.md-typeset h2 {
+  margin-top: 2rem;
+}
+
+/* Mobile optimization */
+@media screen and (max-width: 768px) {
+  .md-typeset {
+    padding: 0 16px;
+  }
+
+  .md-typeset h1 {
+    font-size: 1.6rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Code blocks */
+.md-typeset pre {
+  border-radius: 8px;
+}
+
+/* Mermaid spacing */
+.mermaid {
+  margin: 2rem 0;
+}
