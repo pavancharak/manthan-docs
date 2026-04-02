@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://pavancharak.github.io/manthan-docs/intelligence/">
+        <link rel="canonical" href="https://pavancharak.github.io/manthan-docs/api/">
       
       
-        <link rel="prev" href="../decision-engine/">
+        <link rel="prev" href="../example/">
       
       
-        <link rel="next" href="../graphs/">
+        <link rel="next" href="../architecture/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Intelligence Layer - Manthan</title>
+        <title>API Reference - Manthan</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intelligence Layer
+              API Reference
             
           </span>
         </div>
@@ -281,10 +281,17 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -300,6 +307,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -362,17 +370,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../intelligence/" class="md-nav__link">
         
   
   
@@ -388,7 +389,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -480,9 +480,74 @@
 
 
 
-  <h1>Intelligence Layer</h1>
+  <h1>API Reference</h1>
 
-
+<p># API Reference</p>
+<p>Manthan exposes a deterministic decision endpoint.</p>
+<p>---</p>
+<p>## Endpoint</p>
+<p>POST /decide</p>
+<p>---</p>
+<p>## Request</p>
+<p>### Headers</p>
+<p>``` id="3s3md7"</p>
+<p>Content-Type: application/json</p>
+<p>Body</p>
+<p>{</p>
+<p>&#x20; "risk": 8,</p>
+<p>&#x20; "amount": 12000,</p>
+<p>&#x20; "type": "loan"</p>
+<p>}</p>
+<p>Processing Pipeline</p>
+<p>Input → Canonicalization → Decision Engine → Intelligence → Output</p>
+<p>``` id="3i9f2k"</p>
+<p>---</p>
+<p>## Response</p>
+<p>```json</p>
+<p>{</p>
+<p>&#x20; "decision": "REJECT",</p>
+<p>&#x20; "score": 85,</p>
+<p>&#x20; "confidence": 0.85,</p>
+<p>&#x20; "priority": "HIGH"</p>
+<p>}</p>
+<p>Deterministic Guarantees</p>
+<p>Same input → same output</p>
+<p>No randomness</p>
+<p>No time dependency</p>
+<p>Rule order is fixed</p>
+<p>Error Handling</p>
+<p>Invalid Input</p>
+<p>{</p>
+<p>&#x20; "error": "INVALID_SCHEMA"</p>
+<p>}</p>
+<p>Unsupported Fields</p>
+<p>{</p>
+<p>&#x20; "error": "UNSUPPORTED_FIELD"</p>
+<p>}</p>
+<p>Example Request</p>
+<p>curl -X POST http://localhost:3000/decide \</p>
+<p>&#x20; -H "Content-Type: application/json" \</p>
+<p>&#x20; -d '{</p>
+<p>&#x20;   "risk": 8,</p>
+<p>&#x20;   "amount": 12000,</p>
+<p>&#x20;   "type": "loan"</p>
+<p>&#x20; }'</p>
+<p>Example Response</p>
+<p>{</p>
+<p>&#x20; "decision": "REJECT",</p>
+<p>&#x20; "score": 85,</p>
+<p>&#x20; "confidence": 0.85,</p>
+<p>&#x20; "priority": "HIGH"</p>
+<p>}</p>
+<p>Contract Versioning</p>
+<p>Every decision is tied to a version:</p>
+<p>{</p>
+<p>&#x20; "version": "v1"</p>
+<p>}</p>
+<p>Notes</p>
+<p>Stateless execution</p>
+<p>Idempotent requests</p>
+<p>Fully auditable outputs</p>
 
 
 
