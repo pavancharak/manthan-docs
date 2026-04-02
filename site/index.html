@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -310,18 +312,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-manthan-provides" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What Manthan Provides
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What Manthan Provides">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#deterministic-execution" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -331,8 +321,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#decision-governance" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -342,20 +332,15 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#enforcement-layer" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#enforcement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Enforcement Layer
+        Enforcement
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -371,43 +356,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#system-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        System Architecture
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-it-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why It Matters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#explore" class="md-nav__link">
     <span class="md-ellipsis">
       
         Explore
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#positioning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Positioning
       
     </span>
   </a>
@@ -720,18 +672,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-manthan-provides" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What Manthan Provides
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What Manthan Provides">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#deterministic-execution" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -741,8 +681,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#decision-governance" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -752,20 +692,15 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#enforcement-layer" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#enforcement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Enforcement Layer
+        Enforcement
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -781,43 +716,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#system-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        System Architecture
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-it-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why It Matters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#explore" class="md-nav__link">
     <span class="md-ellipsis">
       
         Explore
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#positioning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Positioning
       
     </span>
   </a>
@@ -857,20 +759,17 @@
 <p>Build systems where decisions are <strong>deterministic, auditable, and enforceable</strong>.</p>
 <hr />
 <h2 id="problem">Problem</h2>
-<p>AI systems today are fundamentally unreliable:</p>
+<p>AI systems today are unreliable.</p>
 <ul>
 <li>Same input → different outputs  </li>
 <li>No traceability  </li>
 <li>No enforcement  </li>
-<li>No system guarantees  </li>
 </ul>
 <hr />
 <h2 id="solution">Solution</h2>
-<p>Manthan introduces a <strong>deterministic decision layer</strong>.</p>
+<p>A deterministic decision layer.</p>
 <pre class="mermaid"><code>flowchart LR
-
-A[Input] --&gt; B[Canonicalization] --&gt; C[Decision Engine] --&gt; D[Intelligence Layer] --&gt; E[Enforcement]
-
+A[Input] --&gt; B[Canonicalization] --&gt; C[Decision Engine] --&gt; D[Intelligence] --&gt; E[Enforcement]
 classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
 class A,B,C,D,E main;</code></pre>
 <hr />
@@ -879,73 +778,45 @@ class A,B,C,D,E main;</code></pre>
 <p>Same Input → Same Output → Always</p>
 </blockquote>
 <hr />
-<h2 id="what-manthan-provides">What Manthan Provides</h2>
-<h3 id="deterministic-execution">Deterministic Execution</h3>
+<h2 id="deterministic-execution">Deterministic Execution</h2>
 <ul>
-<li>Rule-based decisions  </li>
-<li>Fixed execution order  </li>
+<li>Rule-based  </li>
+<li>Fixed order  </li>
 <li>No randomness  </li>
 </ul>
-<h3 id="decision-governance">Decision Governance</h3>
+<hr />
+<h2 id="decision-governance">Decision Governance</h2>
 <ul>
 <li>Versioned contracts  </li>
 <li>Immutable logic  </li>
 <li>Full audit trail  </li>
 </ul>
-<h3 id="enforcement-layer">Enforcement Layer</h3>
+<hr />
+<h2 id="enforcement">Enforcement</h2>
 <ul>
-<li>GitHub PR blocking  </li>
-<li>API enforcement  </li>
-<li>Workflow control  </li>
+<li>API control  </li>
+<li>Workflow enforcement  </li>
+<li>System-level execution  </li>
 </ul>
 <hr />
 <h2 id="how-it-works">How It Works</h2>
 <ol>
 <li>Canonicalize input  </li>
-<li>Evaluate rules deterministically  </li>
-<li>Add structured intelligence  </li>
+<li>Evaluate rules  </li>
+<li>Add intelligence  </li>
 <li>Enforce outcome  </li>
 </ol>
 <hr />
-<h2 id="system-architecture">System Architecture</h2>
-<pre class="mermaid"><code>flowchart LR
-
-subgraph Core["Manthan System"]
-
-A[Canonicalization] --&gt; B[Decision Engine] --&gt; C[Intelligence] --&gt; D[Enforcement]
-
-end
-
-classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-class A,B,C,D main;</code></pre>
-<hr />
-<h2 id="why-it-matters">Why It Matters</h2>
-<p>Without determinism:</p>
-<ul>
-<li>Decisions cannot be trusted  </li>
-<li>Systems cannot be audited  </li>
-<li>Outcomes cannot be enforced  </li>
-</ul>
-<p>With Manthan:</p>
-<ul>
-<li>Every decision is reproducible  </li>
-<li>Every action is traceable  </li>
-<li>Every outcome is enforceable  </li>
-</ul>
-<hr />
 <h2 id="explore">Explore</h2>
 <ul>
-<li><a href="architecture/">Architecture</a></li>
-<li><a href="how-it-works/">How It Works</a></li>
-<li><a href="decision-engine/">Decision Engine</a></li>
-<li><a href="intelligence/">Intelligence Layer</a></li>
-<li><a href="graphs/">Decision Graphs</a></li>
-<li><a href="contracts/">Contracts</a></li>
-<li><a href="api/">API Reference</a></li>
+<li><a href="architecture/">Architecture</a>  </li>
+<li><a href="how-it-works/">How It Works</a>  </li>
+<li><a href="decision-engine/">Decision Engine</a>  </li>
+<li><a href="intelligence/">Intelligence Layer</a>  </li>
+<li><a href="graphs/">Decision Graphs</a>  </li>
+<li><a href="contracts/">Contracts</a>  </li>
+<li><a href="api/">API Reference</a>  </li>
 </ul>
-<hr />
-<h2 id="positioning">Positioning</h2>
-<p>Manthan is <strong>Decision Infrastructure</strong>.</p>
 <hr />
 <h2 id="system-guarantee">System Guarantee</h2>
 <blockquote>

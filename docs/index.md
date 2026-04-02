@@ -1,24 +1,35 @@
 # Manthan
 
-## Decision Operating System for AI
+## Decision Infrastructure for AI
 
-Build systems where decisions are **deterministic, auditable, and enforceable**.
+**Deterministic. Auditable. Enforceable.**
 
 ---
 
-## Problem
+> Build systems where decisions are not guessed — they are **defined and executed deterministically**.
 
-AI systems today are unreliable.
+---
+
+## The Problem
+
+AI systems today are fundamentally unreliable.
 
 - Same input → different outputs  
 - No traceability  
 - No enforcement  
+- No guarantees  
 
 ---
 
-## Solution
+## The Shift
 
-A deterministic decision layer.
+Manthan introduces a new layer:
+
+> **Decision Infrastructure**
+
+---
+
+## How It Works
 
 ```mermaid
 flowchart LR
@@ -35,40 +46,57 @@ class A,B,C,D,E main;
 
 ---
 
-## Deterministic Execution
+## What You Get
 
-- Rule-based  
-- Fixed order  
-- No randomness  
+### Deterministic Execution
+- Rule-based decisions  
+- Fixed evaluation order  
+- Zero randomness  
 
 ---
 
-## Decision Governance
-
+### Governance
 - Versioned contracts  
 - Immutable logic  
 - Full audit trail  
 
 ---
 
-## Enforcement
-
-- API control  
+### Enforcement
+- API-level control  
 - Workflow enforcement  
-- System-level execution  
+- System guarantees  
 
 ---
 
-## How It Works
+## System Layers
 
-1. Canonicalize input  
-2. Evaluate rules  
-3. Add intelligence  
-4. Enforce outcome  
+- Canonicalization  
+- Decision Engine  
+- Intelligence Layer  
+- Decision Graphs  
+- Contracts  
+- Enforcement  
 
 ---
 
-## Explore
+## Why This Matters
+
+Without determinism:
+
+- Systems cannot be trusted  
+- Decisions cannot be audited  
+- Outcomes cannot be enforced  
+
+With Manthan:
+
+- Decisions are reproducible  
+- Logic is transparent  
+- Systems become reliable  
+
+---
+
+## Explore the System
 
 - [Architecture](architecture.md)  
 - [How It Works](how-it-works.md)  
@@ -77,6 +105,14 @@ class A,B,C,D,E main;
 - [Decision Graphs](graphs.md)  
 - [Contracts](contracts.md)  
 - [API Reference](api.md)  
+
+---
+
+## Positioning
+
+Manthan is not an AI model.
+
+It is **Decision Infrastructure**.
 
 ---
 
