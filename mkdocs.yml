@@ -1,5 +1,6 @@
 site_name: Manthan
 site_description: Deterministic Decision Operating System for AI
+site_url: https://pavancharak.github.io/manthan-docs/
 
 theme:
   name: material
@@ -12,7 +13,11 @@ theme:
     - content.tabs.link
 
 markdown_extensions:
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight
@@ -20,8 +25,12 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+
 nav:
   - Home: index.md
+  - How It Works: how-it-works.md
   - Architecture: architecture.md
   - Decision Engine: decision-engine.md
   - Intelligence Layer: intelligence.md
