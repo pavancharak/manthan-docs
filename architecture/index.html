@@ -400,103 +400,61 @@
   <h1>Architecture</h1>
 
 <p># Architecture</p>
-<p>Manthan is a deterministic decision infrastructure composed of layered components.</p>
+<p>Manthan is a **deterministic decision infrastructure** built as layered components.</p>
 <p>---</p>
-<p>## High-Level Flow</p>
-<p>&#x20;           +------------------+</p>
-<p>&#x20;           |      Input       |</p>
-<p>&#x20;           +------------------+</p>
-<p>&#x20;                     |</p>
-<p>&#x20;                     v</p>
-<p>&#x20;           +------------------+</p>
-<p>&#x20;           | Canonicalization |</p>
-<p>&#x20;           +------------------+</p>
-<p>&#x20;                     |</p>
-<p>&#x20;                     v</p>
-<p>&#x20;           +------------------+</p>
-<p>&#x20;           | Decision Engine  |</p>
-<p>&#x20;           +------------------+</p>
-<p>&#x20;                     |</p>
-<p>&#x20;                     v</p>
-<p>&#x20;           +------------------+</p>
-<p>&#x20;           | Intelligence     |</p>
-<p>&#x20;           +------------------+</p>
-<p>&#x20;                     |</p>
-<p>&#x20;                     v</p>
-<p>&#x20;           +------------------+</p>
-<p>&#x20;           | Enforcement      |</p>
-<p>&#x20;           +------------------+</p>
+<p>## System Flow</p>
+<p>=== "Flow"</p>
+<p>&#x20;   ```</p>
+<p>&#x20;   Input → Canonicalization → Decision Engine → Intelligence → Enforcement</p>
+<p>&#x20;   ```</p>
 <p>---</p>
-<p>## Component Breakdown</p>
+<p>## Components</p>
 <p>---</p>
-<p>### 1. Canonicalization Layer</p>
-<p>Purpose:</p>
-<p>- Normalize input into a deterministic format</p>
-<p>Rules:</p>
-<p>- Sort keys lexicographically  </p>
-<p>- Normalize strings  </p>
-<p>- Fix numeric precision  </p>
-<p>- Remove null/undefined  </p>
-<p>Output:</p>
-<p>Canonical Input → Stable Hash</p>
+<p>### Canonicalization</p>
+<p>**Purpose:** Normalize input into a stable format  </p>
+<p>- Sort keys  </p>
+<p>- Normalize values  </p>
+<p>- Remove ambiguity  </p>
+<p>**Output:** Stable hash</p>
 <p>---</p>
-<p>### 2. Decision Engine</p>
-<p>Purpose:</p>
-<p>- Produce the core decision</p>
-<p>Properties:</p>
-<p>- Rule-based execution  </p>
-<p>- Fixed rule order  </p>
+<p>### Decision Engine</p>
+<p>**Purpose:** Core decision computation  </p>
+<p>- Rule-based  </p>
+<p>- Fixed execution order  </p>
 <p>- First-match wins  </p>
 <p>- No randomness  </p>
-<p>Execution:</p>
-<p>FOR each rule:</p>
-<p>IF condition matches:</p>
-<p>RETURN decision</p>
 <p>---</p>
-<p>### 3. Intelligence Layer</p>
-<p>Purpose:</p>
-<p>- Enhance decision with metadata</p>
-<p>Outputs:</p>
+<p>### Intelligence Layer</p>
+<p>**Purpose:** Add structured metadata  </p>
 <p>- Score  </p>
 <p>- Confidence  </p>
 <p>- Priority  </p>
 <p>- Explanation  </p>
-<p>Properties:</p>
-<p>- Deterministic scoring  </p>
-<p>- Static weights  </p>
 <p>---</p>
-<p>### 4. Decision Graph Engine</p>
-<p>Purpose:</p>
-<p>- Handle multi-step decision dependencies</p>
-<p>Properties:</p>
-<p>- DAG structure ONLY  </p>
+<p>### Decision Graphs</p>
+<p>**Purpose:** Handle dependencies  </p>
+<p>- DAG only  </p>
 <p>- Topological execution  </p>
-<p>- No cycles allowed  </p>
-<p>Flow:</p>
-<p>Node A → Node B → Node C</p>
+<p>- No cycles  </p>
 <p>---</p>
-<p>### 5. Contract System</p>
-<p>Purpose:</p>
-<p>- Define decision behavior</p>
-<p>Properties:</p>
+<p>### Contracts</p>
+<p>**Purpose:** Define decision behavior  </p>
 <p>- Versioned  </p>
 <p>- Immutable  </p>
 <p>- Auditable  </p>
-<p>Structure:</p>
-<p>Intent → Inputs → Rules → Outputs</p>
 <p>---</p>
-<p>### 6. Enforcement Layer</p>
-<p>Purpose:</p>
-<p>- Apply decisions externally</p>
-<p>Examples:</p>
+<p>### Enforcement</p>
+<p>**Purpose:** Apply decisions externally  </p>
 <p>- GitHub PR blocking  </p>
-<p>- API response enforcement  </p>
+<p>- API enforcement  </p>
 <p>- Workflow control  </p>
 <p>---</p>
 <p>## System Guarantee</p>
-<p>Same Input → Same Output → Always</p>
+<blockquote>
+<p>**Same Input → Same Output → Always**</p>
+</blockquote>
 <p>---</p>
-<p>## Key Design Principles</p>
+<p>## Design Principles</p>
 <p>- Determinism over intelligence  </p>
 <p>- Explicit over implicit  </p>
 <p>- Versioned over mutable  </p>
@@ -518,6 +476,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -550,7 +510,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
