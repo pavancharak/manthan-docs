@@ -13,3 +13,12 @@ nav:
   - Intelligence Layer: intelligence.md
   - Decision Graphs: graphs.md
   - Contracts: contracts.md
+theme:
+  name: material
+  palette:
+    scheme: slate
+  features:
+    - content.tabs.link
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy

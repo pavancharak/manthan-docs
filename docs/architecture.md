@@ -2,7 +2,7 @@
 
 
 
-Manthan is a deterministic decision infrastructure composed of layered components.
+Manthan is a \*\*deterministic decision infrastructure\*\* built as layered components.
 
 
 
@@ -10,55 +10,19 @@ Manthan is a deterministic decision infrastructure composed of layered component
 
 
 
-\## High-Level Flow
+\## System Flow
 
 
 
-&#x20;           +------------------+
+=== "Flow"
 
-&#x20;           |      Input       |
 
-&#x20;           +------------------+
 
-&#x20;                     |
+&#x20;   ```
 
-&#x20;                     v
+&#x20;   Input → Canonicalization → Decision Engine → Intelligence → Enforcement
 
-&#x20;           +------------------+
-
-&#x20;           | Canonicalization |
-
-&#x20;           +------------------+
-
-&#x20;                     |
-
-&#x20;                     v
-
-&#x20;           +------------------+
-
-&#x20;           | Decision Engine  |
-
-&#x20;           +------------------+
-
-&#x20;                     |
-
-&#x20;                     v
-
-&#x20;           +------------------+
-
-&#x20;           | Intelligence     |
-
-&#x20;           +------------------+
-
-&#x20;                     |
-
-&#x20;                     v
-
-&#x20;           +------------------+
-
-&#x20;           | Enforcement      |
-
-&#x20;           +------------------+
+&#x20;   ```
 
 
 
@@ -66,7 +30,7 @@ Manthan is a deterministic decision infrastructure composed of layered component
 
 
 
-\## Component Breakdown
+\## Components
 
 
 
@@ -74,41 +38,23 @@ Manthan is a deterministic decision infrastructure composed of layered component
 
 
 
-\### 1. Canonicalization Layer
+\### Canonicalization
 
 
 
-Purpose:
+\*\*Purpose:\*\* Normalize input into a stable format  
 
 
 
-\- Normalize input into a deterministic format
+\- Sort keys  
+
+\- Normalize values  
+
+\- Remove ambiguity  
 
 
 
-Rules:
-
-
-
-\- Sort keys lexicographically  
-
-\- Normalize strings  
-
-\- Fix numeric precision  
-
-\- Remove null/undefined  
-
-
-
-Output:
-
-
-
-
-
-Canonical Input → Stable Hash
-
-
+\*\*Output:\*\* Stable hash
 
 
 
@@ -116,25 +62,17 @@ Canonical Input → Stable Hash
 
 
 
-\### 2. Decision Engine
+\### Decision Engine
 
 
 
-Purpose:
+\*\*Purpose:\*\* Core decision computation  
 
 
 
-\- Produce the core decision
+\- Rule-based  
 
-
-
-Properties:
-
-
-
-\- Rule-based execution  
-
-\- Fixed rule order  
+\- Fixed execution order  
 
 \- First-match wins  
 
@@ -142,39 +80,15 @@ Properties:
 
 
 
-Execution:
-
-
-
-
-
-FOR each rule:
-
-IF condition matches:
-
-RETURN decision
-
-
-
-
-
 \---
 
 
 
-\### 3. Intelligence Layer
+\### Intelligence Layer
 
 
 
-Purpose:
-
-
-
-\- Enhance decision with metadata
-
-
-
-Outputs:
+\*\*Purpose:\*\* Add structured metadata  
 
 
 
@@ -188,53 +102,23 @@ Outputs:
 
 
 
-Properties:
-
-
-
-\- Deterministic scoring  
-
-\- Static weights  
-
-
-
 \---
 
 
 
-\### 4. Decision Graph Engine
+\### Decision Graphs
 
 
 
-Purpose:
+\*\*Purpose:\*\* Handle dependencies  
 
 
 
-\- Handle multi-step decision dependencies
-
-
-
-Properties:
-
-
-
-\- DAG structure ONLY  
+\- DAG only  
 
 \- Topological execution  
 
-\- No cycles allowed  
-
-
-
-Flow:
-
-
-
-
-
-Node A → Node B → Node C
-
-
+\- No cycles  
 
 
 
@@ -242,19 +126,11 @@ Node A → Node B → Node C
 
 
 
-\### 5. Contract System
+\### Contracts
 
 
 
-Purpose:
-
-
-
-\- Define decision behavior
-
-
-
-Properties:
+\*\*Purpose:\*\* Define decision behavior  
 
 
 
@@ -266,41 +142,21 @@ Properties:
 
 
 
-Structure:
-
-
-
-
-
-Intent → Inputs → Rules → Outputs
-
-
-
-
-
 \---
 
 
 
-\### 6. Enforcement Layer
+\### Enforcement
 
 
 
-Purpose:
-
-
-
-\- Apply decisions externally
-
-
-
-Examples:
+\*\*Purpose:\*\* Apply decisions externally  
 
 
 
 \- GitHub PR blocking  
 
-\- API response enforcement  
+\- API enforcement  
 
 \- Workflow control  
 
@@ -314,11 +170,7 @@ Examples:
 
 
 
-
-
-Same Input → Same Output → Always
-
-
+> \*\*Same Input → Same Output → Always\*\*
 
 
 
@@ -326,7 +178,7 @@ Same Input → Same Output → Always
 
 
 
-\## Key Design Principles
+\## Design Principles
 
 
 
