@@ -98,7 +98,7 @@ If you are:
 
 
 
-We should talk.
+We should connect.
 
 
 
@@ -110,11 +110,13 @@ We should talk.
 
 
 
-\- GitHub: https://github.com/pavancharak
+👉 \[GitHub Profile](https://github.com/pavancharak)  
 
-\- LinkedIn: https://www.linkedin.com/in/pavancharak/
+👉 \[LinkedIn Profile](https://www.linkedin.com/in/pavancharak/)  
 
-\- Live GitHub app by Manthan : https://github.com/apps/manthan-pr-gate
+👉 \[Manthan GitHub App](https://github.com/apps/manthan-pr-gate)
+
+
 
 \---
 
@@ -153,6 +155,4 @@ It is an attempt to define:
 
 
 > \*\*How decisions should be made in software systems.\*\*
-
-
 
