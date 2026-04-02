@@ -4,6 +4,8 @@
 
 **Deterministic. Auditable. Enforceable.**
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-111827?style=flat&logo=github)](https://github.com/pavancharak/manthan-docs)
+
 ---
 
 > Build systems where decisions are not guessed — they are **defined and executed deterministically**.
@@ -80,7 +82,7 @@ class A,B,C,D,E main;
 
 ---
 
-## Why This Matters
+## Why It Matters
 
 Without determinism:
 
@@ -105,6 +107,29 @@ With Manthan:
 - [Decision Graphs](graphs.md)  
 - [Contracts](contracts.md)  
 - [API Reference](api.md)  
+
+---
+
+## Get Started
+
+Understand the system:
+
+- [Architecture](architecture.md)  
+- [How It Works](how-it-works.md)  
+
+Or explore implementation:
+
+- [API Reference](api.md)  
+
+---
+
+## Build Deterministic Systems
+
+Manthan is built for systems where:
+
+- Decisions must be trusted  
+- Logic must be auditable  
+- Outcomes must be enforced  
 
 ---
 

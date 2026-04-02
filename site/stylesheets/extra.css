@@ -1,17 +1,35 @@
-/* Layout width */
+/* Centered layout */
 .md-typeset {
-  max-width: 900px;
+  max-width: 880px;
   margin: auto;
 }
 
-/* Typography */
+/* Hero title */
 .md-typeset h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   text-align: center;
+  font-weight: 700;
 }
 
+/* Subtitle */
 .md-typeset h2 {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
+  font-weight: 600;
+}
+
+/* Strong paragraph spacing */
+.md-typeset p {
+  line-height: 1.6;
+}
+
+/* Lists */
+.md-typeset ul {
+  margin-left: 1rem;
+}
+
+/* Mermaid spacing */
+.mermaid {
+  margin: 2.5rem 0;
 }
 
 /* Mobile optimization */
@@ -21,20 +39,10 @@
   }
 
   .md-typeset h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .md-typeset h2 {
     font-size: 1.2rem;
   }
-}
-
-/* Code blocks */
-.md-typeset pre {
-  border-radius: 8px;
-}
-
-/* Mermaid spacing */
-.mermaid {
-  margin: 2rem 0;
 }
