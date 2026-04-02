@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://pavancharak.github.io/manthan-docs/graphs/">
+        <link rel="canonical" href="https://pavancharak.github.io/manthan-docs/example/">
       
       
-        <link rel="prev" href="../intelligence/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../contracts/">
+        <link rel="next" href="../architecture/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Decision Graphs - Manthan</title>
+        <title>Example Walkthrough - Manthan</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Decision Graphs
+              Example Walkthrough
             
           </span>
         </div>
@@ -254,10 +254,17 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../example/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -273,6 +280,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -362,17 +370,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../graphs/" class="md-nav__link">
         
   
   
@@ -388,7 +389,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -453,9 +453,59 @@
 
 
 
-  <h1>Decision Graphs</h1>
+  <h1>Example Walkthrough</h1>
 
-
+<p># Example Walkthrough</p>
+<p>This example shows how a decision flows through Manthan.</p>
+<p>---</p>
+<p>## Step 1: Input</p>
+<p>```json</p>
+<p>{</p>
+<p>&#x20; "risk": 8,</p>
+<p>&#x20; "amount": 12000,</p>
+<p>&#x20; "type": "loan"</p>
+<p>}</p>
+<p>Step 2: Canonicalization</p>
+<p>Transform input into deterministic format:</p>
+<p>{</p>
+<p>&#x20; "amount": 12000,</p>
+<p>&#x20; "risk": 8,</p>
+<p>&#x20; "type": "loan"</p>
+<p>}</p>
+<p>Keys sorted</p>
+<p>Values normalized</p>
+<p>Step 3: Decision Engine</p>
+<p>Rules evaluated in fixed order:</p>
+<p>Rule 1: risk &gt; 7 → REJECT</p>
+<p>Rule 2: amount &gt; 10000 → REVIEW</p>
+<p>Rule 3: default → APPROVE</p>
+<p>Evaluation:</p>
+<p>risk = 8 → matches Rule 1</p>
+<p>Step 4: Decision Output</p>
+<p>{</p>
+<p>&#x20; "decision": "REJECT"</p>
+<p>}</p>
+<p>Step 5: Intelligence Layer</p>
+<p>Enhance decision:</p>
+<p>{</p>
+<p>&#x20; "score": 85,</p>
+<p>&#x20; "confidence": 0.85,</p>
+<p>&#x20; "priority": "HIGH"</p>
+<p>}</p>
+<p>Step 6: Final Output</p>
+<p>{</p>
+<p>&#x20; "decision": "REJECT",</p>
+<p>&#x20; "score": 85,</p>
+<p>&#x20; "confidence": 0.85,</p>
+<p>&#x20; "priority": "HIGH"</p>
+<p>}</p>
+<p>Step 7: Enforcement</p>
+<p>Example:</p>
+<p>GitHub PR is blocked</p>
+<p>Workflow is stopped</p>
+<p>Full Flow</p>
+<p>Guarantee</p>
+<p>Same input → Same output → Always</p>
 
 
 
