@@ -14,159 +14,131 @@ Manthan is a \*\*deterministic decision infrastructure\*\* built as layered comp
 
 
 
+```mermaid
 
+flowchart TD
 
-Input → Canonicalization → Decision Engine → Intelligence → Enforcement
+&#x20;   A\[Input] --> B\[Canonicalization]
 
+&#x20;   B --> C\[Decision Engine]
 
+&#x20;   C --> D\[Intelligence Layer]
 
+&#x20;   D --> E\[Enforcement]
 
+Component Overview
 
-\---
+Canonicalization
 
 
 
-\## Components
+Purpose: Normalize input into a stable format
 
 
 
-\### Canonicalization
+Sort keys
 
-\*\*Purpose:\*\* Normalize input into a stable format
+Normalize values
 
+Remove ambiguity
 
 
-\- Sort keys  
 
-\- Normalize values  
+Output: Stable hash
 
-\- Remove ambiguity  
 
 
+Decision Engine
 
-\*\*Output:\*\* Stable hash
 
 
+Purpose: Core decision computation
 
-\---
 
 
+Rule-based
 
-\### Decision Engine
+Fixed execution order
 
-\*\*Purpose:\*\* Core decision computation
+First-match wins
 
+No randomness
 
+Intelligence Layer
 
-\- Rule-based  
 
-\- Fixed execution order  
 
-\- First-match wins  
+Purpose: Add structured metadata
 
-\- No randomness  
 
 
+Score
 
-\---
+Confidence
 
+Priority
 
+Explanation
 
-\### Intelligence Layer
+Decision Graphs
 
-\*\*Purpose:\*\* Add structured metadata
 
 
+Purpose: Handle multi-step dependencies
 
-\- Score  
 
-\- Confidence  
 
-\- Priority  
+DAG only
 
-\- Explanation  
+Topological execution
 
+No cycles
 
+Contracts
 
-\---
 
 
+Purpose: Define decision behavior
 
-\### Decision Graphs
 
-\*\*Purpose:\*\* Handle dependencies
 
+Versioned
 
+Immutable
 
-\- DAG only  
+Auditable
 
-\- Topological execution  
+Enforcement
 
-\- No cycles  
 
 
+Purpose: Apply decisions externally
 
-\---
 
 
+GitHub PR blocking
 
-\### Contracts
+API enforcement
 
-\*\*Purpose:\*\* Define decision behavior
+Workflow control
 
+Execution Pipeline
 
+System Guarantee
 
-\- Versioned  
 
-\- Immutable  
 
-\- Auditable  
+Same Input → Same Output → Always
 
 
 
-\---
+Design Principles
 
+Determinism over intelligence
 
+Explicit over implicit
 
-\### Enforcement
+Versioned over mutable
 
-\*\*Purpose:\*\* Apply decisions externally
-
-
-
-\- GitHub PR blocking  
-
-\- API enforcement  
-
-\- Workflow control  
-
-
-
-\---
-
-
-
-\## System Guarantee
-
-
-
-> \*\*Same Input → Same Output → Always\*\*
-
-
-
-\---
-
-
-
-\## Design Principles
-
-
-
-\- Determinism over intelligence  
-
-\- Explicit over implicit  
-
-\- Versioned over mutable  
-
-\- Auditability over performance  
+Auditability over performance
 
