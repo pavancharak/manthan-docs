@@ -84,13 +84,13 @@ where reliability is not optional.
 
 
 
-\* GitHub → https://github.com/pavancharak
+\- Email → \[founder@manthan.systems](mailto:founder@manthan.systems)  
 
-\* LinkedIn → https://www.linkedin.com/in/pavancharak/
+\- GitHub → \[github.com/pavancharak](https://github.com/pavancharak)  
 
-\* Manthan App → https://github.com/apps/manthan-pr-gate
+\- LinkedIn → \[linkedin.com/in/pavancharak](https://www.linkedin.com/in/pavancharak/)  
 
-
+\- Manthan App → \[github.com/apps/manthan-pr-gate](https://github.com/apps/manthan-pr-gate)
 
 \---
 
