@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#intelligence-layer" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -373,6 +378,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intelligence Layer
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -390,6 +415,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -466,6 +521,27 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -482,47 +558,27 @@
 
 
 
-  <h1>Intelligence Layer</h1>
-
-<p># Intelligence Layer</p>
+<h1 id="intelligence-layer">Intelligence Layer</h1>
 <p>Adds metadata without affecting decisions.</p>
-<p>---</p>
-<p>## Flow</p>
-<pre class="mermaid"><code>
-flowchart LR
-
-
-
-D\[Decision] --&gt; I\[Intelligence] --&gt; O\[Output]
-
-
-
-classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-
+<hr />
+<h2 id="flow">Flow</h2>
+<p>```mermaid
+flowchart LR</p>
+<p>D[Decision] --&gt; I[Intelligence] --&gt; O[Output]</p>
+<p>classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
 class D,I,O main;
-</code></pre>
-<p>---</p>
-<p>## Example</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-
-<span class="err">&amp;#x</span><span class="mi">20</span><span class="err">;</span><span class="w"> </span><span class="nt">&quot;decision&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;reject&quot;</span><span class="p">,</span>
-
-<span class="err">&amp;#x</span><span class="mi">20</span><span class="err">;</span><span class="w"> </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.92</span><span class="p">,</span>
-
-<span class="err">&amp;#x</span><span class="mi">20</span><span class="err">;</span><span class="w"> </span><span class="nt">&quot;confidence&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span>
-
-<span class="p">}</span>
-</code></pre></div>
-<p>---</p>
-<p>## Rules</p>
-<p>- MUST NOT change decision  </p>
-<p>- Deterministic  </p>
-<p>- Stateless  </p>
-<p>---</p>
-<p>## Core Statement</p>
-<blockquote>
+Example
+{
+  "decision": "reject",
+  "score": 0.92,
+  "confidence": "high"
+}
+Rules
+MUST NOT change decision
+Deterministic
+Stateless
+Core Statement</p>
 <p>Explains decisions, never makes them</p>
-</blockquote>
 
 
 

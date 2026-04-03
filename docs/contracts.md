@@ -1,8 +1,4 @@
-# Contracts
-
 Contracts define decision behavior.
-
----
 
 ## Example
 
