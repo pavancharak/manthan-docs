@@ -14,7 +14,7 @@ How decisions are made in Manthan.
 
 
 
-!\[Problem](./assets/problem.png)
+!\[Problem](assets/problem.png)
 
 
 
@@ -22,9 +22,13 @@ AI systems are probabilistic.
 
 
 
-The same input can produce different outputs.  
+The same input can produce different outputs.
 
-There is no traceability.  
+
+
+There is no traceability.
+
+
 
 There is no enforcement.
 
@@ -42,17 +46,21 @@ This makes them unreliable for decisions.
 
 
 
-!\[Shift](./assets/shift.png)
+!\[Shift](assets/shift.png)
 
 
 
-AI operates in generation mode.  
+AI operates in generation mode.
+
+
 
 Manthan operates in decision mode.
 
 
 
-Prompts generate possibilities.  
+Prompts generate possibilities.
+
+
 
 Contracts define outcomes.
 
@@ -70,27 +78,31 @@ Generation is not decision-making.
 
 
 
-!\[Decision Boundary](./assets/decision-boundary.png)
+!\[Decision Boundary](assets/decision-boundary.png)
 
 
 
 AI is useful for:
 
-\- Ambiguity  
-
-\- Interpretation  
-
-\- Exploration  
 
 
+\- Ambiguity
 
-Decisions require:
+\- Interpretation
 
-\- Determinism  
+\- Exploration
 
-\- Enforcement  
 
-\- Guarantees  
+
+But decisions require:
+
+
+
+\- Determinism
+
+\- Enforcement
+
+\- Guarantees
 
 
 
@@ -106,7 +118,7 @@ Crossing the boundary turns insight into decision.
 
 
 
-!\[Architecture](./assets/architecture.png)
+!\[Architecture](assets/architecture.png)
 
 
 
@@ -114,11 +126,17 @@ Decisions originate from human intent.
 
 
 
-Intent is defined as contracts.  
+Intent is defined as contracts.
 
-Contracts are executed by Manthan.  
 
-Execution produces deterministic decisions.  
+
+Contracts are executed by Manthan.
+
+
+
+Execution produces deterministic decisions.
+
+
 
 Decisions are enforced by the system.
 
@@ -136,7 +154,7 @@ Decisions are defined, then executed.
 
 
 
-!\[Contracts](./assets/contracts.png)
+!\[Contracts](assets/contracts.png)
 
 
 
@@ -156,7 +174,9 @@ They define how decisions are made.
 
 
 
-Decisions are not inferred.  
+Decisions are not inferred.
+
+
 
 They are specified.
 
@@ -170,7 +190,7 @@ They are specified.
 
 
 
-!\[Intelligence](./assets/intelligence.png)
+!\[Intelligence](assets/intelligence.png)
 
 
 
@@ -180,11 +200,13 @@ Decisions are made first.
 
 The intelligence layer adds:
 
-\- Explanation  
 
-\- Context  
 
-\- Scoring  
+\- Explanation
+
+\- Context
+
+\- Scoring
 
 
 
@@ -204,27 +226,31 @@ It explains decisions, never makes them.
 
 
 
-!\[Outcome](./assets/outcome.png)
+!\[Outcome](assets/outcome.png)
 
 
 
 Without deterministic decisions:
 
-\- Inconsistent outcomes  
 
-\- No traceability  
 
-\- No enforcement  
+\- Inconsistent outcomes
+
+\- No traceability
+
+\- No enforcement
 
 
 
 With Manthan:
 
-\- Consistent decisions  
 
-\- Full traceability  
 
-\- Enforced outcomes  
+\- Consistent decisions
+
+\- Full traceability
+
+\- Enforced outcomes
 
 
 
