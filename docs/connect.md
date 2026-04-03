@@ -1,8 +1,6 @@
-\# Manthan
+Manthan
 
-
-
-\## Decision Infrastructure for AI Systems
+Decision Infrastructure for AI Systems
 
 
 
@@ -14,11 +12,11 @@ AI systems today are fundamentally unreliable.
 
 
 
-Same input produces different outputs.  
+Same input produces different outputs.
 
-There is no traceability.  
+There is no traceability.
 
-There is no enforcement.  
+There is no enforcement.
 
 
 
@@ -26,57 +24,37 @@ This makes them unsuitable for critical decision-making.
 
 
 
-\---
+The Shift
 
 
 
-\## The Shift
-
-
-
-AI should not guess.  
+AI should not guess.
 
 Systems should decide — deterministically.
 
 
 
-\---
+What Manthan Focuses On
+
+Deterministic decision systems
+
+Auditable execution paths
+
+Enforceable outcomes
+
+Decision infrastructure as a primitive
+
+Who This Is For
 
 
 
-\## What Manthan Focuses On
-
-
-
-\- Deterministic decision systems  
-
-\- Auditable execution paths  
-
-\- Enforceable outcomes  
-
-\- Decision infrastructure as a primitive  
-
-
-
-\---
-
-
-
-\## Who This Is For
-
-
-
-Engineers, founders, and teams building AI systems  
+Engineers, founders, and teams building AI systems
 
 where reliability is not optional.
 
 
 
-\---
-
-
-
-\## Connect
+Connect
 
 
 
@@ -84,21 +62,15 @@ Reach out if you're building or thinking about reliable AI systems.
 
 
 
-\- Email → \[founder@manthan.systems](mailto:founder@manthan.systems)  
+Email → founder@manthan.systems
 
-\- GitHub → \[pavancharak](https://github.com/pavancharak)  
+GitHub → pavancharak
 
-\- LinkedIn → \[Pavan Charak](https://www.linkedin.com/in/pavancharak/)  
+LinkedIn → Pavan Charak
 
-\- Manthan App → \[PR Gate](https://github.com/apps/manthan-pr-gate)
+Manthan App → PR Gate
 
-
-
-\---
-
-
-
-\## Collaboration
+Collaboration
 
 
 
@@ -106,11 +78,7 @@ Open to conversations on system design, infrastructure, and decision reliability
 
 
 
-\---
-
-
-
-\## Closing
+Closing
 
 
 
