@@ -1,258 +1,232 @@
-\# System
+<h1>System</h1>
 
 
 
-How decisions are made in Manthan.
+<p>How decisions are made in Manthan.</p>
 
 
 
-\---
+<hr>
 
 
 
-\## The Problem
+<h2>The Problem</h2>
 
 
 
-!\[Problem](assets/problem.png)
+<img src="assets/problem.png" alt="Problem" width="100%">
 
 
 
-AI systems are probabilistic.
+<p>AI systems are probabilistic.</p>
 
+<p>The same input can produce different outputs.</p>
 
+<p>There is no traceability.</p>
 
-The same input can produce different outputs.
+<p>There is no enforcement.</p>
 
+<p>This makes them unreliable for decisions.</p>
 
 
-There is no traceability.
 
+<hr>
 
 
-There is no enforcement.
 
+<h2>Generation vs Decision</h2>
 
 
-This makes them unreliable for decisions.
 
+<img src="assets/shift.png" alt="Shift" width="100%">
 
 
-\---
 
+<p>AI operates in generation mode.</p>
 
+<p>Manthan operates in decision mode.</p>
 
-\## Generation vs Decision
+<p>Prompts generate possibilities.</p>
 
+<p>Contracts define outcomes.</p>
 
+<p>Generation is not decision-making.</p>
 
-!\[Shift](assets/shift.png)
 
 
+<hr>
 
-AI operates in generation mode.
 
 
+<h2>Decision Boundary</h2>
 
-Manthan operates in decision mode.
 
 
+<img src="assets/decision-boundary.png" alt="Decision Boundary" width="100%">
 
-Prompts generate possibilities.
 
 
+<p><strong>AI is useful for:</strong></p>
 
-Contracts define outcomes.
+<ul>
 
+<li>Ambiguity</li>
 
+<li>Interpretation</li>
 
-Generation is not decision-making.
+<li>Exploration</li>
 
+</ul>
 
 
-\---
 
+<p><strong>Decisions require:</strong></p>
 
+<ul>
 
-\## Decision Boundary
+<li>Determinism</li>
 
+<li>Enforcement</li>
 
+<li>Guarantees</li>
 
-!\[Decision Boundary](assets/decision-boundary.png)
+</ul>
 
 
 
-AI is useful for:
+<p>Crossing the boundary turns insight into decision.</p>
 
 
 
-\- Ambiguity
+<hr>
 
-\- Interpretation
 
-\- Exploration
 
+<h2>Architecture</h2>
 
 
-But decisions require:
 
+<img src="assets/architecture.png" alt="Architecture" width="100%">
 
 
-\- Determinism
 
-\- Enforcement
+<p>Decisions originate from human intent.</p>
 
-\- Guarantees
+<p>Intent is defined as contracts.</p>
 
+<p>Contracts are executed by Manthan.</p>
 
+<p>Execution produces deterministic decisions.</p>
 
-Crossing the boundary turns insight into decision.
+<p>Decisions are enforced by the system.</p>
 
 
 
-\---
+<hr>
 
 
 
-\## Architecture
+<h2>Contracts</h2>
 
 
 
-!\[Architecture](assets/architecture.png)
+<img src="assets/contracts.png" alt="Contracts" width="100%">
 
 
 
-Decisions originate from human intent.
+<ul>
 
+<li>Versioned</li>
 
+<li>Immutable</li>
 
-Intent is defined as contracts.
+<li>Deterministic</li>
 
+</ul>
 
 
-Contracts are executed by Manthan.
 
+<p>Contracts are the source of truth.</p>
 
+<p>Decisions are not inferred.</p>
 
-Execution produces deterministic decisions.
+<p>They are specified.</p>
 
 
 
-Decisions are enforced by the system.
+<hr>
 
 
 
-Decisions are defined, then executed.
+<h2>Intelligence Layer</h2>
 
 
 
-\---
+<img src="assets/intelligence.png" alt="Intelligence" width="100%">
 
 
 
-\## Contracts
+<p>Decisions are made first.</p>
 
 
 
-!\[Contracts](assets/contracts.png)
+<ul>
 
+<li>Explanation</li>
 
+<li>Context</li>
 
-Contracts are the source of truth.
+<li>Scoring</li>
 
+</ul>
 
 
-\- Versioned  
 
-\- Immutable  
+<p>It does not influence the decision.</p>
 
-\- Deterministic  
+<p>It explains decisions, never makes them.</p>
 
 
 
-They define how decisions are made.
+<hr>
 
 
 
-Decisions are not inferred.
+<h2>Outcome</h2>
 
 
 
-They are specified.
+<img src="assets/outcome.png" alt="Outcome" width="100%">
 
 
 
-\---
+<p><strong>Without deterministic decisions:</strong></p>
 
+<ul>
 
+<li>Inconsistent outcomes</li>
 
-\## Intelligence Layer
+<li>No traceability</li>
 
+<li>No enforcement</li>
 
+</ul>
 
-!\[Intelligence](assets/intelligence.png)
 
 
+<p><strong>With Manthan:</strong></p>
 
-Decisions are made first.
+<ul>
 
+<li>Consistent decisions</li>
 
+<li>Full traceability</li>
 
-The intelligence layer adds:
+<li>Enforced outcomes</li>
 
+</ul>
 
 
-\- Explanation
 
-\- Context
-
-\- Scoring
-
-
-
-It does not influence the decision.
-
-
-
-It explains decisions, never makes them.
-
-
-
-\---
-
-
-
-\## Outcome
-
-
-
-!\[Outcome](assets/outcome.png)
-
-
-
-Without deterministic decisions:
-
-
-
-\- Inconsistent outcomes
-
-\- No traceability
-
-\- No enforcement
-
-
-
-With Manthan:
-
-
-
-\- Consistent decisions
-
-\- Full traceability
-
-\- Enforced outcomes
-
-
-
-Reliable systems require deterministic decisions.
+<p><strong>Reliable systems require deterministic decisions.</strong></p>
 
