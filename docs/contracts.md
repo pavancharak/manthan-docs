@@ -2,8 +2,7 @@ Contracts define decision behavior.
 
 ## Example
 
-```yaml
-version: "1.0.0"
+```
 
 intent: "fraud_detection"
 
