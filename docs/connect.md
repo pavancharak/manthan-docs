@@ -1,22 +1,12 @@
-\# Connect
+\# Manthan
 
 
 
-\## Building Decision Infrastructure
+\## Decision Infrastructure for AI Systems
 
 
 
-Manthan is being built as a \*\*deterministic decision system for AI\*\*.
-
-
-
-\---
-
-
-
-This is not another AI tool.  
-
-This is infrastructure for \*\*trustworthy decisions\*\*.
+Manthan is building a deterministic layer for AI, where decisions are traceable, auditable, and enforceable.
 
 
 
@@ -24,35 +14,19 @@ This is infrastructure for \*\*trustworthy decisions\*\*.
 
 
 
-\## Why I’m Building This
+AI systems today are fundamentally unreliable.
 
 
 
-AI systems today are fundamentally broken:
+Same input produces different outputs.
+
+There is no traceability.
+
+There is no enforcement.
 
 
 
-\- Same input → different outputs  
-
-\- No traceability  
-
-\- No enforcement  
-
-\- No guarantees  
-
-
-
-\---
-
-
-
-\## What I Believe
-
-
-
-Systems should not guess.  
-
-They should decide deterministically.
+This makes them unusable for critical decision-making.
 
 
 
@@ -60,17 +34,31 @@ They should decide deterministically.
 
 
 
-\## What I’m Focused On
+\## The Shift
 
 
 
-\- Decision Infrastructure  
+AI should not guess.
 
-\- Deterministic Systems  
+Systems should decide: deterministically.
 
-\- Auditable Architectures  
 
-\- Enforceable Logic  
+
+\---
+
+
+
+\## What Manthan Focuses On
+
+
+
+\* Deterministic decision systems
+
+\* Auditable execution paths
+
+\* Enforceable outcomes
+
+\* Decision infrastructure as a primitive
 
 
 
@@ -82,7 +70,9 @@ They should decide deterministically.
 
 
 
-If you are building AI systems or thinking about reliability, we should connect.
+Engineers, founders, and teams building AI systems
+
+where reliability is not optional.
 
 
 
@@ -94,15 +84,11 @@ If you are building AI systems or thinking about reliability, we should connect.
 
 
 
-GitHub: https://github.com/pavancharak  
+\* GitHub → https://github.com/pavancharak
 
+\* LinkedIn → https://www.linkedin.com/in/pavancharak/
 
-
-LinkedIn: https://www.linkedin.com/in/pavancharak/  
-
-
-
-Manthan App: https://github.com/apps/manthan-pr-gate  
+\* Manthan App → https://github.com/apps/manthan-pr-gate
 
 
 
@@ -114,7 +100,7 @@ Manthan App: https://github.com/apps/manthan-pr-gate
 
 
 
-Open to discussions, system design, and collaboration.
+Open to conversations on system design, infrastructure, and decision reliability.
 
 
 
@@ -126,5 +112,7 @@ Open to discussions, system design, and collaboration.
 
 
 
-Manthan is an attempt to define how decisions should be made in software systems.
+Manthan is an attempt to define how decisions should work in software systems.
+
+
 
