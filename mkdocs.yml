@@ -43,6 +43,7 @@ nav:
   - Intelligence Layer: intelligence.md
   - Decision Graphs: graphs.md
   - Contracts: contracts.md
+  - System: system.md
 
 extra_css:
   - stylesheets/extra.css
