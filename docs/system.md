@@ -14,7 +14,7 @@ How decisions are made in Manthan.
 
 
 
-!\[Problem](assets/problem.png)
+!\[Problem](./assets/problem.png)
 
 
 
@@ -42,7 +42,7 @@ This makes them unreliable for decisions.
 
 
 
-!\[Shift](assets/shift.png)
+!\[Shift](./assets/shift.png)
 
 
 
@@ -70,7 +70,7 @@ Generation is not decision-making.
 
 
 
-!\[Decision Boundary](assets/decision-boundary.png)
+!\[Decision Boundary](./assets/decision-boundary.png)
 
 
 
@@ -84,7 +84,7 @@ AI is useful for:
 
 
 
-But decisions require:
+Decisions require:
 
 \- Determinism  
 
@@ -106,7 +106,7 @@ Crossing the boundary turns insight into decision.
 
 
 
-!\[Architecture](assets/architecture.png)
+!\[Architecture](./assets/architecture.png)
 
 
 
@@ -136,7 +136,7 @@ Decisions are defined, then executed.
 
 
 
-!\[Contracts](assets/contracts.png)
+!\[Contracts](./assets/contracts.png)
 
 
 
@@ -170,7 +170,7 @@ They are specified.
 
 
 
-!\[Intelligence](assets/intelligence.png)
+!\[Intelligence](./assets/intelligence.png)
 
 
 
@@ -204,7 +204,7 @@ It explains decisions, never makes them.
 
 
 
-!\[Outcome](assets/outcome.png)
+!\[Outcome](./assets/outcome.png)
 
 
 
