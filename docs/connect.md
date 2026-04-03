@@ -6,13 +6,7 @@
 
 
 
-Manthan is building a deterministic layer for AI —  
-
-where decisions are traceable, auditable, and enforceable.
-
-
-
-\---
+Manthan is infrastructure for deterministic, auditable decision-making in AI systems.
 
 
 
@@ -86,13 +80,17 @@ where reliability is not optional.
 
 
 
+Reach out if you're building or thinking about reliable AI systems.
+
+
+
 \- Email → \[founder@manthan.systems](mailto:founder@manthan.systems)  
 
-\- GitHub → \[github.com/pavancharak](https://github.com/pavancharak)  
+\- GitHub → \[pavancharak](https://github.com/pavancharak)  
 
-\- LinkedIn → \[linkedin.com/in/pavancharak](https://www.linkedin.com/in/pavancharak/)  
+\- LinkedIn → \[Pavan Charak](https://www.linkedin.com/in/pavancharak/)  
 
-\- Manthan App → \[github.com/apps/manthan-pr-gate](https://github.com/apps/manthan-pr-gate)
+\- Manthan App → \[PR Gate](https://github.com/apps/manthan-pr-gate)
 
 
 
