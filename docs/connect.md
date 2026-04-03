@@ -6,7 +6,9 @@
 
 
 
-Manthan is building a deterministic layer for AI, where decisions are traceable, auditable, and enforceable.
+Manthan is building a deterministic layer for AI —  
+
+where decisions are traceable, auditable, and enforceable.
 
 
 
@@ -18,15 +20,15 @@ AI systems today are fundamentally unreliable.
 
 
 
-Same input produces different outputs.
+Same input produces different outputs.  
 
-There is no traceability.
+There is no traceability.  
 
-There is no enforcement.
+There is no enforcement.  
 
 
 
-This makes them unusable for critical decision-making.
+This makes them unsuitable for critical decision-making.
 
 
 
@@ -38,9 +40,9 @@ This makes them unusable for critical decision-making.
 
 
 
-AI should not guess.
+AI should not guess.  
 
-Systems should decide: deterministically.
+Systems should decide — deterministically.
 
 
 
@@ -52,13 +54,13 @@ Systems should decide: deterministically.
 
 
 
-\* Deterministic decision systems
+\- Deterministic decision systems  
 
-\* Auditable execution paths
+\- Auditable execution paths  
 
-\* Enforceable outcomes
+\- Enforceable outcomes  
 
-\* Decision infrastructure as a primitive
+\- Decision infrastructure as a primitive  
 
 
 
@@ -70,7 +72,7 @@ Systems should decide: deterministically.
 
 
 
-Engineers, founders, and teams building AI systems
+Engineers, founders, and teams building AI systems  
 
 where reliability is not optional.
 
@@ -91,6 +93,8 @@ where reliability is not optional.
 \- LinkedIn → \[linkedin.com/in/pavancharak](https://www.linkedin.com/in/pavancharak/)  
 
 \- Manthan App → \[github.com/apps/manthan-pr-gate](https://github.com/apps/manthan-pr-gate)
+
+
 
 \---
 
@@ -113,6 +117,4 @@ Open to conversations on system design, infrastructure, and decision reliability
 
 
 Manthan is an attempt to define how decisions should work in software systems.
-
-
 
