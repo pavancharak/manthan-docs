@@ -14,7 +14,7 @@
 
 
 
-<img src="assets/problem.png" alt="Problem" width="100%">
+<img src="../assets/problem.png" alt="Problem" style="width:100%; border-radius:8px; margin:16px 0;">
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-<img src="assets/shift.png" alt="Shift" width="100%">
+<img src="../assets/shift.png" alt="Shift" style="width:100%; border-radius:8px; margin:16px 0;">
 
 
 
@@ -62,7 +62,7 @@
 
 
 
-<img src="assets/decision-boundary.png" alt="Decision Boundary" width="100%">
+<img src="../assets/decision-boundary.png" alt="Decision Boundary" style="width:100%; border-radius:8px; margin:16px 0;">
 
 
 
@@ -106,7 +106,7 @@
 
 
 
-<img src="assets/architecture.png" alt="Architecture" width="100%">
+<img src="../assets/architecture.png" alt="Architecture" style="width:100%; border-radius:8px; margin:16px 0;">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-<img src="assets/contracts.png" alt="Contracts" width="100%">
+<img src="../assets/contracts.png" alt="Contracts" style="width:100%; border-radius:8px; margin:16px 0;">
 
 
 
@@ -162,7 +162,7 @@
 
 
 
-<img src="assets/intelligence.png" alt="Intelligence" width="100%">
+<img src="../assets/intelligence.png" alt="Intelligence" style="width:100%; border-radius:8px; margin:16px 0;">
 
 
 
@@ -196,7 +196,7 @@
 
 
 
-<img src="assets/outcome.png" alt="Outcome" width="100%">
+<img src="../assets/outcome.png" alt="Outcome" style="width:100%; border-radius:8px; margin:16px 0;">
 
 
 
