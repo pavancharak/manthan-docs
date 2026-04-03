@@ -1,76 +1,23 @@
-\# Contracts
-
-
+# Contracts
 
 Contracts define decision behavior.
 
+---
 
-
-\---
-
-
-
-\## Example
-
-
+## Example
 
 ```yaml
-
 version: "1.0.0"
 
-
-
-intent: "fraud\_detection"
-
-
+intent: "fraud_detection"
 
 inputs:
-
-&#x20; amount: number
-
-
+  amount: number
 
 behavior:
+  rules:
+    - condition: "amount > 10000"
+      action: "reject"
 
-&#x20; rules:
-
-&#x20;   - condition: "amount > 10000"
-
-&#x20;     action: "reject"
-
-
-
-&#x20;   - condition: "true"
-
-&#x20;     action: "approve"
-
-```
-
-
-
-\---
-
-
-
-\## Properties
-
-
-
-\- Versioned  
-
-\- Immutable  
-
-\- Deterministic  
-
-
-
-\---
-
-
-
-\## Guarantee
-
-
-
-> Contract defines the decision
-
+    - condition: "true"
+      action: "approve"
