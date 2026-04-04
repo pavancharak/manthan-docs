@@ -442,6 +442,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boundaries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -568,6 +623,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boundaries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -589,31 +699,42 @@
 <p>Adds metadata without affecting decisions.</p>
 <hr />
 <h2 id="flow">Flow</h2>
-<p>```mermaid
-flowchart LR
-    D[Decision] --&gt; I[Intelligence] --&gt; O[Output]</p>
-<div class="highlight"><pre><span></span><code>classDef main fill:#020617,stroke:#60a5fa,stroke-width:2px,color:#ffffff;
-class D,I,O main;
+<pre class="mermaid"><code>flowchart LR
+    D[Decision] --&gt; I[Intelligence] --&gt; O[Output]
+
+    classDef main fill:#020617,stroke:#60a5fa,stroke-width:2px,color:#ffffff;
+    class D,I,O main;</code></pre>
+<hr />
+<h2 id="example">Example</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;decision&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;reject&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.92</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;confidence&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>Example
-{
-  "decision": "reject",
-  "score": 0.92,
-  "confidence": "high"
-}
-Behavior
-Enriches decision output with metadata
-Does not modify or override the decision
-Operates deterministically
-Rules
-MUST NOT change decision
-Stateless
-Deterministic
-Boundaries
-No decision authority
-No side effects
-No persistence
-Core Statement</p>
+<hr />
+<h2 id="behavior">Behavior</h2>
+<ul>
+<li>Enriches decision output with metadata</li>
+<li>Does not modify or override the decision</li>
+<li>Operates deterministically</li>
+</ul>
+<hr />
+<h2 id="rules">Rules</h2>
+<ul>
+<li>MUST NOT change decision  </li>
+<li>Stateless  </li>
+<li>Deterministic  </li>
+</ul>
+<hr />
+<h2 id="boundaries">Boundaries</h2>
+<ul>
+<li>No decision authority  </li>
+<li>No side effects  </li>
+<li>No persistence  </li>
+</ul>
+<hr />
+<h2 id="core-statement">Core Statement</h2>
 <p>Explains decisions, never makes them.</p>
 
 
