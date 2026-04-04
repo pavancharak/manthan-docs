@@ -7,8 +7,10 @@ theme:
   palette:
     scheme: slate
   features:
+    - navigation.tabs
     - navigation.sections
     - navigation.expand
+    - navigation.instant
     - content.code.copy
     - content.tabs.link
 
@@ -33,6 +35,9 @@ extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascripts/mermaid.js
 
+extra_css:
+  - stylesheets/extra.css
+
 nav:
   - Home: index.md
   - How It Works: how-it-works.md
@@ -44,6 +49,4 @@ nav:
   - Decision Graphs: graphs.md
   - Contracts: contracts.md
   - System: system.md
-
-extra_css:
-  - stylesheets/extra.css
+  - Research: papers.md

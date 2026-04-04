@@ -19,7 +19,8 @@
 }
 
 .md-typeset h2 {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 0.8rem;
   font-weight: 600;
 }
 
@@ -32,7 +33,7 @@
 }
 
 /* ============================= */
-/* LINKS (FIX CLICK ISSUE) */
+/* LINKS */
 /* ============================= */
 
 .md-typeset a {
@@ -41,7 +42,6 @@
   text-decoration: none;
   position: relative;
   z-index: 10;
-  pointer-events: auto;
 }
 
 .md-typeset a:hover {
@@ -58,8 +58,12 @@
   z-index: 1;
 }
 
+.mermaid svg {
+  pointer-events: none;
+}
+
 /* ============================= */
-/* CONTENT LAYER FIX */
+/* CONTENT */
 /* ============================= */
 
 .md-content {
@@ -68,7 +72,7 @@
 }
 
 /* ============================= */
-/* CODE BLOCKS */
+/* CODE */
 /* ============================= */
 
 .md-typeset pre {
@@ -76,10 +80,88 @@
 }
 
 /* ============================= */
-/* MOBILE RESPONSIVE */
+/* HERO */
 /* ============================= */
 
-@media screen and (max-width: 768px) {
+.research-hero {
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+
+.research-hero h1 {
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+}
+
+.research-hero p {
+  max-width: 700px;
+  margin: 10px auto;
+  opacity: 0.75;
+}
+
+/* ============================= */
+/* CARDS */
+/* ============================= */
+
+.papers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.paper-card {
+  padding: 22px;
+  border-radius: 14px;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+}
+
+.paper-card:hover {
+  transform: translateY(-6px);
+  border-color: #6366f1;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.paper-card.featured {
+  background: linear-gradient(135deg, #1e293b, #020617);
+  border: 1px solid #6366f1;
+}
+
+.paper-card h3 {
+  font-size: 1.3rem;
+}
+
+.paper-card h4 {
+  font-size: 1.05rem;
+}
+
+.paper-card p {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* Links inside cards */
+.paper-card a::after {
+  content: " →";
+  transition: transform 0.2s ease;
+}
+
+.paper-card a:hover::after {
+  transform: translateX(4px);
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media screen and (max-width: 600px) {
+  .papers-grid {
+    grid-template-columns: 1fr;
+  }
+
   .md-typeset {
     padding: 0 16px;
   }
@@ -91,8 +173,4 @@
   .md-typeset h2 {
     font-size: 1.2rem;
   }
-}
-/* FIX: allow clicks through diagrams */
-.mermaid svg {
-  pointer-events: none;
 }
