@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#example" class="md-skip">
+        <a href="#contracts" class="md-skip">
           Skip to content
         </a>
       
@@ -432,6 +432,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -474,6 +476,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -486,6 +490,39 @@
     <span class="md-ellipsis">
       
         Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guarantees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guarantees
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Statement
       
     </span>
   </a>
@@ -544,6 +581,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -556,6 +595,39 @@
     <span class="md-ellipsis">
       
         Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guarantees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guarantees
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Statement
       
     </span>
   </a>
@@ -579,21 +651,41 @@
 
 
 
-  <h1>Contracts</h1>
-
+<h1 id="contracts">Contracts</h1>
 <p>Contracts define decision behavior.</p>
+<hr />
 <h2 id="example">Example</h2>
-<p>```</p>
-<p>intent: "fraud_detection"</p>
-<p>inputs:
-  amount: number</p>
-<p>behavior:
-  rules:
-    - condition: "amount &gt; 10000"
-      action: "reject"</p>
-<div class="highlight"><pre><span></span><code>- condition: &quot;true&quot;
-  action: &quot;approve&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">intent</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fraud_detection&quot;</span>
+
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">number</span>
+
+<span class="nt">behavior</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">rules</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;amount</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">10000&quot;</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;reject&quot;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;approve&quot;</span>
 </code></pre></div>
+<hr />
+<h2 id="rules">Rules</h2>
+<ul>
+<li>Deterministic  </li>
+<li>Order matters (top → bottom evaluation)  </li>
+<li>First matching rule applies  </li>
+<li>No ambiguity  </li>
+</ul>
+<hr />
+<h2 id="guarantees">Guarantees</h2>
+<ul>
+<li>Same input → same output  </li>
+<li>No randomness  </li>
+<li>No side effects  </li>
+</ul>
+<hr />
+<h2 id="core-statement">Core Statement</h2>
+<p>Contracts are the single source of truth for decisions.</p>
 
 
 
