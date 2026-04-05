@@ -1352,13 +1352,12 @@
 </blockquote>
 <hr />
 <h2 id="position-in-system">Position in System</h2>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<div class="mermaid">flowchart LR
 
 C[Canonical Input] --&gt; R[Rule Evaluation] --&gt; M[Match Resolution] --&gt; D[Decision]
 
 classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-class C,R,M,D main;
-</code></pre></div>
+class C,R,M,D main;</div>
 <hr />
 <h2 id="input">Input</h2>
 <p>The engine operates ONLY on canonicalized input.</p>
@@ -1404,7 +1403,7 @@ class C,R,M,D main;
 </ul>
 <hr />
 <h2 id="evaluation-flow">Evaluation Flow</h2>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<div class="mermaid">flowchart LR
 
 A[Rule 1] --&gt;|true| D[Decision]
 A --&gt;|false| B[Rule 2]
@@ -1413,8 +1412,7 @@ B --&gt;|false| C[Rule 3]
 C --&gt; D
 
 classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-class A,B,C,D main;
-</code></pre></div>
+class A,B,C,D main;</div>
 <hr />
 <h2 id="example-execution">Example Execution</h2>
 <h3 id="input_1">Input</h3>
@@ -1554,10 +1552,6 @@ It executes rules deterministically.</p>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-      
-        <script src="../javascripts/mermaid.js"></script>
       
     
   </body>

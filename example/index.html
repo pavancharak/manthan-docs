@@ -1401,7 +1401,7 @@ ELSE → approve
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="graph">Graph</h3>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<div class="mermaid">flowchart LR
 
 A[Age Check] --&gt; B[Eligibility]
 A --&gt; C[Document Verification]
@@ -1410,8 +1410,7 @@ B --&gt; D[Decision]
 C --&gt; D
 
 classDef node fill:#020617,stroke:#a78bfa,stroke-width:3px,color:#ffffff;
-class A,B,C,D node;
-</code></pre></div>
+class A,B,C,D node;</div>
 <h3 id="logic">Logic</h3>
 <ul>
 <li>user_age &lt; 18 → not eligible  </li>
@@ -1518,10 +1517,6 @@ No hidden state  </p>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-      
-        <script src="../javascripts/mermaid.js"></script>
       
     
   </body>

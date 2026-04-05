@@ -1134,7 +1134,7 @@
 <p>Manthan is a <strong>deterministic decision infrastructure</strong> built as layered components with strict execution guarantees.</p>
 <hr />
 <h2 id="system-flow">System Flow</h2>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<div class="mermaid">flowchart LR
 
 A[Input] --&gt; B[Canonicalization] --&gt; C[Decision Engine] --&gt; D[Intelligence Layer] --&gt; E[Enforcement]
 
@@ -1147,11 +1147,10 @@ classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
 classDef note fill:#020617,stroke:#64748b,stroke-width:1px,color:#9ca3af;
 
 class A,B,C,D,E main;
-class N1,N2,N3,N4 note;
-</code></pre></div>
+class N1,N2,N3,N4 note;</div>
 <hr />
 <h2 id="execution-pipeline">Execution Pipeline</h2>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<div class="mermaid">flowchart LR
 
 I[Input] --&gt; C[Canonicalization] --&gt; H[Deterministic Hash] --&gt; D[Decision Engine] --&gt; L[Intelligence Layer] --&gt; O[Output] --&gt; E[Enforcement]
 
@@ -1166,11 +1165,10 @@ classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
 classDef note fill:#020617,stroke:#64748b,stroke-width:1px,color:#9ca3af;
 
 class I,C,H,D,L,O,E main;
-class N1,N2,N3,N4,N5,N6 note;
-</code></pre></div>
+class N1,N2,N3,N4,N5,N6 note;</div>
 <hr />
 <h2 id="decision-graph-dependency-execution">Decision Graph (Dependency Execution)</h2>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<div class="mermaid">flowchart LR
 
 A[Input Check] --&gt; B[Risk Evaluation]
 A --&gt; C[Fraud Detection]
@@ -1181,29 +1179,28 @@ C --&gt; D
 D --&gt; E[Final Action]
 
 classDef node fill:#020617,stroke:#a78bfa,stroke-width:3px,color:#ffffff;
-class A,B,C,D,E node;
-</code></pre></div>
+class A,B,C,D,E node;</div>
 <hr />
 <h2 id="system-architecture-layered-view">System Architecture (Layered View)</h2>
-<div class="highlight"><pre><span></span><code>flowchart LR
+<div class="mermaid">flowchart LR
 
-subgraph InputLayer[&quot;Input Layer&quot;]
+subgraph InputLayer["Input Layer"]
 I1[Raw Input]
 C1[Canonicalization]
 end
 
-subgraph Core[&quot;Decision Core&quot;]
+subgraph Core["Decision Core"]
 D1[Decision Engine]
 L1[Intelligence Layer]
 G1[Decision Graph Engine]
 end
 
-subgraph Governance[&quot;Governance&quot;]
+subgraph Governance["Governance"]
 K1[Contracts]
 A1[Audit Log]
 end
 
-subgraph Execution[&quot;Execution&quot;]
+subgraph Execution["Execution"]
 E1[Enforcement]
 end
 
@@ -1225,8 +1222,7 @@ classDef exec fill:#020617,stroke:#a78bfa,stroke-width:3px,color:#ffffff;
 class I1,C1 input;
 class D1,L1,G1 core;
 class K1,A1 gov;
-class E1 exec;
-</code></pre></div>
+class E1 exec;</div>
 <hr />
 <h2 id="component-overview">Component Overview</h2>
 <h3 id="canonicalization">Canonicalization</h3>
@@ -1355,10 +1351,6 @@ class E1 exec;
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-      
-        <script src="../javascripts/mermaid.js"></script>
       
     
   </body>
