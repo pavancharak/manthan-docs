@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://pavancharak.github.io/manthan-docs/architecture/">
       
       
-        <link rel="prev" href="../api/">
+        <link rel="prev" href="../system/">
       
       
-        <link rel="next" href="../decision-engine/">
+        <link rel="next" href="../api/">
       
       
         
@@ -204,51 +204,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../how-it-works/" class="md-tabs__link">
+      <a href="../system/" class="md-tabs__link">
         
   
   
     
   
-  How It Works
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../example/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Example Walkthrough
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../api/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  API Reference
+  System
 
       </a>
     </li>
@@ -282,89 +244,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../decision-engine/" class="md-tabs__link">
+      <a href="../api/" class="md-tabs__link">
         
   
   
     
   
-  Decision Engine
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../intelligence/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Intelligence Layer
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../graphs/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Decision Graphs
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../contracts/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Contracts
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../system/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  System
+  API Reference
 
       </a>
     </li>
@@ -457,68 +343,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-it-works/" class="md-nav__link">
+      <a href="../system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    How It Works
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../example/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Example Walkthrough
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    API Reference
+    System
   
 
     
@@ -772,122 +604,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../decision-engine/" class="md-nav__link">
+      <a href="../api/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Decision Engine
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intelligence/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Intelligence Layer
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../graphs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Decision Graphs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../contracts/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Contracts
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../system/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    System
+    API Reference
   
 
     
@@ -1134,7 +858,7 @@
 <p>Manthan is a <strong>deterministic decision infrastructure</strong> built as layered components with strict execution guarantees.</p>
 <hr />
 <h2 id="system-flow">System Flow</h2>
-<div class="mermaid">flowchart LR
+<div class="highlight"><pre><span></span><code>flowchart LR
 
 A[Input] --&gt; B[Canonicalization] --&gt; C[Decision Engine] --&gt; D[Intelligence Layer] --&gt; E[Enforcement]
 
@@ -1147,10 +871,11 @@ classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
 classDef note fill:#020617,stroke:#64748b,stroke-width:1px,color:#9ca3af;
 
 class A,B,C,D,E main;
-class N1,N2,N3,N4 note;</div>
+class N1,N2,N3,N4 note;
+</code></pre></div>
 <hr />
 <h2 id="execution-pipeline">Execution Pipeline</h2>
-<div class="mermaid">flowchart LR
+<div class="highlight"><pre><span></span><code>flowchart LR
 
 I[Input] --&gt; C[Canonicalization] --&gt; H[Deterministic Hash] --&gt; D[Decision Engine] --&gt; L[Intelligence Layer] --&gt; O[Output] --&gt; E[Enforcement]
 
@@ -1165,10 +890,11 @@ classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
 classDef note fill:#020617,stroke:#64748b,stroke-width:1px,color:#9ca3af;
 
 class I,C,H,D,L,O,E main;
-class N1,N2,N3,N4,N5,N6 note;</div>
+class N1,N2,N3,N4,N5,N6 note;
+</code></pre></div>
 <hr />
 <h2 id="decision-graph-dependency-execution">Decision Graph (Dependency Execution)</h2>
-<div class="mermaid">flowchart LR
+<div class="highlight"><pre><span></span><code>flowchart LR
 
 A[Input Check] --&gt; B[Risk Evaluation]
 A --&gt; C[Fraud Detection]
@@ -1179,28 +905,29 @@ C --&gt; D
 D --&gt; E[Final Action]
 
 classDef node fill:#020617,stroke:#a78bfa,stroke-width:3px,color:#ffffff;
-class A,B,C,D,E node;</div>
+class A,B,C,D,E node;
+</code></pre></div>
 <hr />
 <h2 id="system-architecture-layered-view">System Architecture (Layered View)</h2>
-<div class="mermaid">flowchart LR
+<div class="highlight"><pre><span></span><code>flowchart LR
 
-subgraph InputLayer["Input Layer"]
+subgraph InputLayer[&quot;Input Layer&quot;]
 I1[Raw Input]
 C1[Canonicalization]
 end
 
-subgraph Core["Decision Core"]
+subgraph Core[&quot;Decision Core&quot;]
 D1[Decision Engine]
 L1[Intelligence Layer]
 G1[Decision Graph Engine]
 end
 
-subgraph Governance["Governance"]
+subgraph Governance[&quot;Governance&quot;]
 K1[Contracts]
 A1[Audit Log]
 end
 
-subgraph Execution["Execution"]
+subgraph Execution[&quot;Execution&quot;]
 E1[Enforcement]
 end
 
@@ -1222,7 +949,8 @@ classDef exec fill:#020617,stroke:#a78bfa,stroke-width:3px,color:#ffffff;
 class I1,C1 input;
 class D1,L1,G1 core;
 class K1,A1 gov;
-class E1 exec;</div>
+class E1 exec;
+</code></pre></div>
 <hr />
 <h2 id="component-overview">Component Overview</h2>
 <h3 id="canonicalization">Canonicalization</h3>
@@ -1351,10 +1079,6 @@ class E1 exec;</div>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-      
-        <script src="../javascripts/mermaid.js"></script>
       
     
   </body>
