@@ -1,136 +1,458 @@
-\# PR Gate — Deterministic Decision Enforcement
+<!DOCTYPE html>
 
+<html lang="en">
 
+<head>
 
-The PR Gate is the enforcement layer of Manthan.
+&#x20; <meta charset="UTF-8" />
 
+&#x20; <title>PR Gate — Manthan</title>
 
+&#x20; <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-It evaluates GitHub pull requests against decision contracts and produces a deterministic verdict.
 
 
+&#x20; <style>
 
-\---
+&#x20;   :root {
 
+&#x20;     --bg: #0b0f14;
 
+&#x20;     --card: #11161d;
 
-\## What It Does
+&#x20;     --border: #1f2933;
 
+&#x20;     --text: #e6edf3;
 
+&#x20;     --muted: #8b949e;
 
-For every pull request:
+&#x20;     --accent: linear-gradient(90deg, #58a6ff, #f97316);
 
+&#x20;     --green: #3fb950;
 
+&#x20;     --red: #f85149;
 
-\* Loads the relevant contract
+&#x20;   }
 
-\* Evaluates PR data against defined rules
 
-\* Produces a verdict (PASS / FAIL)
 
-\* Enforces the result via PR comment and status
+&#x20;   \* {
 
+&#x20;     box-sizing: border-box;
 
+&#x20;   }
 
-Same input → same decision. Every time.
 
 
+&#x20;   body {
 
-\---
+&#x20;     margin: 0;
 
+&#x20;     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
+&#x20;     background: radial-gradient(circle at top, #0f1620, #0b0f14);
 
-\## Execution Flow
+&#x20;     color: var(--text);
 
+&#x20;     line-height: 1.6;
 
+&#x20;   }
 
-1\. Pull request event triggers webhook
 
-2\. Manthan ingests PR data
 
-3\. Contract is selected
+&#x20;   .container {
 
-4\. Decision engine evaluates inputs
+&#x20;     max-width: 960px;
 
-5\. Verdict is generated
+&#x20;     margin: auto;
 
-6\. Result is posted to the PR
+&#x20;     padding: 80px 20px;
 
+&#x20;   }
 
 
-\---
 
+&#x20;   h1 {
 
+&#x20;     font-size: 48px;
 
-\## Example Output
+&#x20;     margin: 0;
 
+&#x20;     font-weight: 700;
 
+&#x20;     letter-spacing: -1px;
 
-\*\*Decision: FAIL\*\*
+&#x20;   }
 
 
 
-Contract: api-schema-v1
+&#x20;   .subtitle {
 
+&#x20;     font-size: 18px;
 
+&#x20;     margin-top: 10px;
 
-Violations:
+&#x20;     background: var(--accent);
 
+&#x20;     -webkit-background-clip: text;
 
+&#x20;     -webkit-text-fill-color: transparent;
 
-\* Missing field `userId`
+&#x20;     font-weight: 600;
 
-\* Endpoint `/create` not defined
+&#x20;   }
 
 
 
-Trace:
+&#x20;   p {
 
+&#x20;     color: var(--muted);
 
+&#x20;     font-size: 16px;
 
-\* input.schema.required
+&#x20;   }
 
-\* endpoint.registry.match
 
 
+&#x20;   .hero {
 
-evaluation\_id: 8f3a1c
+&#x20;     margin-bottom: 60px;
 
-contract\_version: v1
+&#x20;   }
 
 
 
-\---
+&#x20;   .tagline {
 
+&#x20;     margin-top: 20px;
 
+&#x20;     font-size: 20px;
 
-\## Output Structure
+&#x20;     font-weight: 600;
 
+&#x20;   }
 
 
-Manthan produces both:
 
+&#x20;   .divider {
 
+&#x20;     margin: 60px 0;
 
-\### Human-readable output
+&#x20;     border-top: 1px solid var(--border);
 
+&#x20;   }
 
 
-\* Clear verdict
 
-\* Violations
+&#x20;   h2 {
 
-\* Trace
+&#x20;     font-size: 14px;
 
+&#x20;     text-transform: uppercase;
 
+&#x20;     letter-spacing: 1.5px;
 
-\### Machine-readable output (JSON)
+&#x20;     color: var(--muted);
 
+&#x20;     margin-bottom: 15px;
 
+&#x20;   }
 
-```json
 
-{
+
+&#x20;   ul, ol {
+
+&#x20;     padding-left: 20px;
+
+&#x20;   }
+
+
+
+&#x20;   li {
+
+&#x20;     margin-bottom: 6px;
+
+&#x20;   }
+
+
+
+&#x20;   .card {
+
+&#x20;     background: var(--card);
+
+&#x20;     border: 1px solid var(--border);
+
+&#x20;     border-radius: 14px;
+
+&#x20;     padding: 24px;
+
+&#x20;     margin-top: 20px;
+
+&#x20;   }
+
+
+
+&#x20;   .verdict {
+
+&#x20;     font-size: 22px;
+
+&#x20;     font-weight: bold;
+
+&#x20;     margin-bottom: 10px;
+
+&#x20;   }
+
+
+
+&#x20;   .fail {
+
+&#x20;     color: var(--red);
+
+&#x20;   }
+
+
+
+&#x20;   .pass {
+
+&#x20;     color: var(--green);
+
+&#x20;   }
+
+
+
+&#x20;   code {
+
+&#x20;     background: #161b22;
+
+&#x20;     padding: 4px 8px;
+
+&#x20;     border-radius: 6px;
+
+&#x20;     font-size: 13px;
+
+&#x20;   }
+
+
+
+&#x20;   pre {
+
+&#x20;     background: #161b22;
+
+&#x20;     padding: 20px;
+
+&#x20;     border-radius: 12px;
+
+&#x20;     overflow-x: auto;
+
+&#x20;     border: 1px solid var(--border);
+
+&#x20;     margin-top: 15px;
+
+&#x20;   }
+
+
+
+&#x20;   .highlight {
+
+&#x20;     font-weight: 600;
+
+&#x20;     color: var(--text);
+
+&#x20;   }
+
+
+
+&#x20;   .footer {
+
+&#x20;     margin-top: 80px;
+
+&#x20;     font-size: 14px;
+
+&#x20;     color: var(--muted);
+
+&#x20;     text-align: center;
+
+&#x20;   }
+
+
+
+&#x20;   .glow {
+
+&#x20;     color: #fff;
+
+&#x20;     text-shadow: 0 0 12px rgba(88,166,255,0.4);
+
+&#x20;   }
+
+&#x20; </style>
+
+</head>
+
+
+
+<body>
+
+&#x20; <div class="container">
+
+
+
+&#x20;   <div class="hero">
+
+&#x20;     <h1 class="glow">PR Gate</h1>
+
+&#x20;     <div class="subtitle">Deterministic Decision Enforcement</div>
+
+
+
+&#x20;     <p class="tagline">
+
+&#x20;       This is not review. This is execution.
+
+&#x20;     </p>
+
+
+
+&#x20;     <p>
+
+&#x20;       The PR Gate evaluates GitHub pull requests against decision contracts
+
+&#x20;       and produces a <span class="highlight">deterministic, enforceable verdict</span>.
+
+&#x20;     </p>
+
+&#x20;   </div>
+
+
+
+&#x20;   <div class="divider"></div>
+
+
+
+&#x20;   <h2>Core Function</h2>
+
+&#x20;   <ul>
+
+&#x20;     <li>Resolve contract</li>
+
+&#x20;     <li>Evaluate PR against rules</li>
+
+&#x20;     <li>Produce verdict (PASS / FAIL)</li>
+
+&#x20;     <li>Enforce directly in PR</li>
+
+&#x20;   </ul>
+
+
+
+&#x20;   <p class="highlight">Same input → same decision.</p>
+
+
+
+&#x20;   <div class="divider"></div>
+
+
+
+&#x20;   <h2>Execution Model</h2>
+
+&#x20;   <ol>
+
+&#x20;     <li>Webhook triggered</li>
+
+&#x20;     <li>PR state ingested</li>
+
+&#x20;     <li>Contract resolved</li>
+
+&#x20;     <li>Evaluation executed</li>
+
+&#x20;     <li>Verdict computed</li>
+
+&#x20;     <li>Result enforced</li>
+
+&#x20;   </ol>
+
+
+
+&#x20;   <div class="divider"></div>
+
+
+
+&#x20;   <h2>Example Verdict</h2>
+
+
+
+&#x20;   <div class="card">
+
+&#x20;     <div class="verdict fail">Decision: FAIL</div>
+
+
+
+&#x20;     <p>Contract: <code>api-schema-v1</code></p>
+
+
+
+&#x20;     <p><strong>Violations</strong></p>
+
+&#x20;     <ul>
+
+&#x20;       <li>Missing field <code>userId</code></li>
+
+&#x20;       <li>Endpoint <code>/create</code> not defined</li>
+
+&#x20;     </ul>
+
+
+
+&#x20;     <p><strong>Trace</strong></p>
+
+&#x20;     <ul>
+
+&#x20;       <li>input.schema.required</li>
+
+&#x20;       <li>endpoint.registry.match</li>
+
+&#x20;     </ul>
+
+
+
+&#x20;     <p>
+
+&#x20;       evaluation\_id: <code>8f3a1c</code><br>
+
+&#x20;       contract\_version: <code>v1</code>
+
+&#x20;     </p>
+
+&#x20;   </div>
+
+
+
+&#x20;   <div class="divider"></div>
+
+
+
+&#x20;   <h2>Output Model</h2>
+
+
+
+&#x20;   <p class="highlight">Human Layer</p>
+
+&#x20;   <ul>
+
+&#x20;     <li>Verdict</li>
+
+&#x20;     <li>Violations</li>
+
+&#x20;     <li>Trace</li>
+
+&#x20;   </ul>
+
+
+
+&#x20;   <p class="highlight">Machine Layer (Canonical JSON)</p>
+
+
+
+&#x20;   <pre>{
 
 &#x20; "decision": "FAIL",
 
@@ -156,135 +478,127 @@ Manthan produces both:
 
 &#x20; "contract\_version": "v1"
 
-}
+}</pre>
 
-```
 
 
+&#x20;   <div class="divider"></div>
 
-\---
 
 
+&#x20;   <h2>Determinism Guarantee</h2>
 
-\## Determinism Guarantee
 
 
+&#x20;   <ul>
 
-Given:
+&#x20;     <li>Same PR</li>
 
+&#x20;     <li>Same contract</li>
 
+&#x20;     <li>Same repository state</li>
 
-\* Same PR
+&#x20;   </ul>
 
-\* Same contract
 
-\* Same repository state
 
+&#x20;   <p class="highlight">Any deviation is a system fault.</p>
 
 
-The PR Gate guarantees:
 
+&#x20;   <div class="divider"></div>
 
 
-\* Same verdict
 
-\* Same violations
+&#x20;   <h2>Enforcement</h2>
 
-\* Same trace
 
-\* Same evaluation\_id
 
+&#x20;   <ul>
 
+&#x20;     <li><span class="pass">PASS</span> → proceeds</li>
 
-No drift. No ambiguity.
+&#x20;     <li><span class="fail">FAIL</span> → blocked</li>
 
+&#x20;   </ul>
 
 
-\---
 
+&#x20;   <p>
 
+&#x20;     No suggestions.<br>
 
-\## Enforcement Behavior
+&#x20;     No approximations.<br>
 
+&#x20;     <span class="highlight">Only enforced decisions.</span>
 
+&#x20;   </p>
 
-\* PASS → PR can proceed
 
-\* FAIL → PR is blocked or flagged
 
+&#x20;   <div class="divider"></div>
 
 
-The PR Gate does not suggest changes.
 
-It enforces decisions.
+&#x20;   <h2>Positioning</h2>
 
 
 
-\---
+&#x20;   <ul>
 
+&#x20;     <li>Human → subjective</li>
 
+&#x20;     <li>AI → probabilistic</li>
 
-\## Design Principles
+&#x20;     <li>CI → test-based</li>
 
+&#x20;   </ul>
 
 
-\* Deterministic execution
 
-\* Contract-driven evaluation
+&#x20;   <p class="subtitle">
 
-\* Idempotent processing
+&#x20;     Manthan → Deterministic decision enforcement
 
-\* Traceable output
+&#x20;   </p>
 
 
 
-\---
+&#x20;   <div class="divider"></div>
 
 
 
-\## Positioning
+&#x20;   <h2>Status</h2>
 
 
 
-Traditional PR review:
+&#x20;   <p>Manthan v0.2 — PR Gate (locked)</p>
 
 
 
-\* Human → subjective
+&#x20;   <ul>
 
-\* AI → probabilistic
+&#x20;     <li>GitHub App integration</li>
 
+&#x20;     <li>Idempotent processing</li>
 
+&#x20;     <li>Reproducible outputs</li>
 
-Manthan PR Gate:
+&#x20;   </ul>
 
 
 
-\* Deterministic
+&#x20;   <div class="footer">
 
-\* Enforced
+&#x20;     No runtime mutation. Versioned evolution only.
 
-\* Reproducible
+&#x20;   </div>
 
 
 
-\---
+&#x20; </div>
 
+</body>
 
-
-\## Status
-
-
-
-Manthan v0.2 — PR Gate (locked)
-
-
-
-\* GitHub App integration
-
-\* Idempotent webhook handling
-
-\* Stable evaluation output
-
-
+</html>
 
