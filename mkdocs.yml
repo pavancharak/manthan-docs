@@ -35,14 +35,9 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 
-# ✅ KEEP THIS (manual Mermaid)
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascripts/mermaid.js
-
-# ❌ REMOVE THIS (important)
-# extra:
-#   mermaid: true
 
 extra_css:
   - stylesheets/extra.css
