@@ -1,7 +1,7 @@
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
   if (typeof mermaid !== "undefined") {
     mermaid.initialize({
-      startOnLoad: true,
+      startOnLoad: false,
       theme: "default",
       securityLevel: "loose"
     });

@@ -39,6 +39,9 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid.js
 
 
 extra_css:
@@ -57,5 +60,3 @@ nav:
   - System: system.md
   - Research: papers.md
 
-extra:
-  mermaid: true

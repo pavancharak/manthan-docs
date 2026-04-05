@@ -848,39 +848,70 @@ flowchart LR
     D --&gt; E[Enforcement]
 Step 1 — Canonicalization</p>
 <p>Goal: Remove ambiguity from input</p>
-<p>Keys are sorted
+<p>Every decision begins by transforming input into a stable and comparable form.</p>
+<p>What happens
+Keys are sorted
 Values are normalized
 Structure is stabilized
+Result
 Same logical input → Same canonical form
 Step 2 — Deterministic Identity</p>
-<p>Goal: Assign a stable identity</p>
-<p>Same input → same hash
+<p>Goal: Assign a stable identity to input</p>
+<p>Manthan converts canonical input into a deterministic hash.</p>
+<p>Properties
+Same input → same hash
 Different input → different hash
 Stable across executions
-Step 3 — Decision Engine</p>
+Why this matters</p>
+<p>This hash becomes the anchor for traceability.</p>
+<p>Step 3 — Decision Engine</p>
 <p>Goal: Compute outcome using rules</p>
-<p>Fixed execution order
+<p>This is where decisions are made — not suggested.</p>
+<p>Properties
+Fixed execution order
 First-match wins
 No randomness
 No hidden state
+Example
 IF amount &gt; 10000 → reject
 ELSE → approve
-Step 4 — Intelligence Layer</p>
+Result</p>
+<p>A deterministic decision.</p>
+<p>Step 4 — Intelligence Layer</p>
 <p>Goal: Add meaning without changing outcome</p>
-<p>Score
+<p>This layer enriches the decision with structured metadata.</p>
+<p>Adds
+Score
 Confidence
 Priority
-Explanation</p>
+Explanation
+Critical constraint</p>
 <p>This layer does not change the decision</p>
-<p>Step 5 — Decision Graph
+<p>Step 5 — Decision Graph</p>
+<p>Goal: Handle multi-step dependencies</p>
+<p>Example
 Step 6 — Enforcement</p>
 <p>Goal: Apply decision to the real world</p>
-<p>Block GitHub PR
+<p>Examples
+Block GitHub PR
 Reject API request
 Trigger workflow
-The Guarantee</p>
+Result</p>
+<p>Real-world effect</p>
+<p>The Guarantee</p>
+<p>Manthan guarantees:</p>
 <p>Same Input → Same Decision → Same Outcome</p>
-<p>Execution Summary
+<p>Always.</p>
+<p>Why This Matters</p>
+<p>Without determinism:</p>
+<p>Decisions cannot be trusted
+Systems cannot be audited
+Outcomes cannot be enforced</p>
+<p>With Manthan:</p>
+<p>Every decision is traceable
+Every outcome is predictable
+Every action is enforceable
+Execution Summary
 Core Principle</p>
 <p>Determinism is not a feature.
 It is the foundation.</p>
@@ -939,10 +970,6 @@ It is the foundation.</p>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-      
-        <script src="../javascripts/mermaid.js"></script>
       
     
   </body>
