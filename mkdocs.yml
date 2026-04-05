@@ -27,11 +27,7 @@ plugins:
 
 markdown_extensions:
   - attr_list
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight
@@ -39,24 +35,12 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 
-extra_javascript:
-  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
-  - javascripts/mermaid.js
-
-
 extra_css:
   - stylesheets/extra.css
 
 nav:
   - Home: index.md
-  - How It Works: how-it-works.md
-  - Example Walkthrough: example.md
-  - API Reference: api.md
-  - Architecture: architecture.md
-  - Decision Engine: decision-engine.md
-  - Intelligence Layer: intelligence.md
-  - Decision Graphs: graphs.md
-  - Contracts: contracts.md
   - System: system.md
+  - Architecture: architecture.md
+  - API Reference: api.md
   - Research: papers.md
-
