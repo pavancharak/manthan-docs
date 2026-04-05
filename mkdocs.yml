@@ -6,7 +6,7 @@ theme:
   name: material
 
   palette:
-    scheme: default   # 🔥 switched from slate → light mode
+    scheme: default
     primary: white
     accent: indigo
 
@@ -27,11 +27,7 @@ plugins:
 
 markdown_extensions:
   - attr_list
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight
@@ -39,9 +35,14 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 
+# ✅ KEEP THIS (manual Mermaid)
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascripts/mermaid.js
+
+# ❌ REMOVE THIS (important)
+# extra:
+#   mermaid: true
 
 extra_css:
   - stylesheets/extra.css

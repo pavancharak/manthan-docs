@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#how-it-works" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -458,6 +463,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How It Works
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -475,6 +500,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -740,6 +795,27 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -756,144 +832,89 @@
 
 
 
-  <h1>How It Works</h1>
-
-<p># How It Works</p>
-<p>Manthan executes decisions through a **deterministic pipeline**.</p>
-<p>---</p>
-<p>## End-to-End Flow</p>
-<pre class="mermaid"><code>
+<h1 id="how-it-works">How It Works</h1>
+<p>Manthan executes decisions through a <strong>deterministic pipeline</strong>.</p>
+<p>Not probabilistic.<br />
+Not approximate.<br />
+Not best-effort.  </p>
+<p><strong>Deterministic.</strong></p>
+<hr />
+<h2 id="the-flow">The Flow</h2>
+<p>```mermaid
 flowchart LR
-
-
-
-A\[Input] --&gt; B\[Canonicalization] --&gt; C\[Decision Engine] --&gt; D\[Intelligence Layer] --&gt; E\[Enforcement]
-
-
-
-classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-
-class A,B,C,D,E main;
-</code></pre>
-<p>---</p>
-<p>## Step 1 — Canonicalization</p>
-<p>**Goal:** Remove ambiguity from input</p>
-<p>### What happens:</p>
-<p>- Keys are sorted</p>
-<p>- Values are normalized</p>
-<p>- Structure is stabilized</p>
-<p>### Output:</p>
-<p>A **canonical representation** of input</p>
-<div class="highlight"><pre><span></span><code>Same logical input → Same canonical form
-</code></pre></div>
-<p>---</p>
-<p>## Step 2 — Deterministic Hash</p>
-<p>**Goal:** Create stable identity for input</p>
-<p>### What happens:</p>
-<p>- Canonical input → hashed</p>
-<p>- Same input → same hash</p>
-<p>- Different input → different hash</p>
-<p>### Output:</p>
-<p>A **deterministic identifier**</p>
-<p>---</p>
-<p>## Step 3 — Decision Engine</p>
-<p>**Goal:** Compute decision using rules</p>
-<p>### Rules:</p>
-<p>- Fixed execution order  </p>
-<p>- First-match wins  </p>
-<p>- No randomness  </p>
-<p>### Example:</p>
-<div class="highlight"><pre><span></span><code>IF amount &gt; 10000 → reject
-
+    A[Input] --&gt; B[Canonicalization]
+    B --&gt; C[Decision Engine]
+    C --&gt; D[Intelligence Layer]
+    D --&gt; E[Enforcement]
+Step 1 — Canonicalization</p>
+<p>Goal: Remove ambiguity from input</p>
+<p>Every decision begins by transforming input into a stable and comparable form.</p>
+<p>What happens
+Keys are sorted
+Values are normalized
+Structure is stabilized
+Result
+Same logical input → Same canonical form
+Step 2 — Deterministic Identity</p>
+<p>Goal: Assign a stable identity to input</p>
+<p>Manthan converts canonical input into a deterministic hash.</p>
+<p>Properties
+Same input → same hash
+Different input → different hash
+Stable across executions
+Why this matters</p>
+<p>This hash becomes the anchor for traceability.</p>
+<p>Step 3 — Decision Engine</p>
+<p>Goal: Compute outcome using rules</p>
+<p>This is where decisions are made — not suggested.</p>
+<p>Properties
+Fixed execution order
+First-match wins
+No randomness
+No hidden state
+Example
+IF amount &gt; 10000 → reject
 ELSE → approve
-</code></pre></div>
-<p>### Output:</p>
-<p>A **deterministic decision**</p>
-<p>---</p>
-<p>## Step 4 — Intelligence Layer</p>
-<p>**Goal:** Add structured metadata</p>
-<p>### Adds:</p>
-<p>- Score  </p>
-<p>- Confidence  </p>
-<p>- Priority  </p>
-<p>- Explanation  </p>
-<p>### Important:</p>
-<p>This layer **DOES NOT change the decision**</p>
-<p>---</p>
-<p>## Step 5 — Decision Graph (if applicable)</p>
-<p>**Goal:** Handle multi-step dependencies</p>
-<p>### Properties:</p>
-<p>- DAG only  </p>
-<p>- No cycles  </p>
-<p>- Topological execution  </p>
-<p>### Example:</p>
-<pre class="mermaid"><code>
-flowchart LR
-
-
-
-A\[Input Check] --&gt; B\[Risk Evaluation]
-
-A --&gt; C\[Fraud Detection]
-
-
-
-B --&gt; D\[Decision]
-
-C --&gt; D
-
-
-
-classDef node fill:#020617,stroke:#a78bfa,stroke-width:3px,color:#ffffff;
-
-class A,B,C,D node;
-</code></pre>
-<p>---</p>
-<p>## Step 6 — Enforcement</p>
-<p>**Goal:** Apply decision externally</p>
-<p>### Examples:</p>
-<p>- Block GitHub PR  </p>
-<p>- Reject API request  </p>
-<p>- Trigger workflow  </p>
-<p>### Output:</p>
-<p>**Real-world effect**</p>
-<p>---</p>
-<p>## Determinism Guarantee</p>
+Result</p>
+<p>A deterministic decision.</p>
+<p>Step 4 — Intelligence Layer</p>
+<p>Goal: Add meaning without changing outcome</p>
+<p>This layer enriches the decision with structured metadata.</p>
+<p>Adds
+Score
+Confidence
+Priority
+Explanation
+Critical constraint</p>
+<p>This layer does not change the decision</p>
+<p>Step 5 — Decision Graph</p>
+<p>Goal: Handle multi-step dependencies</p>
+<p>Example
+Step 6 — Enforcement</p>
+<p>Goal: Apply decision to the real world</p>
+<p>Examples
+Block GitHub PR
+Reject API request
+Trigger workflow
+Result</p>
+<p>Real-world effect</p>
+<p>The Guarantee</p>
 <p>Manthan guarantees:</p>
-<blockquote>
-<p>**Same Input → Same Output → Always**</p>
-</blockquote>
-<p>---</p>
-<p>## Why This Matters</p>
+<p>Same Input → Same Decision → Same Outcome</p>
+<p>Always.</p>
+<p>Why This Matters</p>
 <p>Without determinism:</p>
-<p>- Decisions cannot be trusted  </p>
-<p>- Systems cannot be audited  </p>
-<p>- Outcomes cannot be enforced  </p>
+<p>Decisions cannot be trusted
+Systems cannot be audited
+Outcomes cannot be enforced</p>
 <p>With Manthan:</p>
-<p>- Every decision is traceable  </p>
-<p>- Every output is predictable  </p>
-<p>- Every action is enforceable  </p>
-<p>---</p>
-<p>## Execution Summary</p>
-<pre class="mermaid"><code>
-flowchart LR
-
-
-
-I\[Input] --&gt; C\[Canonicalization] --&gt; H\[Hash] --&gt; D\[Decision Engine] --&gt; L\[Intelligence] --&gt; E\[Enforcement]
-
-
-
-classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-
-class I,C,H,D,L,E main;
-</code></pre>
-<p>---</p>
-<p>## Core Principle</p>
-<blockquote>
-<p>Determinism is not a feature.  </p>
-<p>It is the foundation.</p>
-</blockquote>
+<p>Every decision is traceable
+Every outcome is predictable
+Every action is enforceable
+Execution Summary
+Core Principle</p>
+<p>Determinism is not a feature.
+It is the foundation.</p>
 
 
 

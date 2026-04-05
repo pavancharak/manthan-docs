@@ -120,4 +120,3 @@ Core Principle
 
 Determinism is not a feature.
 It is the foundation.
-
