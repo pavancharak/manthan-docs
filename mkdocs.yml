@@ -4,8 +4,16 @@ site_url: https://pavancharak.github.io/manthan-docs/
 
 theme:
   name: material
+
   palette:
-    scheme: slate
+    scheme: default   # 🔥 switched from slate → light mode
+    primary: white
+    accent: indigo
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
   features:
     - navigation.tabs
     - navigation.sections
