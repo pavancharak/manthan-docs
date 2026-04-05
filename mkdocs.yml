@@ -41,6 +41,4 @@ extra_css:
 nav:
   - Home: index.md
   - System: system.md
-  - Architecture: architecture.md
-  - API Reference: api.md
   - Research: papers.md
