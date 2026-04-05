@@ -41,4 +41,5 @@ extra_css:
 nav:
   - Home: index.md
   - System: system.md
-  - Research: papers.md
+  - Research: pa0pers.md
+  - PR Gate: pr-gate.md
