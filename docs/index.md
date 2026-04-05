@@ -68,8 +68,6 @@ Manthan operates in <strong>decision mode</strong>.
 
 <div style="text-align:center; line-height:2;">
   <a href="system/"><strong>System</strong></a><br>
-  <a href="architecture/">Architecture</a><br>
-  <a href="api/">API</a><br>
   <a href="papers/">Research</a>
 </div>
 
@@ -114,6 +112,10 @@ LinkedIn
 GitHub App
 </a><br>
 
+📖 <a href="https://manthansystems.substack.com/" target="_blank">
+Substack
+</a>
+</p>
 
 <br>
 

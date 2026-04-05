@@ -1,146 +1,116 @@
-\# Research
-
-
+# Research
 
 <div class="research-hero">
-
-&#x20; <h1>Decision Infrastructure Research</h1>
-
-&#x20; <p>
-
-&#x20;   Manthan establishes a new paradigm where decisions are deterministic,
-
-&#x20;   auditable, and enforceable — forming the foundation of reliable computational systems.
-
-&#x20; </p>
-
+  <h1>Decision Infrastructure</h1>
+  <p>
+    Manthan defines a new class of systems where decisions are deterministic,
+    auditable, and enforceable.
+  </p>
+  <p>
+    This research establishes decisions as a first-class primitive in software systems.
+  </p>
 </div>
 
+---
 
+## The Premise
 
-\---
+Modern AI systems generate outputs.
 
+They do not make decisions.
 
+- Outputs are probabilistic  
+- Behavior is non-deterministic  
+- Outcomes are not enforceable  
 
-\## 🧠 Core System
+This creates a fundamental gap.
 
+> Systems can generate — but they cannot be trusted to decide.
 
+---
+
+## 🧠 Core System
 
 <div class="paper-card featured">
-
-&#x20; <h3>Manthan OS</h3>
-
-&#x20; <p>Deterministic Decision Infrastructure for Verifiable, Auditable, and Enforceable Computation</p>
-
-&#x20; <a href="../papers/manthan-os.pdf" target="\_blank">Read Paper</a>
-
+  <h3>Manthan OS</h3>
+  <p>Deterministic Decision Infrastructure for Verifiable, Auditable, and Enforceable Computation</p>
+  <a href="../papers/manthan-os.pdf" target="_blank">Read Paper</a>
 </div>
 
+---
 
+## ⚙️ Decision Systems
 
-\---
-
-
-
-\## ⚙️ Decision Systems
-
-
+<p>
+These works define how decisions are structured, executed, and enforced as deterministic systems.
+</p>
 
 <div class="papers-grid">
 
-
+<div class="paper-card">
+  <h4>Decision Consistency & Enforcement</h4>
+  <p>Framework for Reliable Computational Governance</p>
+  <a href="../papers/decision-consistency-enforcement.pdf" target="_blank">View</a>
+</div>
 
 <div class="paper-card">
-
-&#x20; <h4>Decision Consistency \& Enforcement</h4>
-
-&#x20; <p>Framework for Reliable Computational Governance</p>
-
-&#x20; <a href="../papers/decision-consistency-enforcement.pdf" target="\_blank">View</a>
+  <h4>Distributed Decision Systems</h4>
+  <p>Deterministic Consensus Model</p>
+  <a href="../papers/distributed-decision-systems.pdf" target="_blank">View</a>
+</div>
 
 </div>
 
+---
 
+## 🤖 AI Systems
 
-<div class="paper-card">
-
-&#x20; <h4>Distributed Decision Systems</h4>
-
-&#x20; <p>Deterministic Consensus Model</p>
-
-&#x20; <a href="../papers/distributed-decision-systems.pdf" target="\_blank">View</a>
-
-</div>
-
-
-
-</div>
-
-
-
-\---
-
-
-
-\## 🤖 AI Alignment
-
-
+<p>
+AI systems are effective at generation, but require deterministic layers for reliable execution.
+</p>
 
 <div class="papers-grid">
 
-
-
 <div class="paper-card">
-
-&#x20; <h4>AI Alignment Infrastructure</h4>
-
-&#x20; <p>Enforcing Verifiable Behavior in Autonomous Systems</p>
-
-&#x20; <a href="../papers/ai-alignment-decision-infrastructure.pdf" target="\_blank">View</a>
+  <h4>AI Alignment Infrastructure</h4>
+  <p>Enforcing Verifiable Behavior in Autonomous Systems</p>
+  <a href="../papers/ai-alignment-decision-infrastructure.pdf" target="_blank">View</a>
+</div>
 
 </div>
 
+---
 
+## 🏛️ Governance & Compliance
 
-</div>
-
-
-
-\---
-
-
-
-\## 🏛️ Governance \& Compliance
-
-
+<p>
+These works explore how deterministic decision systems enable auditability, compliance, and control.
+</p>
 
 <div class="papers-grid">
 
-
+<div class="paper-card">
+  <h4>Auditability & Compliance</h4>
+  <p>Framework for Verifiable Governance</p>
+  <a href="../papers/decision-auditability-compliance.pdf" target="_blank">View</a>
+</div>
 
 <div class="paper-card">
-
-&#x20; <h4>Auditability \& Compliance</h4>
-
-&#x20; <p>Framework for Verifiable Governance</p>
-
-&#x20; <a href="../papers/decision-auditability-compliance.pdf" target="\_blank">View</a>
+  <h4>Auditability (Formal)</h4>
+  <p>Formal Model for Verifiable Governance</p>
+  <a href="../papers/decision-auditability-formal.pdf" target="_blank">View</a>
+</div>
 
 </div>
 
+---
 
+## Conclusion
 
-<div class="paper-card">
+AI can generate.
 
-&#x20; <h4>Auditability (Formal)</h4>
+But systems must decide.
 
-&#x20; <p>Formal Model for Verifiable Governance</p>
+Manthan defines the missing layer:
 
-&#x20; <a href="../papers/decision-auditability-formal.pdf" target="\_blank">View</a>
-
-</div>
-
-
-
-</div>
-
+> Deterministic. Traceable. Enforceable.
