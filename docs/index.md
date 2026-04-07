@@ -41,7 +41,7 @@
          text-decoration:none;
          font-weight:600;
        ">
-       💬 Ask Manthan
+       Ask Manthan
     </a>
 
     <!-- Live System -->
