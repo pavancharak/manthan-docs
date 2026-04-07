@@ -33,11 +33,11 @@ Explore the core research behind Manthan:
 
 <!-- Manthan OS -->
 <p>
-<strong>🧠 Manthan OS</strong><br>
+<strong>Manthan OS</strong><br>
 Foundational system design for decision infrastructure.<br>
 
 <a href="https://docs.google.com/gview?url=https://manthan.systems/papers/manthan-os.pdf&embedded=true" target="_blank">
-📖 Read online
+Read online
 </a>
 &nbsp; | &nbsp;
 <a href="https://manthan.systems/papers/manthan-os.pdf" target="_blank">
@@ -49,11 +49,11 @@ Foundational system design for decision infrastructure.<br>
 
 <!-- Auditability Formal -->
 <p>
-<strong>⚖️ Decision Auditability (Formal)</strong><br>
+<strong>Decision Auditability (Formal)</strong><br>
 Formal model for traceable and auditable decisions.<br>
 
 <a href="https://docs.google.com/gview?url=https://manthan.systems/papers/decision-auditability-formal.pdf&embedded=true" target="_blank">
-📖 Read online
+Read online
 </a>
 &nbsp; | &nbsp;
 <a href="https://manthan.systems/papers/decision-auditability-formal.pdf" target="_blank">
@@ -65,11 +65,11 @@ Formal model for traceable and auditable decisions.<br>
 
 <!-- Auditability Compliance -->
 <p>
-<strong>📊 Decision Auditability (Compliance)</strong><br>
+<strong>Decision Auditability (Compliance)</strong><br>
 Applying auditability to real-world compliance systems.<br>
 
 <a href="https://docs.google.com/gview?url=https://manthan.systems/papers/decision-auditability-compliance.pdf&embedded=true" target="_blank">
-📖 Read online
+Read online
 </a>
 &nbsp; | &nbsp;
 <a href="https://manthan.systems/papers/decision-auditability-compliance.pdf" target="_blank">
@@ -81,11 +81,11 @@ Applying auditability to real-world compliance systems.<br>
 
 <!-- Consistency -->
 <p>
-<strong>🔒 Decision Consistency & Enforcement</strong><br>
+<strong>Decision Consistency & Enforcement</strong><br>
 Ensuring decisions remain consistent and enforceable.<br>
 
 <a href="https://docs.google.com/gview?url=https://manthan.systems/papers/decision-consistency-enforcement.pdf&embedded=true" target="_blank">
-📖 Read online
+Read online
 </a>
 &nbsp; | &nbsp;
 <a href="https://manthan.systems/papers/decision-consistency-enforcement.pdf" target="_blank">
@@ -97,11 +97,11 @@ Ensuring decisions remain consistent and enforceable.<br>
 
 <!-- Distributed -->
 <p>
-<strong>🌐 Distributed Decision Systems</strong><br>
+<strong>Distributed Decision Systems</strong><br>
 Extending decision infrastructure across distributed environments.<br>
 
 <a href="https://docs.google.com/gview?url=https://manthan.systems/papers/distributed-decision-systems.pdf&embedded=true" target="_blank">
-📖 Read online
+Read online
 </a>
 &nbsp; | &nbsp;
 <a href="https://manthan.systems/papers/distributed-decision-systems.pdf" target="_blank">
@@ -113,11 +113,11 @@ Extending decision infrastructure across distributed environments.<br>
 
 <!-- AI Alignment -->
 <p>
-<strong>🤖 AI Alignment via Decision Infrastructure</strong><br>
+<strong>AI Alignment via Decision Infrastructure</strong><br>
 Using deterministic decisions to improve AI system alignment.<br>
 
 <a href="https://docs.google.com/gview?url=https://manthan.systems/papers/ai-alignment-decision-infrastructure.pdf&embedded=true" target="_blank">
-📖 Read online
+Read online
 </a>
 &nbsp; | &nbsp;
 <a href="https://manthan.systems/papers/ai-alignment-decision-infrastructure.pdf" target="_blank">
