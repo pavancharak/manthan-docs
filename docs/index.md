@@ -9,7 +9,7 @@ Every system runs on decisions.
 
 <div style="text-align:center; margin-top:20px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
 
-<a href="https://chat.openai.com/gpts/YOUR-GPT-LINK" target="_blank"
+<a href="https://chatgpt.com/g/g-69d503815138819190a6ea5bf3227781-manthan-decision-infrastructure-assistant" target="_blank"
 style="background:#0b1220; color:#fff; padding:14px 28px; border-radius:12px; text-decoration:none; font-weight:600;">
 Ask Manthan →
 </a>
