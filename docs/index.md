@@ -1,70 +1,124 @@
-# Manthan
-
-## Decision Infrastructure
-
-Every system runs on decisions.  
-**Manthan makes them deterministic, auditable, and enforceable.**
+<p align="center">
+  <img src="assets/banner.png" alt="Manthan Banner" width="100%" style="border-radius:16px;">
+</p>
 
 <br>
 
-<div style="text-align:center; margin-top:20px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+<!-- HERO -->
+<div style="
+  text-align:center;
+  padding:60px 20px;
+  border-radius:20px;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color:white;
+  margin-bottom:50px;
+">
 
-<a href="https://chatgpt.com/g/g-69d503815138819190a6ea5bf3227781-manthan-decision-infrastructure-assistant" target="_blank"
-style="background:#0b1220; color:#fff; padding:14px 28px; border-radius:12px; text-decoration:none; font-weight:600;">
-Ask Manthan →
-</a>
+  <h1 style="font-size:48px; margin-bottom:10px; font-weight:600;">
+    Manthan
+  </h1>
 
-<a href="https://github.com/apps/manthan-pr-gate" target="_blank"
-style="border:1px solid #000; padding:12px 24px; border-radius:10px; text-decoration:none;">
-Install PR Gate
-</a>
+  <p style="font-size:22px; opacity:0.9; margin-bottom:10px;">
+    Decision Infrastructure
+  </p>
 
-<a href="https://manthanos.fly.dev/" target="_blank"
-style="border:1px solid #000; padding:12px 24px; border-radius:10px; text-decoration:none;">
-Live System
-</a>
+  <p style="font-size:18px; max-width:680px; margin: 0 auto 30px;">
+    Every system runs on decisions.<br>
+    <strong>Manthan makes them deterministic, auditable, and enforceable.</strong>
+  </p>
 
+  <!-- CTA -->
+  <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+    
+    <!-- Ask Manthan -->
+    <a href="https://chatgpt.com/g/g-69d503815138819190a6ea5bf3227781-manthan-decision-infrastructure-assistant"
+       target="_blank"
+       style="
+         padding:12px 28px;
+         background:#ffffff;
+         color:#0f172a;
+         border-radius:10px;
+         text-decoration:none;
+         font-weight:600;
+       ">
+       💬 Ask Manthan
+    </a>
+
+    <!-- Live System -->
+    <a href="https://manthanos.fly.dev/health"
+       target="_blank"
+       style="
+         padding:12px 28px;
+         border:1px solid rgba(255,255,255,0.3);
+         color:#ffffff;
+         border-radius:10px;
+         text-decoration:none;
+         font-weight:500;
+       ">
+       Live System
+    </a>
+
+  </div>
 </div>
-
-<br><br>
 
 ---
 
 ## The Problem
 
-AI systems operate in probabilistic generation.
+<div style="text-align:center; max-width:720px; margin:auto; font-size:18px;">
 
-- Same input → different outputs  
-- No traceability  
-- No enforcement  
+AI systems operate in probabilistic generation.<br><br>
 
-**This makes them unfit for critical systems.**
+• Same input → different outputs  
+• No traceability  
+• No enforcement  
+
+<br>
+
+<strong>This makes them unfit for critical systems.</strong>
+
+</div>
 
 ---
 
 ## The Shift
 
-<div class="comparison-table">
+<div style="
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-top:30px;
+">
 
-<div class="row header">
-<div>Generation</div>
-<div>Decision</div>
-</div>
+  <div style="
+    min-width:220px;
+    padding:20px;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
+    text-align:center;
+  ">
+    <h3>Generation</h3>
+    <p>Possibilities</p>
+    <p>Suggestions</p>
+    <p>Probabilistic</p>
+  </div>
 
-<div class="row">
-<div>Possibilities</div>
-<div>Outcomes</div>
-</div>
-
-<div class="row">
-<div>Suggestions</div>
-<div>Enforcement</div>
-</div>
-
-<div class="row">
-<div>Probabilistic</div>
-<div class="highlight">Deterministic</div>
-</div>
+  <div style="
+    min-width:220px;
+    padding:20px;
+    border-radius:14px;
+    border-radius:14px;
+    border:1px solid #0f172a;
+    text-align:center;
+    background:#0f172a;
+    color:white;
+  ">
+    <h3>Decision</h3>
+    <p>Outcomes</p>
+    <p>Enforcement</p>
+    <p>Deterministic</p>
+  </div>
 
 </div>
 
@@ -72,95 +126,112 @@ AI systems operate in probabilistic generation.
 
 ## System Flow
 
-<div class="flow-block">
+<div style="text-align:center; margin-top:30px;">
 
+<div style="
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:12px;
+  background:#020617;
+  color:#ffffff;
+  font-family: monospace;
+  font-size:14px;
+  max-width:100%;
+  overflow-x:auto;
+">
 Input → Contract → Engine → Trace → Enforcement
-
 </div>
 
+<p style="margin-top:16px;">
 Each step is deterministic and fully auditable.
+</p>
+
+</div>
 
 ---
 
-## Execution Pipeline
+## Core Principles
 
-<div class="flow-block">
+<div style="text-align:center; max-width:720px; margin:auto; line-height:1.8;">
 
-contract_validation  
-→ determinism_check  
-→ boundary_check  
-→ intent_alignment  
-→ base_rules  
+No layer overrides another  
+Contract is the single source of truth  
+No runtime mutation  
+No external influence on decisions  
 
 </div>
-
-Fail-fast. Fully traceable. No hidden logic.
 
 ---
 
 ## Explore
 
-- [System](system.md)
-- [Architecture](architecture.md)
-- [Contracts](contracts.md)
-- [Decision Engine](decision-engine.md)
-- [PR Gate](pr-gate.md)
-- [API](api.md)
+<div style="text-align:center; line-height:2;">
 
----
+<a href="system.md"><strong>System</strong></a><br>
+<a href="architecture.md">Architecture</a><br>
+<a href="contracts.md">Contracts</a><br>
+<a href="decision-engine.md">Decision Engine</a><br>
+<a href="pr-gate.md">PR Gate</a><br>
+<a href="api.md">API</a><br>
+<a href="papers.md">Research</a>
 
-## Research
-
-- [Papers](papers.md)
+</div>
 
 ---
 
 ## Use
 
-[Install Manthan PR Gate](https://github.com/apps/manthan-pr-gate)
+<div style="text-align:center; line-height:2;">
 
----
+<a href="https://chatgpt.com/g/g-69d503815138819190a6ea5bf3227781-manthan-decision-infrastructure-assistant" target="_blank">
+Ask Manthan
+</a><br>
 
-## Ask Manthan
-
-Interact with Manthan directly.
-
-<div style="text-align:center; margin-top:16px;">
-
-<a href="https://chat.openai.com/gpts/YOUR-GPT-LINK" target="_blank"
-style="background:#111827; color:#fff; padding:14px 28px; border-radius:12px; text-decoration:none;">
-Ask anything about Manthan →
+<a href="https://manthanos.fly.dev/health" target="_blank">
+Live System
 </a>
 
 </div>
 
 ---
 
-## Thinking
-
-[Read on Substack](https://manthansystems.substack.com/)
-
----
-
 ## Contact
 
-- founder@manthan.systems  
-- [LinkedIn](https://www.linkedin.com/in/pavancharak/)  
-- [GitHub App](https://github.com/apps/manthan-pr-gate)  
-- [Substack](https://manthansystems.substack.com/)  
+<div style="
+  max-width:600px;
+  margin: 24px auto;
+  text-align:center;
+  line-height:2;
+">
 
----
+<p>
+<a href="mailto:founder@manthan.systems">founder@manthan.systems</a>
+</p>
 
-## Who This Is For
+<p>
+<a href="https://www.linkedin.com/in/pavancharak/" target="_blank">
+LinkedIn
+</a>
+</p>
 
-Engineers, founders, and teams building systems  
-where correctness, auditability, and enforcement are non-negotiable.
+<p>
+<a href="https://manthansystems.substack.com/" target="_blank">
+Substack
+</a>
+</p>
+
+</div>
 
 ---
 
 ## Closing
 
-Manthan is not another AI system.  
-It is the layer that makes decisions in software systems  
+<div style="text-align:center; max-width:720px; margin:auto; font-size:18px;">
 
-**traceable, auditable, and enforceable by design.**
+Manthan is not another AI system.<br><br>
+
+It is the layer that makes decisions in software systems<br>
+
+<strong>traceable, auditable, and enforceable by design.</strong>
+
+</div>
