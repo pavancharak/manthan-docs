@@ -9,8 +9,13 @@ Every system runs on decisions.
 
 <div style="text-align:center; margin-top:20px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
 
+<a href="https://chat.openai.com/gpts/YOUR-GPT-LINK" target="_blank"
+style="background:#0b1220; color:#fff; padding:14px 28px; border-radius:12px; text-decoration:none; font-weight:600;">
+Ask Manthan →
+</a>
+
 <a href="https://github.com/apps/manthan-pr-gate" target="_blank"
-style="background:#000; color:#fff; padding:12px 24px; border-radius:10px; text-decoration:none;">
+style="border:1px solid #000; padding:12px 24px; border-radius:10px; text-decoration:none;">
 Install PR Gate
 </a>
 
@@ -39,24 +44,26 @@ AI systems operate in probabilistic generation.
 
 ## The Shift
 
-<div class="comparison">
+<div class="comparison-table">
 
-<div class="card generation">
-<h3>Generation</h3>
-
-<p>Possibilities</p>
-<p>Suggestions</p>
-<p>Probabilistic</p>
-
+<div class="row header">
+<div>Generation</div>
+<div>Decision</div>
 </div>
 
-<div class="card decision">
-<h3>Decision</h3>
+<div class="row">
+<div>Possibilities</div>
+<div>Outcomes</div>
+</div>
 
-<p>Outcomes</p>
-<p>Enforcement</p>
-<p>Deterministic</p>
+<div class="row">
+<div>Suggestions</div>
+<div>Enforcement</div>
+</div>
 
+<div class="row">
+<div>Probabilistic</div>
+<div class="highlight">Deterministic</div>
 </div>
 
 </div>
@@ -111,6 +118,21 @@ Fail-fast. Fully traceable. No hidden logic.
 ## Use
 
 [Install Manthan PR Gate](https://github.com/apps/manthan-pr-gate)
+
+---
+
+## Ask Manthan
+
+Interact with Manthan directly.
+
+<div style="text-align:center; margin-top:16px;">
+
+<a href="https://chat.openai.com/gpts/YOUR-GPT-LINK" target="_blank"
+style="background:#111827; color:#fff; padding:14px 28px; border-radius:12px; text-decoration:none;">
+Ask anything about Manthan →
+</a>
+
+</div>
 
 ---
 
