@@ -42,7 +42,7 @@ extra_css:
 nav:
   - Home: index.md
 
-  - Philosophy: philosophy.md
+  - Investors: investors.md
 
   - Product:
       - System: system.md
