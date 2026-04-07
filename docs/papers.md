@@ -37,16 +37,60 @@ Distributed decision architectures
 <h2 style="text-align:center;">Papers</h2>
 
 <p style="text-align:center;">
-The following papers explore the principles behind Manthan:
+Explore the core research behind Manthan:
 </p>
 
-<ul>
-  <li>Decision Infrastructure</li>
-  <li>Decision Auditability</li>
-  <li>Decision Consistency</li>
-  <li>Distributed Decision Systems</li>
-  <li>Manthan OS</li>
-</ul>
+<br>
+
+<div style="max-width:720px; margin:auto; line-height:1.8;">
+
+<p>
+<strong>Manthan OS</strong><br>
+Foundational system design for decision infrastructure.<br>
+<a href="papers/manthan-os.pdf" target="_blank">Read paper →</a>
+</p>
+
+<br>
+
+<p>
+<strong>Decision Auditability (Formal)</strong><br>
+Formal model for traceable and auditable decisions.<br>
+<a href="papers/decision-auditability-formal.pdf" target="_blank">Read paper →</a>
+</p>
+
+<br>
+
+<p>
+<strong>Decision Auditability (Compliance)</strong><br>
+Applying auditability to real-world compliance systems.<br>
+<a href="papers/decision-auditability-compliance.pdf" target="_blank">Read paper →</a>
+</p>
+
+<br>
+
+<p>
+<strong>Decision Consistency & Enforcement</strong><br>
+Ensuring decisions remain consistent and enforceable.<br>
+<a href="papers/decision-consistency-enforcement.pdf" target="_blank">Read paper →</a>
+</p>
+
+<br>
+
+<p>
+<strong>Distributed Decision Systems</strong><br>
+Extending decision infrastructure across distributed environments.<br>
+<a href="papers/distributed-decision-systems.pdf" target="_blank">Read paper →</a>
+</p>
+
+<br>
+
+<p>
+<strong>AI Alignment via Decision Infrastructure</strong><br>
+Using deterministic decisions to improve AI system alignment.<br>
+<a href="papers/ai-alignment-decision-infrastructure.pdf" target="_blank">Read paper →</a>
+</p>
+
+</div>
 
 <br>
 
@@ -83,7 +127,7 @@ Without a deterministic decision layer:
 <br>
 
 <p style="text-align:center; max-width:720px; margin:auto;">
-Manthan addresses this by introducing decision infrastructure as a first-class system layer.
+Manthan introduces decision infrastructure as a first-class system layer.
 </p>
 
 <br>
