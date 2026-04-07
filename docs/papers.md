@@ -21,7 +21,7 @@ This requires a shift from probabilistic generation to deterministic evaluation.
 
 <hr>
 
-<h2 style="text-align:center;">📚 Papers</h2>
+<h2 style="text-align:center;">Papers</h2>
 
 <p style="text-align:center;">
 Explore the core research behind Manthan:
