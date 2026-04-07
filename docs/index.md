@@ -39,11 +39,27 @@ AI systems operate in probabilistic generation.
 
 ## The Shift
 
-| Generation | Decision |
-|----------|---------|
-| Possibilities | Outcomes |
-| Suggestions | Enforcement |
-| Probabilistic | Deterministic |
+<div class="comparison">
+
+<div class="card generation">
+<h3>Generation</h3>
+
+<p>Possibilities</p>
+<p>Suggestions</p>
+<p>Probabilistic</p>
+
+</div>
+
+<div class="card decision">
+<h3>Decision</h3>
+
+<p>Outcomes</p>
+<p>Enforcement</p>
+<p>Deterministic</p>
+
+</div>
+
+</div>
 
 ---
 
@@ -77,18 +93,18 @@ Fail-fast. Fully traceable. No hidden logic.
 
 ## Explore
 
-- [System](system/)
-- [Architecture](architecture/)
-- [Contracts](contracts/)
-- [Decision Engine](decision-engine/)
-- [PR Gate](pr-gate/)
-- [API](api/)
+- [System](system.md)
+- [Architecture](architecture.md)
+- [Contracts](contracts.md)
+- [Decision Engine](decision-engine.md)
+- [PR Gate](pr-gate.md)
+- [API](api.md)
 
 ---
 
 ## Research
 
-- [Papers](papers/)
+- [Papers](papers.md)
 
 ---
 
