@@ -1,271 +1,132 @@
-/* ---------------- GLOBAL ---------------- */
+/* ============================= */
+/* GLOBAL POLISH */
+/* ============================= */
 
 body {
-  letter-spacing: 0.2px;
-  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* ---------------- HEADINGS ---------------- */
+/* ============================= */
+/* CTA BUTTONS */
+/* ============================= */
 
-h1 {
-  font-weight: 700;
-  letter-spacing: -0.5px;
+a[href*="manthan-pr-gate"] {
+  background: #000 !important;
+  color: #fff !important;
+  padding: 12px 24px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  display: inline-block;
 }
 
-h2 {
-  font-weight: 600;
-  margin-top: 60px;
-  margin-bottom: 20px;
+a[href*="manthanos.fly.dev"] {
+  border: 1px solid #000 !important;
+  padding: 12px 24px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  display: inline-block;
 }
 
-h3 {
-  font-weight: 500;
-}
-
-/* ---------------- PARAGRAPH ---------------- */
-
-p {
-  line-height: 1.7;
-  font-size: 16px;
-}
-
-/* ---------------- SECTION DIVIDER ---------------- */
-
-hr {
-  margin: 60px auto;
-  width: 60%;
-  opacity: 0.15;
-}
-
-/* ---------------- SAFE CENTERING ---------------- */
-
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset p {
-  text-align: center;
-}
-
-/* ---------------- LIST FIX ---------------- */
-
-.md-typeset ul,
-.md-typeset ol {
-  text-align: left;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-.md-typeset ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.md-typeset ul li {
-  margin-bottom: 6px;
-}
-
-/* ---------------- CODE BLOCK ---------------- */
-
-pre {
-  background: linear-gradient(135deg, #0b1220, #020617);
-  color: #f9fafb !important;
-  padding: 20px;
-  border-radius: 14px;
-  font-size: 15px;
-  line-height: 1.7;
-  overflow-x: auto;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
-
-pre, pre * {
-  color: #f9fafb !important;
-  opacity: 1 !important;
-}
-
-.md-typeset pre {
-  text-align: left;
-}
-
-/* ---------------- FLOW BLOCK ---------------- */
+/* ============================= */
+/* FLOW BLOCKS */
+/* ============================= */
 
 .flow-block {
-  text-align: center !important;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  font-weight: 500;
-}
-
-/* ---------------- NAVBAR ---------------- */
-
-.md-header {
-  backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.9);
-}
-
-/* ---------------- IMAGE ---------------- */
-
-img {
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-  max-width: 100%;
-  height: auto;
-}
-
-img:hover {
-  transform: scale(1.02);
-}
-
-/* ---------------- SPACING ---------------- */
-
-.md-typeset > * {
-  margin-top: 20px;
-}
-
-/* ---------------- LINKS ---------------- */
-
-a {
-  transition: all 0.2s ease;
-}
-
-a:hover {
-  opacity: 0.85;
-}
-
-/* ===================================================== */
-/* ================= HERO SECTION ======================= */
-/* ===================================================== */
-
-.hero {
+  background: linear-gradient(135deg, #0b1220, #1e293b);
+  color: #e5e7eb;
+  padding: 18px;
+  border-radius: 14px;
   text-align: center;
-  padding: 80px 20px 60px;
-  margin-bottom: 40px;
-  background: radial-gradient(circle at top, #111827, #020617);
+  font-family: monospace;
+  font-size: 14px;
+  overflow-x: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  margin-top: 16px;
+}
+
+/* ============================= */
+/* COMPARISON TABLE (FINAL UI) */
+/* ============================= */
+
+.comparison-table {
+  max-width: 620px;
+  margin: 28px auto;
   border-radius: 16px;
-  animation: fadeIn 0.6s ease-in-out;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  font-size: 15px;
+  border: 1px solid #e5e7eb;
 }
 
-.hero,
-.hero * {
-  color: #f9fafb !important;
+/* Rows */
+.comparison-table .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-  letter-spacing: -1px;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+/* Cells */
+.comparison-table .row div {
+  padding: 16px;
+  text-align: center;
 }
 
-.hero-subtitle {
-  font-size: 22px;
+/* Header */
+.comparison-table .header {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #ffffff;
   font-weight: 600;
+  font-size: 16px;
 }
 
-.hero-description {
-  font-size: 18px;
-  margin-top: 12px;
+/* Alternating rows */
+.comparison-table .row:nth-child(even):not(.header) {
+  background: #f9fafb;
+}
+
+/* Highlight deterministic side */
+.comparison-table .highlight {
+  font-weight: 700;
+  color: #0b1220;
+}
+
+/* ============================= */
+/* TYPOGRAPHY IMPROVEMENTS */
+/* ============================= */
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+p {
   line-height: 1.6;
 }
 
-/* CTA container */
-.hero-actions {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-/* PRIMARY CTA */
-.btn-primary {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #ffffff !important;
-  padding: 14px 26px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
-  transition: all 0.25s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.6);
-}
-
-/* SECONDARY CTA */
-.btn-secondary {
-  border: 1px solid rgba(255,255,255,0.4);
-  color: #e5e7eb !important;
-  padding: 14px 26px;
-  border-radius: 10px;
-  text-decoration: none;
-  backdrop-filter: blur(6px);
-  transition: all 0.25s ease;
-}
-
-.btn-secondary:hover {
-  background: rgba(255,255,255,0.1);
-  color: #ffffff !important;
-  transform: translateY(-2px);
-}
-
-/* ---------------- ANIMATION ---------------- */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===================================================== */
-/* ================= RESPONSIVE ========================= */
-/* ===================================================== */
+/* ============================= */
+/* MOBILE RESPONSIVENESS */
+/* ============================= */
 
 @media (max-width: 768px) {
 
-  /* HERO */
-  .hero {
-    padding: 60px 16px 40px;
+  /* Flow blocks */
+  .flow-block {
+    font-size: 13px;
+    padding: 14px;
   }
 
-  .hero h1 {
-    font-size: 34px;
+  /* Comparison */
+  .comparison-table {
+    font-size: 14px;
   }
 
-  .hero-subtitle {
-    font-size: 18px;
+  .comparison-table .row div {
+    padding: 12px;
   }
 
-  .hero-description {
-    font-size: 16px;
-  }
-
-  /* BUTTONS STACK */
-  .hero-actions {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
+  /* CTA buttons */
+  a[href*="manthan-pr-gate"],
+  a[href*="manthanos.fly.dev"] {
     width: 100%;
     text-align: center;
-  }
-
-  /* FLOW BLOCK */
-  .flow-block {
-    font-size: 14px;
-    padding: 16px;
-  }
-
-  /* HEADINGS */
-  .md-typeset h2 {
-    margin-top: 40px;
   }
 }
