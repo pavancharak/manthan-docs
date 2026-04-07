@@ -1,4 +1,4 @@
-<h1 style="text-align:center;">📖 Research</h1>
+<h1 style="text-align:center;">Research</h1>
 
 <p style="text-align:center; font-size:18px;">
 Foundations of deterministic decision systems.
