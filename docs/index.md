@@ -1,170 +1,277 @@
-<div class="hero">
+/* ---------------- GLOBAL ---------------- */
 
-  <h1>Manthan</h1>
+body {
+  letter-spacing: 0.2px;
+  scroll-behavior: smooth;
+}
 
-  <p class="hero-subtitle">
-    Decision Infrastructure
-  </p>
+/* ---------------- HEADINGS ---------------- */
 
-  <p class="hero-description">
-    Every system runs on decisions.<br>
-    <strong>Manthan makes them deterministic, auditable, and enforceable.</strong>
-  </p>
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
 
-  <div class="hero-actions">
-    <a href="https://github.com/apps/manthan-pr-gate" target="_blank" class="btn-primary">
-      Install PR Gate
-    </a>
+h2 {
+  font-weight: 600;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
 
-    <a href="https://manthanos.fly.dev/health" target="_blank" class="btn-secondary">
-        Live System
-    </a>
-  </div>
+h3 {
+  font-weight: 500;
+}
 
-</div>
+/* ---------------- PARAGRAPH ---------------- */
 
-<br><br>
+p {
+  line-height: 1.7;
+  font-size: 16px;
+}
 
----
+/* ---------------- SECTION DIVIDER ---------------- */
 
-## The Problem
+hr {
+  margin: 60px auto;
+  width: 60%;
+  opacity: 0.15;
+}
 
-<p align="center">
-  <img src="assets/problem.png" width="70%">
-</p>
+/* ---------------- SAFE CENTERING ---------------- */
 
-<p style="text-align:center; max-width:720px; margin:auto;">
-Modern systems — especially AI — operate in probabilistic generation.<br>
-The same input can produce different outputs.<br><br>
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset p {
+  text-align: center;
+}
 
-There is no traceability. No enforcement.
-</p>
+/* ---------------- LIST FIX ---------------- */
 
-<p style="text-align:center;">
-<strong>This makes them unfit for critical systems.</strong>
-</p>
+.md-typeset ul,
+.md-typeset ol {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 600px;
+}
 
-<br>
+.md-typeset ul {
+  list-style: disc;
+  padding-left: 20px;
+}
 
----
+.md-typeset ul li {
+  margin-bottom: 6px;
+}
 
-## The Shift
+/* ---------------- CODE BLOCK ---------------- */
 
-<p align="center">
-  <img src="assets/shift.png" width="70%">
-</p>
+pre {
+  background: linear-gradient(135deg, #0b1220, #020617);
+  color: #f9fafb !important;
+  padding: 20px;
+  border-radius: 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-x: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
 
-<div style="display:flex; justify-content:center; gap:80px; flex-wrap:wrap; text-align:center;">
+pre, pre * {
+  color: #f9fafb !important;
+  opacity: 1 !important;
+}
 
-<div>
-<p><strong>Generation</strong></p>
-<p>Possibilities</p>
-<p>Suggestions</p>
-<p>Probabilistic</p>
-</div>
+/* Default alignment */
+.md-typeset pre {
+  text-align: left;
+}
 
-<div>
-<p><strong>Decision</strong></p>
-<p>Outcomes</p>
-<p>Enforcement</p>
-<p>Deterministic</p>
-</div>
+/* ---------------- FLOW BLOCK (FINAL FIX) ---------------- */
 
-</div>
+.flow-block {
+  text-align: center !important;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
 
-<br>
+  white-space: normal !important;   /* ✅ wrap text */
+  word-break: break-word;
+  overflow-x: hidden;               /* ✅ prevent horizontal scroll */
+}
 
----
+/* ---------------- NAVBAR ---------------- */
 
-## How Manthan Works
+.md-header {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.9);
+}
 
-<p align="center">
-  <img src="assets/architecture.png" width="70%">
-</p>
+/* ---------------- IMAGE ---------------- */
 
-<pre>
-Input → Contract → Engine → Trace → Enforcement
-</pre>
+img {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+}
 
-<pre>
-contract_validation
-→ determinism_check
-→ boundary_check
-→ intent_alignment
-→ base_rules
-</pre>
+img:hover {
+  transform: scale(1.02);
+}
 
-<p style="text-align:center;">
-Fail-fast. Fully traceable. No hidden logic.
-</p>
+/* ---------------- SPACING ---------------- */
 
-<br>
+.md-typeset > * {
+  margin-top: 20px;
+}
 
----
+/* ---------------- LINKS ---------------- */
 
-## What You Get
+a {
+  transition: all 0.2s ease;
+}
 
-<p align="center">
-  <img src="assets/outcome.png" width="70%">
-</p>
+a:hover {
+  opacity: 0.85;
+}
 
-<div style="text-align:center; line-height:1.8;">
-Deterministic decision<br>
-Full execution trace<br>
-Human-readable explanation<br>
-Enforced outcome
-</div>
+/* ===================================================== */
+/* ================= HERO SECTION ======================= */
+/* ===================================================== */
 
-<br>
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+  margin-bottom: 40px;
+  background: radial-gradient(circle at top, #111827, #020617);
+  border-radius: 16px;
+  animation: fadeIn 0.6s ease-in-out;
+}
 
----
+.hero,
+.hero * {
+  color: #f9fafb !important;
+}
 
-## Live System
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
 
-<p style="text-align:center;">
-Manthan v0.2 is deployed and running.
-</p>
+.hero-subtitle {
+  font-size: 22px;
+  font-weight: 600;
+}
 
-<p style="text-align:center;">
-<a href="https://manthanos.fly.dev/health" target="_blank">
-Check system health →
-</a>
-</p>
+.hero-description {
+  font-size: 18px;
+  margin-top: 12px;
+  line-height: 1.6;
+}
 
-<br>
+/* CTA container */
+.hero-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
----
+/* PRIMARY CTA */
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff !important;
+  padding: 14px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  transition: all 0.25s ease;
+}
 
-## Explore
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.6);
+}
 
-<div style="text-align:center; line-height:2;">
-  <a href="system/"><strong>System</strong></a><br>
-  <a href="architecture/">Architecture</a><br>
-  <a href="contracts/">Contracts</a><br>
-  <a href="decision-engine/">Decision Engine</a><br>
-  <a href="pr-gate/">PR Gate</a><br>
-  <a href="papers/">Research</a>
-</div>
+/* SECONDARY CTA */
+.btn-secondary {
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #e5e7eb !important;
+  padding: 14px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+}
 
-<br>
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
 
----
+/* ---------------- ANIMATION ---------------- */
 
-## Who This Is For
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-<p style="text-align:center; max-width:720px; margin:auto;">
-Engineers and teams building systems where correctness, auditability, and enforcement are non-negotiable.
-</p>
+/* ===================================================== */
+/* ================= RESPONSIVE ========================= */
+/* ===================================================== */
 
-<br>
+@media (max-width: 768px) {
 
----
+  /* HERO */
+  .hero {
+    padding: 60px 16px 40px;
+  }
 
-## Closing
+  .hero h1 {
+    font-size: 34px;
+  }
 
-<p style="text-align:center; max-width:720px; margin:auto;">
-Software runs on code.<br>
-Systems run on decisions.<br><br>
+  .hero-subtitle {
+    font-size: 18px;
+  }
 
-<strong>Manthan makes those decisions reliable infrastructure.</strong>
-</p>
+  .hero-description {
+    font-size: 16px;
+  }
+
+  /* BUTTONS STACK */
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* FLOW BLOCK FIX */
+  .flow-block {
+    font-size: 14px;
+    padding: 16px;
+    white-space: normal !important;
+  }
+
+  /* HEADINGS */
+  .md-typeset h2 {
+    margin-top: 40px;
+  }
+}
