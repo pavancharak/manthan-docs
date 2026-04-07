@@ -1,277 +1,128 @@
-/* ---------------- GLOBAL ---------------- */
+# Manthan
 
-body {
-  letter-spacing: 0.2px;
-  scroll-behavior: smooth;
-}
+## Decision Infrastructure
 
-/* ---------------- HEADINGS ---------------- */
+Every system runs on decisions.  
+**Manthan makes them deterministic, auditable, and enforceable.**
 
-h1 {
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
+<br>
 
-h2 {
-  font-weight: 600;
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
+<div style="text-align:center; margin-top:20px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
 
-h3 {
-  font-weight: 500;
-}
+<a href="https://github.com/apps/manthan-pr-gate" target="_blank"
+style="background:#000; color:#fff; padding:12px 24px; border-radius:10px; text-decoration:none;">
+Install PR Gate
+</a>
 
-/* ---------------- PARAGRAPH ---------------- */
+<a href="https://manthanos.fly.dev/" target="_blank"
+style="border:1px solid #000; padding:12px 24px; border-radius:10px; text-decoration:none;">
+Live System
+</a>
 
-p {
-  line-height: 1.7;
-  font-size: 16px;
-}
+</div>
 
-/* ---------------- SECTION DIVIDER ---------------- */
+<br><br>
 
-hr {
-  margin: 60px auto;
-  width: 60%;
-  opacity: 0.15;
-}
+---
 
-/* ---------------- SAFE CENTERING ---------------- */
+## The Problem
 
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset p {
-  text-align: center;
-}
+AI systems operate in probabilistic generation.
 
-/* ---------------- LIST FIX ---------------- */
+- Same input → different outputs  
+- No traceability  
+- No enforcement  
 
-.md-typeset ul,
-.md-typeset ol {
-  text-align: left;
-  margin: 0 auto;
-  max-width: 600px;
-}
+**This makes them unfit for critical systems.**
 
-.md-typeset ul {
-  list-style: disc;
-  padding-left: 20px;
-}
+---
 
-.md-typeset ul li {
-  margin-bottom: 6px;
-}
+## The Shift
 
-/* ---------------- CODE BLOCK ---------------- */
+| Generation | Decision |
+|----------|---------|
+| Possibilities | Outcomes |
+| Suggestions | Enforcement |
+| Probabilistic | Deterministic |
 
-pre {
-  background: linear-gradient(135deg, #0b1220, #020617);
-  color: #f9fafb !important;
-  padding: 20px;
-  border-radius: 14px;
-  font-size: 15px;
-  line-height: 1.7;
-  overflow-x: auto;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
+---
 
-pre, pre * {
-  color: #f9fafb !important;
-  opacity: 1 !important;
-}
+## System Flow
 
-/* Default alignment */
-.md-typeset pre {
-  text-align: left;
-}
+<div class="flow-block">
 
-/* ---------------- FLOW BLOCK (FINAL FIX) ---------------- */
+Input → Contract → Engine → Trace → Enforcement
 
-.flow-block {
-  text-align: center !important;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  font-weight: 500;
+</div>
 
-  white-space: normal !important;   /* ✅ wrap text */
-  word-break: break-word;
-  overflow-x: hidden;               /* ✅ prevent horizontal scroll */
-}
+Each step is deterministic and fully auditable.
 
-/* ---------------- NAVBAR ---------------- */
+---
 
-.md-header {
-  backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.9);
-}
+## Execution Pipeline
 
-/* ---------------- IMAGE ---------------- */
+<div class="flow-block">
 
-img {
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-  max-width: 100%;
-  height: auto;
-}
+contract_validation  
+→ determinism_check  
+→ boundary_check  
+→ intent_alignment  
+→ base_rules  
 
-img:hover {
-  transform: scale(1.02);
-}
+</div>
 
-/* ---------------- SPACING ---------------- */
+Fail-fast. Fully traceable. No hidden logic.
 
-.md-typeset > * {
-  margin-top: 20px;
-}
+---
 
-/* ---------------- LINKS ---------------- */
+## Explore
 
-a {
-  transition: all 0.2s ease;
-}
+- [System](system/)
+- [Architecture](architecture/)
+- [Contracts](contracts/)
+- [Decision Engine](decision-engine/)
+- [PR Gate](pr-gate/)
+- [API](api/)
 
-a:hover {
-  opacity: 0.85;
-}
+---
 
-/* ===================================================== */
-/* ================= HERO SECTION ======================= */
-/* ===================================================== */
+## Research
 
-.hero {
-  text-align: center;
-  padding: 80px 20px 60px;
-  margin-bottom: 40px;
-  background: radial-gradient(circle at top, #111827, #020617);
-  border-radius: 16px;
-  animation: fadeIn 0.6s ease-in-out;
-}
+- [Papers](papers/)
 
-.hero,
-.hero * {
-  color: #f9fafb !important;
-}
+---
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-  letter-spacing: -1px;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
+## Use
 
-.hero-subtitle {
-  font-size: 22px;
-  font-weight: 600;
-}
+[Install Manthan PR Gate](https://github.com/apps/manthan-pr-gate)
 
-.hero-description {
-  font-size: 18px;
-  margin-top: 12px;
-  line-height: 1.6;
-}
+---
 
-/* CTA container */
-.hero-actions {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
+## Thinking
 
-/* PRIMARY CTA */
-.btn-primary {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #ffffff !important;
-  padding: 14px 26px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
-  transition: all 0.25s ease;
-}
+[Read on Substack](https://manthansystems.substack.com/)
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.6);
-}
+---
 
-/* SECONDARY CTA */
-.btn-secondary {
-  border: 1px solid rgba(255,255,255,0.4);
-  color: #e5e7eb !important;
-  padding: 14px 26px;
-  border-radius: 10px;
-  text-decoration: none;
-  backdrop-filter: blur(6px);
-  transition: all 0.25s ease;
-}
+## Contact
 
-.btn-secondary:hover {
-  background: rgba(255,255,255,0.1);
-  color: #ffffff !important;
-  transform: translateY(-2px);
-}
+- founder@manthan.systems  
+- [LinkedIn](https://www.linkedin.com/in/pavancharak/)  
+- [GitHub App](https://github.com/apps/manthan-pr-gate)  
+- [Substack](https://manthansystems.substack.com/)  
 
-/* ---------------- ANIMATION ---------------- */
+---
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+## Who This Is For
 
-/* ===================================================== */
-/* ================= RESPONSIVE ========================= */
-/* ===================================================== */
+Engineers, founders, and teams building systems  
+where correctness, auditability, and enforcement are non-negotiable.
 
-@media (max-width: 768px) {
+---
 
-  /* HERO */
-  .hero {
-    padding: 60px 16px 40px;
-  }
+## Closing
 
-  .hero h1 {
-    font-size: 34px;
-  }
+Manthan is not another AI system.  
+It is the layer that makes decisions in software systems  
 
-  .hero-subtitle {
-    font-size: 18px;
-  }
-
-  .hero-description {
-    font-size: 16px;
-  }
-
-  /* BUTTONS STACK */
-  .hero-actions {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* FLOW BLOCK FIX */
-  .flow-block {
-    font-size: 14px;
-    padding: 16px;
-    white-space: normal !important;
-  }
-
-  /* HEADINGS */
-  .md-typeset h2 {
-    margin-top: 40px;
-  }
-}
+**traceable, auditable, and enforceable by design.**
