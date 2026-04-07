@@ -40,7 +40,7 @@ Foundational system design for decision infrastructure.<br>
 📖 Read online
 </a>
 &nbsp; | &nbsp;
-<a href="papers/manthan-os.pdf" download>
+<a href="https://manthan.systems/papers/manthan-os.pdf" target="_blank">
 ⬇ Download
 </a>
 </p>
@@ -56,7 +56,7 @@ Formal model for traceable and auditable decisions.<br>
 📖 Read online
 </a>
 &nbsp; | &nbsp;
-<a href="papers/decision-auditability-formal.pdf" download>
+<a href="https://manthan.systems/papers/decision-auditability-formal.pdf" target="_blank">
 ⬇ Download
 </a>
 </p>
@@ -72,7 +72,7 @@ Applying auditability to real-world compliance systems.<br>
 📖 Read online
 </a>
 &nbsp; | &nbsp;
-<a href="papers/decision-auditability-compliance.pdf" download>
+<a href="https://manthan.systems/papers/decision-auditability-compliance.pdf" target="_blank">
 ⬇ Download
 </a>
 </p>
@@ -88,7 +88,7 @@ Ensuring decisions remain consistent and enforceable.<br>
 📖 Read online
 </a>
 &nbsp; | &nbsp;
-<a href="papers/decision-consistency-enforcement.pdf" download>
+<a href="https://manthan.systems/papers/decision-consistency-enforcement.pdf" target="_blank">
 ⬇ Download
 </a>
 </p>
@@ -104,7 +104,7 @@ Extending decision infrastructure across distributed environments.<br>
 📖 Read online
 </a>
 &nbsp; | &nbsp;
-<a href="papers/distributed-decision-systems.pdf" download>
+<a href="https://manthan.systems/papers/distributed-decision-systems.pdf" target="_blank">
 ⬇ Download
 </a>
 </p>
@@ -120,7 +120,7 @@ Using deterministic decisions to improve AI system alignment.<br>
 📖 Read online
 </a>
 &nbsp; | &nbsp;
-<a href="papers/ai-alignment-decision-infrastructure.pdf" download>
+<a href="https://manthan.systems/papers/ai-alignment-decision-infrastructure.pdf" target="_blank">
 ⬇ Download
 </a>
 </p>
