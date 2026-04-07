@@ -14,7 +14,16 @@
   margin-bottom:50px;
 ">
 
-  <h1 style="font-size:48px; margin-bottom:10px; font-weight:600;">
+  <!-- FIXED TITLE -->
+  <h1 style="
+    font-size:48px;
+    margin-bottom:10px;
+    font-weight:700;
+    background: linear-gradient(135deg, #ffffff, #cbd5f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing:-0.5px;
+  ">
     Manthan
   </h1>
 
@@ -29,33 +38,41 @@
 
   <!-- CTA -->
   <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
-    
-    <!-- Ask Manthan -->
+
+    <!-- PRIMARY -->
     <a href="https://chatgpt.com/g/g-69d503815138819190a6ea5bf3227781-manthan-decision-infrastructure-assistant"
        target="_blank"
        style="
-         padding:12px 28px;
-         background:#ffffff;
-         color:#0f172a;
-         border-radius:10px;
+         padding:14px 32px;
+         background: linear-gradient(135deg, #2563eb, #1e40af);
+         color:#ffffff;
+         border-radius:12px;
          text-decoration:none;
          font-weight:600;
-       ">
-       Ask Manthan
+         font-size:15px;
+         box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+         transition: all 0.2s ease;
+       "
+       onmouseover="this.style.transform='translateY(-2px)'"
+       onmouseout="this.style.transform='translateY(0)'"
+    >
+      💬 Ask Manthan
     </a>
 
-    <!-- Live System -->
+    <!-- SECONDARY -->
     <a href="https://manthanos.fly.dev/health"
        target="_blank"
        style="
-         padding:12px 28px;
-         border:1px solid rgba(255,255,255,0.3);
+         padding:14px 32px;
+         border:1px solid rgba(255,255,255,0.4);
          color:#ffffff;
-         border-radius:10px;
+         border-radius:12px;
          text-decoration:none;
          font-weight:500;
-       ">
-       Live System
+         font-size:15px;
+       "
+    >
+      ⚡ Live System
     </a>
 
   </div>
@@ -107,7 +124,6 @@ AI systems operate in probabilistic generation.<br><br>
   <div style="
     min-width:220px;
     padding:20px;
-    border-radius:14px;
     border-radius:14px;
     border:1px solid #0f172a;
     text-align:center;
@@ -174,22 +190,6 @@ No external influence on decisions
 <a href="pr-gate.md">PR Gate</a><br>
 <a href="api.md">API</a><br>
 <a href="papers.md">Research</a>
-
-</div>
-
----
-
-## Use
-
-<div style="text-align:center; line-height:2;">
-
-<a href="https://chatgpt.com/g/g-69d503815138819190a6ea5bf3227781-manthan-decision-infrastructure-assistant" target="_blank">
-Ask Manthan
-</a><br>
-
-<a href="https://manthanos.fly.dev/health" target="_blank">
-Live System
-</a>
 
 </div>
 
