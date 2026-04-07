@@ -42,6 +42,8 @@ extra_css:
 nav:
   - Home: index.md
 
+  - Philosophy: philosophy.md
+
   - Product:
       - System: system.md
       - PR Gate: pr-gate.md
@@ -53,5 +55,3 @@ nav:
 
   - Research:
       - Papers: papers.md
-
-  - API: api.md
