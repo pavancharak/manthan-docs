@@ -1,188 +1,134 @@
-/* ============================= */
-/* GLOBAL BACKGROUND */
-/* ============================= */
+/* ---------------- GLOBAL ---------------- */
 
 body {
-  background-color: #f6f8fb;
-}
-
-.md-main {
-  background-color: #f6f8fb;
-}
-
-.md-content {
-  background-color: #ffffff;
-  padding: 32px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-}
-
-/* ============================= */
-/* LAYOUT */
-/* ============================= */
-
-.md-typeset {
-  max-width: 880px;
-  margin: auto;
   letter-spacing: 0.2px;
+  scroll-behavior: smooth;
 }
 
-/* ============================= */
-/* TYPOGRAPHY */
-/* ============================= */
+/* ---------------- HEADINGS ---------------- */
 
-.md-typeset h1 {
-  font-size: 2.4rem;
-  text-align: center;
+h1 {
   font-weight: 700;
-  color: #111827;
-}
-
-.md-typeset h2 {
-  margin-top: 3rem;
-  margin-bottom: 0.8rem;
-  font-weight: 600;
-  color: #111827;
-}
-
-.md-typeset p {
-  line-height: 1.7;
-  font-size: 16px;
-  color: #374151;
-}
-
-.md-typeset li {
-  margin-bottom: 6px;
-  color: #374151;
-}
-
-/* ============================= */
-/* LINKS */
-/* ============================= */
-
-.md-typeset a {
-  color: #4f46e5;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.md-typeset a:hover {
-  text-decoration: underline;
-}
-
-/* ============================= */
-/* HERO */
-/* ============================= */
-
-.research-hero {
-  text-align: center;
-  margin: 3rem 0 2rem;
-}
-
-.research-hero h1 {
-  font-size: 2.2rem;
   letter-spacing: -0.5px;
 }
 
-.research-hero p {
-  max-width: 700px;
-  margin: 10px auto;
-  color: #6b7280;
+h2 {
+  font-weight: 600;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
-/* ============================= */
-/* CARDS (TRUST MODE) */
-/* ============================= */
-
-.papers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  margin-top: 24px;
+h3 {
+  font-weight: 500;
 }
 
-.paper-card {
-  padding: 22px;
-  border-radius: 14px;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+/* ---------------- PARAGRAPH ---------------- */
+
+p {
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ---------------- SECTIONS ---------------- */
+
+hr {
+  margin: 60px auto;
+  width: 60%;
+  opacity: 0.15;
+}
+
+/* ---------------- PRE BLOCK ---------------- */
+
+pre {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  overflow-x: auto;
+}
+
+/* ---------------- CENTER CONTENT ---------------- */
+
+.md-typeset {
+  text-align: center;
+}
+
+/* keep code blocks left aligned */
+.md-typeset pre {
+  text-align: left;
+}
+
+/* ---------------- BUTTONS ---------------- */
+
+a {
   transition: all 0.2s ease;
 }
 
-.paper-card:hover {
-  transform: translateY(-4px);
-  border-color: #6366f1;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-}
-
-.paper-card.featured {
-  background: #f8fafc;
-  border: 1px solid #6366f1;
-}
-
-.paper-card h3 {
-  font-size: 1.3rem;
-  color: #111827;
-}
-
-.paper-card h4 {
-  font-size: 1.05rem;
-  color: #374151;
-}
-
-.paper-card p {
-  font-size: 0.9rem;
-  color: #6b7280;
-}
-
-/* Links inside cards */
-.paper-card a::after {
-  content: " →";
-  transition: transform 0.2s ease;
-}
-
-.paper-card a:hover::after {
-  transform: translateX(4px);
-}
-
-/* ============================= */
-/* MERMAID */
-/* ============================= */
-
-.mermaid {
-  margin: 2.5rem 0;
-}
-
-.mermaid svg {
-  pointer-events: none;
-}
-
-/* ============================= */
-/* CODE */
-/* ============================= */
-
-.md-typeset pre {
+a[href*="github.com/apps"] {
+  background: #000;
+  color: #fff !important;
+  padding: 12px 22px;
   border-radius: 8px;
+  text-decoration: none;
 }
 
-/* ============================= */
-/* MOBILE */
-/* ============================= */
+a[href*="github.com/apps"]:hover {
+  background: #111;
+  transform: translateY(-1px);
+}
 
-@media screen and (max-width: 600px) {
-  .papers-grid {
-    grid-template-columns: 1fr;
-  }
+/* secondary button */
+a[href*="fly.dev"] {
+  border: 1px solid #000;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+}
 
-  .md-typeset {
-    padding: 0 16px;
-  }
+a[href*="fly.dev"]:hover {
+  background: #000;
+  color: #fff !important;
+}
 
-  .md-typeset h1 {
-    font-size: 1.8rem;
-  }
+/* ---------------- NAVBAR ---------------- */
 
-  .md-typeset h2 {
-    font-size: 1.2rem;
-  }
+.md-header {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* ---------------- IMAGE POLISH ---------------- */
+
+img {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* ---------------- SECTION SPACING ---------------- */
+
+.md-typeset > * {
+  margin-top: 20px;
+}
+
+/* ---------------- LIST POLISH ---------------- */
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "• ";
+  color: #6366f1;
+}
+
+/* ---------------- SMOOTH LINKS ---------------- */
+
+a:hover {
+  opacity: 0.85;
 }

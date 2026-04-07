@@ -77,11 +77,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#contracts" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -578,26 +573,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Contracts
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -615,69 +590,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rules
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guarantees" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guarantees
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-statement" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Statement
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -822,60 +734,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rules
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guarantees" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guarantees
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-statement" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Statement
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -892,41 +750,63 @@
 
 
 
-<h1 id="contracts">Contracts</h1>
-<p>Contracts define decision behavior.</p>
-<hr />
-<h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="nt">intent</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fraud_detection&quot;</span>
+<h1 style="text-align:center;">📜 Contracts</h1>
 
-<span class="nt">inputs</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">number</span>
+<p style="text-align:center;">
+Source of truth for decisions.
+</p>
 
-<span class="nt">behavior</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">rules</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;amount</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">10000&quot;</span>
-<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;reject&quot;</span>
+<p><br></p>
+<hr>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
-<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;approve&quot;</span>
-</code></pre></div>
-<hr />
-<h2 id="rules">Rules</h2>
-<ul>
-<li>Deterministic  </li>
-<li>Order matters (top → bottom evaluation)  </li>
-<li>First matching rule applies  </li>
-<li>No ambiguity  </li>
-</ul>
-<hr />
-<h2 id="guarantees">Guarantees</h2>
-<ul>
-<li>Same input → same output  </li>
-<li>No randomness  </li>
-<li>No side effects  </li>
-</ul>
-<hr />
-<h2 id="core-statement">Core Statement</h2>
-<p>Contracts are the single source of truth for decisions.</p>
+<h2 style="text-align:center;">Structure</h2>
+
+<pre style="text-align:center;">
+intent
+inputs
+outputs
+behavior
+determinism
+boundaries
+</pre>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">Rules</h2>
+
+<div style="text-align:center; line-height:1.8;">
+No runtime mutation<br>
+Fully validated<br>
+Deterministic
+</div>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">Role</h2>
+
+<p style="text-align:center;">
+Defines what is allowed and what is blocked.
+</p>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">Without Contracts</h2>
+
+<p style="text-align:center;">
+Decisions become inconsistent and unverifiable.
+</p>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">With Contracts</h2>
+
+<p style="text-align:center;">
+Decisions become deterministic and auditable.
+</p>
 
 
 
