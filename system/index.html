@@ -750,172 +750,105 @@
 
 
 
-<h1>System</h1>
+<h1 style="text-align:center;">System</h1>
 
-<p>
-Manthan defines how decisions are made, validated, and enforced in software systems.
+<p style="text-align:center; font-size:18px;">
+Decision Infrastructure for deterministic systems.
 </p>
 
+<p><br></p>
 <hr>
 
-<h2>The Problem</h2>
+<h2 style="text-align:center;">Core Idea</h2>
 
-<p>
-AI systems operate in probabilistic generation.
+<p style="text-align:center; max-width:720px; margin:auto;">
+Decisions are not suggestions.<br>
+<strong>They are outcomes that must be enforced.</strong>
 </p>
 
-<ul>
-<li>Same input → different outputs</li>
-<li>No traceability</li>
-<li>No enforcement</li>
-</ul>
-
-<p>
-<strong>This makes them unreliable for decisions.</strong>
-</p>
-
-<p><img src="../assets/problem.png" alt="Problem" style="width:100%; border-radius:8px; margin:20px 0;"></p>
+<p><br></p>
 <hr>
 
-<h2>Generation vs Decision</h2>
+<h2 style="text-align:center;">What Manthan Does</h2>
 
-<p>
-AI operates in <strong>generation mode</strong>.<br>
-Manthan operates in <strong>decision mode</strong>.
-</p>
-
-<ul>
-<li>Generation → possibilities</li>
-<li>Decision → outcomes</li>
-</ul>
-
-<p>
-Prompts generate.<br>
-Contracts decide.
-</p>
-
-<p><img src="../assets/shift.png" alt="Shift" style="width:100%; border-radius:8px; margin:20px 0;"></p>
-<hr>
-
-<h2>Decision Boundary</h2>
-
-<p>
-AI is useful for ambiguity.<br>
-Decisions require certainty.
-</p>
-
-<div style="display:flex; gap:40px; flex-wrap:wrap;">
-
-<div>
-<p><strong>AI (Generation)</strong></p>
-<ul>
-<li>Interpretation</li>
-<li>Exploration</li>
-<li>Ambiguity</li>
-</ul>
+<div style="text-align:center; line-height:1.8;">
+Evaluates inputs against contracts<br>
+Produces deterministic outcomes<br>
+Generates full execution trace<br>
+Enforces results automatically
 </div>
 
-<div>
-<p><strong>Decision Systems</strong></p>
-<ul>
-<li>Determinism</li>
-<li>Enforcement</li>
-<li>Guarantees</li>
-</ul>
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">System Flow</h2>
+
+<pre>
+Input → Contract → Engine → Trace → Enforcement
+</pre>
+
+<p style="text-align:center;">
+Each step is deterministic and fully auditable.
+</p>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">Core Properties</h2>
+
+<div style="text-align:center; line-height:1.8;">
+Deterministic<br>
+Traceable<br>
+Auditable<br>
+Enforceable
 </div>
 
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">Why This Matters</h2>
+
+<p style="text-align:center; max-width:720px; margin:auto;">
+Modern systems — especially AI-driven systems — lack deterministic decision layers.<br><br>
+
+This leads to:
+</p>
+
+<ul>
+  <li>Inconsistent outcomes</li>
+  <li>Unverifiable reasoning</li>
+  <li>Broken compliance</li>
+</ul>
+
+<p><br></p>
+<p style="text-align:center; max-width:720px; margin:auto;">
+Manthan introduces a new primitive:
+<br><br>
+<strong>Decision Infrastructure</strong>
+</p>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">What Makes It Different</h2>
+
+<div style="text-align:center; line-height:1.8;">
+No randomness<br>
+No hidden logic<br>
+No silent failures<br>
+No optional enforcement
 </div>
 
-<p>
-Crossing this boundary turns insight into decision.
-</p>
-
-<p><img src="../assets/decision-boundary.png" alt="Decision Boundary" style="width:100%; border-radius:8px; margin:20px 0;"></p>
+<p><br></p>
 <hr>
 
-<h2>System Model</h2>
+<h2 style="text-align:center;">Summary</h2>
 
-<p>
-A Manthan system follows a deterministic structure:
+<p style="text-align:center; max-width:720px; margin:auto;">
+Manthan ensures that every decision in a system is:
+<br><br>
+<strong>deterministic, traceable, and enforceable by design.</strong>
 </p>
-
-<ul>
-<li>Intent → defined as contracts</li>
-<li>Contracts → define decisions</li>
-<li>Decisions → executed deterministically</li>
-<li>Execution → enforced by the system</li>
-</ul>
-
-<p><img src="../assets/architecture.png" alt="System Model" style="width:100%; border-radius:8px; margin:20px 0;"></p>
-<hr>
-
-<h2>Contracts</h2>
-
-<p>
-Contracts define decisions explicitly.
-</p>
-
-<ul>
-<li>Versioned</li>
-<li>Immutable</li>
-<li>Deterministic</li>
-</ul>
-
-<p>
-They are the source of truth.
-</p>
-
-<p>
-Decisions are not inferred.<br>
-<strong>They are specified.</strong>
-</p>
-
-<p><img src="../assets/contracts.png" alt="Contracts" style="width:100%; border-radius:8px; margin:20px 0;"></p>
-<hr>
-
-<h2>Intelligence Layer</h2>
-
-<p>
-Decisions are made first.
-</p>
-
-<ul>
-<li>Explanation</li>
-<li>Context</li>
-<li>Scoring</li>
-</ul>
-
-<p>
-This layer does not influence decisions.<br>
-<strong>It explains decisions — it never makes them.</strong>
-</p>
-
-<p><img src="../assets/intelligence.png" alt="Intelligence" style="width:100%; border-radius:8px; margin:20px 0;"></p>
-<hr>
-
-<h2>Outcome</h2>
-
-<p><strong>Without deterministic decisions:</strong></p>
-
-<ul>
-<li>Inconsistent outcomes</li>
-<li>No traceability</li>
-<li>No enforcement</li>
-</ul>
-
-<p><strong>With Manthan:</strong></p>
-
-<ul>
-<li>Consistent decisions</li>
-<li>Full traceability</li>
-<li>Enforced outcomes</li>
-</ul>
-
-<p>
-<strong>Reliable systems require deterministic decisions.</strong>
-</p>
-
-<p><img src="../assets/outcome.png" alt="Outcome" style="width:100%; border-radius:8px; margin:20px 0;"></p>
 
 
 

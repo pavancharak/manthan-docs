@@ -39,7 +39,6 @@ hr {
 
 /* ---------------- SAFE CENTERING ---------------- */
 
-/* Only center safe elements */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3,
@@ -47,15 +46,14 @@ hr {
   text-align: center;
 }
 
-/* Keep lists properly aligned */
+/* ---------------- LIST FIX (NO BREAKAGE) ---------------- */
+
 .md-typeset ul,
 .md-typeset ol {
   text-align: left;
   margin: 0 auto;
   max-width: 600px;
 }
-
-/* ---------------- LIST STYLING ---------------- */
 
 .md-typeset ul {
   list-style: disc;
@@ -66,7 +64,7 @@ hr {
   margin-bottom: 6px;
 }
 
-/* ---------------- CODE BLOCK (FIXED) ---------------- */
+/* ---------------- CODE BLOCK (VISIBLE + PREMIUM) ---------------- */
 
 pre {
   background: linear-gradient(135deg, #0b1220, #020617);
@@ -79,13 +77,13 @@ pre {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Force visibility */
+/* FORCE VISIBILITY */
 pre, pre * {
   color: #f9fafb !important;
   opacity: 1 !important;
 }
 
-/* Keep code blocks left aligned */
+/* keep code blocks left aligned */
 .md-typeset pre {
   text-align: left;
 }
@@ -96,7 +94,7 @@ a {
   transition: all 0.2s ease;
 }
 
-/* Primary button */
+/* Primary (GitHub App) */
 a[href*="github.com/apps"] {
   background: #000;
   color: #fff !important;
@@ -110,7 +108,7 @@ a[href*="github.com/apps"]:hover {
   transform: translateY(-1px);
 }
 
-/* Secondary button */
+/* Secondary (Live system) */
 a[href*="fly.dev"] {
   border: 1px solid #000;
   padding: 12px 22px;
@@ -151,4 +149,97 @@ img:hover {
 
 a:hover {
   opacity: 0.85;
+}
+
+/* ===================================================== */
+/* ================= HERO SECTION ======================= */
+/* ===================================================== */
+
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+  margin-bottom: 40px;
+
+  background: radial-gradient(circle at top, #111827, #020617);
+  color: #f9fafb;
+
+  border-radius: 16px;
+}
+
+/* headline */
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+/* subtitle */
+.hero-subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* description */
+.hero-description {
+  font-size: 18px;
+  margin-top: 12px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* actions */
+.hero-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* primary button */
+.btn-primary {
+  background: #fff;
+  color: #000 !important;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #e5e7eb;
+}
+
+/* secondary button */
+.btn-secondary {
+  border: 1px solid #fff;
+  color: #fff !important;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: #000 !important;
+}
+
+/* subtle animation */
+.hero {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -750,10 +750,23 @@
 
 
 
-<h1 style="text-align:center;">📜 Contracts</h1>
+<h1 style="text-align:center;">Contracts</h1>
 
-<p style="text-align:center;">
-Source of truth for decisions.
+<p style="text-align:center; font-size:18px;">
+Source of truth for all decisions in Manthan.
+</p>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">Purpose</h2>
+
+<p style="text-align:center; max-width:720px; margin:auto;">
+Contracts define how decisions are made.
+<br><br>
+They specify inputs, outputs, rules, and constraints.
+<br><br>
+<strong>No decision exists outside a contract.</strong>
 </p>
 
 <p><br></p>
@@ -761,14 +774,43 @@ Source of truth for decisions.
 
 <h2 style="text-align:center;">Structure</h2>
 
-<pre style="text-align:center;">
+<pre>
 intent
 inputs
 outputs
 behavior
+errorModel
 determinism
 boundaries
+metadata
 </pre>
+
+<p style="text-align:center;">
+Each field has a defined role. No implicit behavior.
+</p>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">What Contracts Define</h2>
+
+<div style="text-align:center; line-height:1.8;">
+What inputs are required<br>
+What outputs are valid<br>
+What rules must be enforced<br>
+What behavior is allowed or forbidden
+</div>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">Validation</h2>
+
+<p style="text-align:center; max-width:720px; margin:auto;">
+Every contract is validated before execution.
+<br><br>
+Invalid contracts are rejected immediately.
+</p>
 
 <p><br></p>
 <hr>
@@ -777,35 +819,84 @@ boundaries
 
 <div style="text-align:center; line-height:1.8;">
 No runtime mutation<br>
-Fully validated<br>
-Deterministic
+No partial loading<br>
+No implicit defaults<br>
+Full contract always flows into trace
 </div>
 
 <p><br></p>
 <hr>
 
-<h2 style="text-align:center;">Role</h2>
+<h2 style="text-align:center;">Determinism</h2>
 
+<p style="text-align:center; max-width:720px; margin:auto;">
+Contracts explicitly define determinism constraints:
+</p>
+
+<ul>
+  <li>Allowed behaviors</li>
+  <li>Forbidden operations</li>
+</ul>
+
+<p><br></p>
 <p style="text-align:center;">
-Defines what is allowed and what is blocked.
+This ensures decisions remain predictable and stable.
 </p>
 
 <p><br></p>
 <hr>
 
-<h2 style="text-align:center;">Without Contracts</h2>
+<h2 style="text-align:center;">Boundaries</h2>
 
+<p style="text-align:center; max-width:720px; margin:auto;">
+Contracts define system boundaries:
+</p>
+
+<ul>
+  <li>What data can be accessed</li>
+  <li>What operations are restricted</li>
+</ul>
+
+<p><br></p>
 <p style="text-align:center;">
-Decisions become inconsistent and unverifiable.
+This prevents uncontrolled behavior.
 </p>
 
 <p><br></p>
 <hr>
 
-<h2 style="text-align:center;">With Contracts</h2>
+<h2 style="text-align:center;">Why Contracts Matter</h2>
 
-<p style="text-align:center;">
-Decisions become deterministic and auditable.
+<p style="text-align:center; max-width:720px; margin:auto;">
+Without contracts, decisions become:
+</p>
+
+<ul>
+  <li>Implicit</li>
+  <li>Inconsistent</li>
+  <li>Unverifiable</li>
+</ul>
+
+<p><br></p>
+<p style="text-align:center; max-width:720px; margin:auto;">
+With contracts, decisions become:
+</p>
+
+<ul>
+  <li>Explicit</li>
+  <li>Deterministic</li>
+  <li>Auditable</li>
+</ul>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">Summary</h2>
+
+<p style="text-align:center; max-width:720px; margin:auto;">
+Contracts define reality for decision-making in Manthan.
+<br><br>
+<strong>They are the single source of truth.</strong>
 </p>
 
 

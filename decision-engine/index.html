@@ -750,18 +750,29 @@
 
 
 
-<h1 style="text-align:center;">⚙️ Decision Engine</h1>
+<h1 style="text-align:center;">Decision Engine</h1>
 
-<p style="text-align:center;">
-Deterministic execution core.
+<p style="text-align:center; font-size:18px;">
+Deterministic execution core of Manthan.
 </p>
 
 <p><br></p>
 <hr>
 
-<h2 style="text-align:center;">Pipeline</h2>
+<h2 style="text-align:center;">Purpose</h2>
 
-<pre style="text-align:center;">
+<p style="text-align:center; max-width:720px; margin:auto;">
+The decision engine evaluates inputs against contracts and produces:
+<br><br>
+<strong>a deterministic outcome with a full execution trace.</strong>
+</p>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">Execution Pipeline</h2>
+
+<pre>
 contract_validation
 → determinism_check
 → boundary_check
@@ -769,35 +780,112 @@ contract_validation
 → base_rules
 </pre>
 
+<p style="text-align:center;">
+Each step is executed in a fixed order.  
+Failure at any step stops execution immediately.
+</p>
+
 <p><br></p>
 <hr>
 
-<h2 style="text-align:center;">Properties</h2>
+<h2 style="text-align:center;">Step Breakdown</h2>
+
+<p style="text-align:center; max-width:720px; margin:auto;">
+
+<strong>contract_validation</strong><br>
+Ensures contract structure and rules are valid.<br><br>
+
+<strong>determinism_check</strong><br>
+Prevents forbidden patterns and non-deterministic behavior.<br><br>
+
+<strong>boundary_check</strong><br>
+Ensures execution stays within defined system boundaries.<br><br>
+
+<strong>intent_alignment</strong><br>
+Validates that changes match declared intent.<br><br>
+
+<strong>base_rules</strong><br>
+Applies core rule evaluation defined by the contract.
+</p>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">Execution Properties</h2>
 
 <div style="text-align:center; line-height:1.8;">
-Fixed order<br>
-Fail-fast<br>
+Fixed step order<br>
+Fail-fast execution<br>
 No randomness<br>
-No external dependencies
+No external calls<br>
+No hidden state
 </div>
 
 <p><br></p>
 <hr>
 
-<h2 style="text-align:center;">Output</h2>
+<h2 style="text-align:center;">Output Structure</h2>
 
-<pre style="text-align:center;">
-decision + trace
+<pre>
+{
+  decision: {
+    status: "pass | fail",
+    failedStep: "..."
+  },
+  trace: {
+    evaluationSteps: [...]
+  }
+}
 </pre>
 
 <p><br></p>
 <hr>
 
-<h2 style="text-align:center;">Core Truth</h2>
+<h2 style="text-align:center;">Determinism Guarantee</h2>
 
-<p style="text-align:center;">
-Same input → same output<br>
-<strong>No exceptions.</strong>
+<p style="text-align:center; max-width:720px; margin:auto;">
+For the same:
+<br>
+Input + Contract
+<br><br>
+The engine will always produce:
+<br><br>
+<strong>the exact same output.</strong>
+</p>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">What This Is NOT</h2>
+
+<div style="text-align:center; line-height:1.8;">
+Not AI generation<br>
+Not probabilistic reasoning<br>
+Not heuristic scoring<br>
+Not rule guessing
+</div>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">What This IS</h2>
+
+<div style="text-align:center; line-height:1.8;">
+Deterministic evaluation<br>
+Contract-driven execution<br>
+Fully traceable reasoning<br>
+Enforced decision outcomes
+</div>
+
+<p><br></p>
+<hr>
+
+<h2 style="text-align:center;">Summary</h2>
+
+<p style="text-align:center; max-width:720px; margin:auto;">
+The decision engine ensures that every decision in Manthan is:
+<br><br>
+<strong>deterministic, explainable, and auditable by design.</strong>
 </p>
 
 
