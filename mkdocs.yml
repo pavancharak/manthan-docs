@@ -1,5 +1,5 @@
 site_name: Manthan
-site_description: Deterministic Decision Operating System for AI
+site_description: Decision Infrastructure for Trusted Systems
 site_url: https://pavancharak.github.io/manthan-docs/
 
 theme:
@@ -7,7 +7,7 @@ theme:
 
   palette:
     scheme: default
-    primary: white
+    primary: black
     accent: indigo
 
   font:
@@ -16,9 +16,10 @@ theme:
 
   features:
     - navigation.tabs
-    - navigation.sections
-    - navigation.expand
+    - navigation.top
     - navigation.instant
+    - navigation.expand
+    - header.autohide
     - content.code.copy
     - content.tabs.link
 
@@ -40,6 +41,17 @@ extra_css:
 
 nav:
   - Home: index.md
-  - System: system.md
-  - Research: papers.md
-  - PR Gate: pr-gate.md
+
+  - Product:
+      - System: system.md
+      - PR Gate: pr-gate.md
+
+  - Technology:
+      - Architecture: architecture.md
+      - Decision Engine: decision-engine.md
+      - Contracts: contracts.md
+
+  - Research:
+      - Papers: papers.md
+
+  - API: api.md

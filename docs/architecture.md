@@ -1,198 +1,116 @@
-# Architecture
+<h1 style="text-align:center;">Architecture</h1>
 
-Manthan is a **deterministic decision infrastructure** built as layered components with strict execution guarantees.
+<p style="text-align:center; font-size:18px;">
+Deterministic system architecture for decision execution.
+</p>
 
----
+<br>
 
-## System Flow
+<hr>
 
-```mermaid
-flowchart LR
+<h2 style="text-align:center;">System Layers</h2>
 
-A[Input] --> B[Canonicalization] --> C[Decision Engine] --> D[Intelligence Layer] --> E[Enforcement]
+<pre>
+contracts/
+packages/core/
+registry/
+api/
+enforcement/
+</pre>
 
-A -.-> N1[Normalize]
-B -.-> N2[Evaluate Rules]
-C -.-> N3[Score]
-D -.-> N4[Execute]
+<p style="text-align:center;">
+Each layer has a fixed responsibility. No overlap. No mutation.
+</p>
 
-classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-classDef note fill:#020617,stroke:#64748b,stroke-width:1px,color:#9ca3af;
+<br>
 
-class A,B,C,D,E main;
-class N1,N2,N3,N4 note;
-```
+<hr>
 
----
+<h2 style="text-align:center;">Layer Responsibilities</h2>
 
-## Execution Pipeline
+<p style="text-align:center; max-width:720px; margin:auto;">
 
-```mermaid
-flowchart LR
+<strong>Contracts</strong><br>
+Defines rules, inputs, outputs, and constraints.<br><br>
 
-I[Input] --> C[Canonicalization] --> H[Deterministic Hash] --> D[Decision Engine] --> L[Intelligence Layer] --> O[Output] --> E[Enforcement]
+<strong>Core Engine</strong><br>
+Executes deterministic decision pipeline.<br><br>
 
-I -.-> N1[Normalize]
-C -.-> N2[Hash]
-H -.-> N3[Match Rules]
-D -.-> N4[Score]
-L -.-> N5[Final Decision]
-O -.-> N6[Execute]
+<strong>Registry</strong><br>
+Loads and validates contracts.<br><br>
 
-classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-classDef note fill:#020617,stroke:#64748b,stroke-width:1px,color:#9ca3af;
+<strong>API</strong><br>
+Receives events and builds input payloads.<br><br>
 
-class I,C,H,D,L,O,E main;
-class N1,N2,N3,N4,N5,N6 note;
-```
+<strong>Enforcement</strong><br>
+Applies decisions to GitHub (block / approve).
+</p>
 
----
+<br>
 
-## Decision Graph (Dependency Execution)
+<hr>
 
-```mermaid
-flowchart LR
+<h2 style="text-align:center;">Execution Flow</h2>
 
-A[Input Check] --> B[Risk Evaluation]
-A --> C[Fraud Detection]
+<pre>
+Event → Registry → Engine → Trace → Enforcement
+</pre>
 
-B --> D[Decision]
-C --> D
+<p style="text-align:center;">
+Execution is linear, deterministic, and fail-fast.
+</p>
 
-D --> E[Final Action]
+<br>
 
-classDef node fill:#020617,stroke:#a78bfa,stroke-width:3px,color:#ffffff;
-class A,B,C,D,E node;
-```
+<hr>
 
----
+<h2 style="text-align:center;">Key Principles</h2>
 
-## System Architecture (Layered View)
+<div style="text-align:center; line-height:1.8;">
+No layer overrides another<br>
+Contract is the single source of truth<br>
+No runtime mutation<br>
+No external influence on decisions
+</div>
 
-```mermaid
-flowchart LR
+<br>
 
-subgraph InputLayer["Input Layer"]
-I1[Raw Input]
-C1[Canonicalization]
-end
+<hr>
 
-subgraph Core["Decision Core"]
-D1[Decision Engine]
-L1[Intelligence Layer]
-G1[Decision Graph Engine]
-end
+<h2 style="text-align:center;">Determinism Guarantee</h2>
 
-subgraph Governance["Governance"]
-K1[Contracts]
-A1[Audit Log]
-end
+<p style="text-align:center; max-width:720px; margin:auto;">
+The system ensures:
+</p>
 
-subgraph Execution["Execution"]
-E1[Enforcement]
-end
+<ul>
+  <li>Same input → same output</li>
+  <li>No randomness</li>
+  <li>No hidden state</li>
+  <li>No external dependencies in decision logic</li>
+</ul>
 
-I1 --> C1 --> D1 --> L1 --> E1
+<br>
 
-D1 --> G1
-G1 --> D1
+<hr>
 
-D1 --> K1
-K1 --> D1
+<h2 style="text-align:center;">Why This Architecture Matters</h2>
 
-D1 --> A1
+<p style="text-align:center; max-width:720px; margin:auto;">
+Traditional systems mix logic, data, and enforcement.<br><br>
 
-classDef input fill:#020617,stroke:#22c55e,stroke-width:3px,color:#ffffff;
-classDef core fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-classDef gov fill:#020617,stroke:#f59e0b,stroke-width:3px,color:#ffffff;
-classDef exec fill:#020617,stroke:#a78bfa,stroke-width:3px,color:#ffffff;
+Manthan separates them cleanly, making decisions:
+<br><br>
+<strong>traceable, auditable, and enforceable.</strong>
+</p>
 
-class I1,C1 input;
-class D1,L1,G1 core;
-class K1,A1 gov;
-class E1 exec;
-```
+<br>
 
----
+<hr>
 
-## Component Overview
+<h2 style="text-align:center;">Summary</h2>
 
-### Canonicalization
-**Purpose:** Normalize input into a stable format
-
-- Sort keys  
-- Normalize values  
-- Remove ambiguity  
-
-**Output:** Stable hash
-
----
-
-### Decision Engine
-**Purpose:** Core decision computation
-
-- Rule-based  
-- Fixed execution order  
-- First-match wins  
-- No randomness  
-
----
-
-### Intelligence Layer
-**Purpose:** Add structured metadata
-
-- Score  
-- Confidence  
-- Priority  
-- Explanation  
-
----
-
-### Decision Graphs
-**Purpose:** Handle multi-step dependencies
-
-- DAG only  
-- Topological execution  
-- No cycles  
-
----
-
-### Contracts
-**Purpose:** Define decision behavior
-
-- Versioned  
-- Immutable  
-- Auditable  
-
----
-
-### Enforcement
-**Purpose:** Apply decisions externally
-
-- GitHub PR blocking  
-- API enforcement  
-- Workflow control  
-
----
-
-## System Properties
-
-- Deterministic execution (no randomness)  
-- Immutable contract-based logic  
-- Full auditability via append-only logs  
-- Graph-based dependency resolution  
-
----
-
-## System Guarantee
-
-> **Same Input → Same Output → Always**
-
----
-
-## Design Principles
-
-- Determinism over intelligence  
-- Explicit over implicit  
-- Versioned over mutable  
-- Auditability over performance  
+<p style="text-align:center; max-width:720px; margin:auto;">
+Manthan is built as a deterministic system where each layer has a single responsibility,
+ensuring consistent and reliable decision execution.
+</p>

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Deterministic Decision Operating System for AI">
+        <meta name="description" content="Decision Infrastructure for Trusted Systems">
       
       
       
@@ -67,13 +67,18 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#the-problem" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -198,17 +203,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="system/" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="system/" class="md-tabs__link">
+          
   
-  System
+  
+  Product
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -217,17 +223,38 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="papers/" class="md-tabs__link">
+    
+    
+      <li class="md-tabs__item">
+        <a href="architecture/" class="md-tabs__link">
+          
+  
+  
+  Technology
+
+        </a>
+      </li>
+    
+  
+
+      
         
   
   
+  
+  
     
+    
+      <li class="md-tabs__item">
+        <a href="papers/" class="md-tabs__link">
+          
+  
   
   Research
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -237,13 +264,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="pr-gate/" class="md-tabs__link">
+      <a href="api/" class="md-tabs__link">
         
   
   
     
   
-  PR Gate
+  API
 
       </a>
     </li>
@@ -297,6 +324,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -314,12 +359,169 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Shift
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-manthan-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Manthan Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Get
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-this-is-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who This Is For
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Closing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Product
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
@@ -344,36 +546,10 @@
     </li>
   
 
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="papers/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Research
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -387,6 +563,271 @@
     
   
     PR Gate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="decision-engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decision Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contracts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Research
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="papers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Papers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
   
 
     
@@ -417,6 +858,102 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Shift
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-manthan-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Manthan Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Get
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explore
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-this-is-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who This Is For
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Closing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -432,136 +969,151 @@
 
 
 
+<div class="hero">
+
+  <h1>Manthan</h1>
+
+  <p class="hero-subtitle">
+    Decision Infrastructure
+  </p>
+
+  <p class="hero-description">
+    Every system runs on decisions.<br>
+    <strong>Manthan makes them deterministic, auditable, and enforceable.</strong>
+  </p>
+
+  <div class="hero-actions">
+    <a href="https://github.com/apps/manthan-pr-gate" target="_blank" class="btn-primary">
+      Install PR Gate
+    </a>
+
+    <a href="https://manthanos.fly.dev/health" target="_blank" class="btn-secondary">
+        Live System
+    </a>
+  </div>
+
+</div>
+
+<p><br><br></p>
+<hr />
+<h2 id="the-problem">The Problem</h2>
 <p align="center">
-  <img src="assets/banner.png" alt="Manthan Banner" width="100%" style="border-radius:12px;">
+  <img src="assets/problem.png" width="70%">
 </p>
-
-<p><br></p>
-<h1 style="margin-bottom: 10px;">Manthan</h1>
-
-<p style="font-size:22px; text-align:center;">
-<strong>Decision Infrastructure for Trusted Systems</strong>
-</p>
-
-<p style="text-align:center; font-size:18px; margin-top:10px;">
-Most systems optimize for performance.<br>
-<strong>Manthan optimizes for trust.</strong>
-</p>
-
-<p><br></p>
-<hr>
-
-<h2 style="text-align:center;">The Problem</h2>
 
 <p style="text-align:center; max-width:720px; margin:auto;">
-AI systems operate in probabilistic generation.<br>
-The same input can produce different outputs.<br>
+Modern systems — especially AI — operate in probabilistic generation.<br>
+The same input can produce different outputs.<br><br>
+
 There is no traceability. No enforcement.
 </p>
 
-<p style="text-align:center; margin-top:12px;">
+<p style="text-align:center;">
 <strong>This makes them unfit for critical systems.</strong>
 </p>
 
 <p><br></p>
-<hr>
-
-<h2 style="text-align:center;">The Shift</h2>
-
-<p style="text-align:center;">
-AI operates in <strong>generation mode</strong>.<br>
-Manthan operates in <strong>decision mode</strong>.
+<hr />
+<h2 id="the-shift">The Shift</h2>
+<p align="center">
+  <img src="assets/shift.png" width="70%">
 </p>
 
-<p><br></p>
-<div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; text-align:center;">
-  <div>
-    <p><strong>Generation</strong></p>
-    <p>Possibilities</p>
-    <p>Suggestions</p>
-    <p>Probabilistic</p>
-  </div>
+<div style="display:flex; justify-content:center; gap:80px; flex-wrap:wrap; text-align:center;">
 
-  <div>
-    <p><strong>Decision</strong></p>
-    <p>Outcomes</p>
-    <p>Enforcement</p>
-    <p>Deterministic</p>
-  </div>
+<div>
+<p><strong>Generation</strong></p>
+<p>Possibilities</p>
+<p>Suggestions</p>
+<p>Probabilistic</p>
+</div>
+
+<div>
+<p><strong>Decision</strong></p>
+<p>Outcomes</p>
+<p>Enforcement</p>
+<p>Deterministic</p>
+</div>
+
 </div>
 
 <p><br></p>
-<hr>
+<hr />
+<h2 id="how-manthan-works">How Manthan Works</h2>
+<p align="center">
+  <img src="assets/architecture.png" width="70%">
+</p>
 
-<h2 style="text-align:center;">Explore</h2>
+<pre>
+Input → Contract → Engine → Trace → Enforcement
+</pre>
 
+<pre>
+contract_validation
+→ determinism_check
+→ boundary_check
+→ intent_alignment
+→ base_rules
+</pre>
+
+<p style="text-align:center;">
+Fail-fast. Fully traceable. No hidden logic.
+</p>
+
+<p><br></p>
+<hr />
+<h2 id="what-you-get">What You Get</h2>
+<p align="center">
+  <img src="assets/outcome.png" width="70%">
+</p>
+
+<div style="text-align:center; line-height:1.8;">
+Deterministic decision<br>
+Full execution trace<br>
+Human-readable explanation<br>
+Enforced outcome
+</div>
+
+<p><br></p>
+<hr />
+<h2 id="live-system">Live System</h2>
+<p style="text-align:center;">
+Manthan v0.2 is deployed and running.
+</p>
+
+<p style="text-align:center;">
+<a href="https://manthanos.fly.dev/health" target="_blank">
+Check system health →
+</a>
+</p>
+
+<p><br></p>
+<hr />
+<h2 id="explore">Explore</h2>
 <div style="text-align:center; line-height:2;">
   <a href="system/"><strong>System</strong></a><br>
+  <a href="architecture/">Architecture</a><br>
+  <a href="contracts/">Contracts</a><br>
+  <a href="decision-engine/">Decision Engine</a><br>
+  <a href="pr-gate/">PR Gate</a><br>
   <a href="papers/">Research</a>
 </div>
 
 <p><br></p>
-<hr>
-
-<h2 style="text-align:center;">Use</h2>
-
-<p style="text-align:center;">
-🚀 <a href="https://github.com/apps/manthan-pr-gate" target="_blank">
-Try Manthan (GitHub App)
-</a>
-</p>
-
-<p><br></p>
-<hr>
-
-<h2 style="text-align:center;">Thinking</h2>
-
-<p style="text-align:center;">
-📖 <a href="https://manthansystems.substack.com/" target="_blank">
-Read Manthan on Substack →
-</a>
-</p>
-
-<p><br></p>
-<hr>
-
-<h2 style="text-align:center;">Contact</h2>
-
-<p style="text-align:center; line-height:1.8;">
-📧 <a href="mailto:founder@manthan.systems">founder@manthan.systems</a><br>
-
-🔗 <a href="https://www.linkedin.com/in/pavancharak/" target="_blank">
-LinkedIn
-</a><br>
-
-🚀 <a href="https://github.com/apps/manthan-pr-gate" target="_blank">
-GitHub App
-</a><br>
-
-📖 <a href="https://manthansystems.substack.com/" target="_blank">
-Substack
-</a>
-</p>
-
-<p><br></p>
-<hr>
-
-<h2 style="text-align:center;">Who This Is For</h2>
-
+<hr />
+<h2 id="who-this-is-for">Who This Is For</h2>
 <p style="text-align:center; max-width:720px; margin:auto;">
-Engineers, founders, and teams building systems<br>
-where correctness, auditability, and enforcement are non-negotiable.
+Engineers and teams building systems where correctness, auditability, and enforcement are non-negotiable.
 </p>
 
 <p><br></p>
-<hr>
-
-<h2 style="text-align:center;">Closing</h2>
-
+<hr />
+<h2 id="closing">Closing</h2>
 <p style="text-align:center; max-width:720px; margin:auto;">
-Manthan is not another AI system.<br>
-It is the layer that makes decisions in software systems<br>
-<strong>traceable, auditable, and enforceable by design.</strong>
+Software runs on code.<br>
+Systems run on decisions.<br><br>
+
+<strong>Manthan makes those decisions reliable infrastructure.</strong>
 </p>
 
 
@@ -584,6 +1136,12 @@ It is the layer that makes decisions in software systems<br>
 
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -614,7 +1172,7 @@ It is the layer that makes decisions in software systems<br>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.instant", "content.code.copy", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.top", "navigation.instant", "navigation.expand", "header.autohide", "content.code.copy", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.79ae519e.min.js"></script>

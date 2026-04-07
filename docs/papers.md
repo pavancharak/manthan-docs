@@ -1,116 +1,100 @@
-# Research
+<h1 style="text-align:center;">Research</h1>
 
-<div class="research-hero">
-  <h1>Decision Infrastructure</h1>
-  <p>
-    Manthan defines a new class of systems where decisions are deterministic,
-    auditable, and enforceable.
-  </p>
-  <p>
-    This research establishes decisions as a first-class primitive in software systems.
-  </p>
-</div>
-
----
-
-## The Premise
-
-Modern AI systems generate outputs.
-
-They do not make decisions.
-
-- Outputs are probabilistic  
-- Behavior is non-deterministic  
-- Outcomes are not enforceable  
-
-This creates a fundamental gap.
-
-> Systems can generate — but they cannot be trusted to decide.
-
----
-
-## 🧠 Core System
-
-<div class="paper-card featured">
-  <h3>Manthan OS</h3>
-  <p>Deterministic Decision Infrastructure for Verifiable, Auditable, and Enforceable Computation</p>
-  <a href="../papers/manthan-os.pdf" target="_blank">Read Paper</a>
-</div>
-
----
-
-## ⚙️ Decision Systems
-
-<p>
-These works define how decisions are structured, executed, and enforced as deterministic systems.
+<p style="text-align:center; font-size:18px;">
+Foundations of deterministic decision systems.
 </p>
 
-<div class="papers-grid">
+<br>
 
-<div class="paper-card">
-  <h4>Decision Consistency & Enforcement</h4>
-  <p>Framework for Reliable Computational Governance</p>
-  <a href="../papers/decision-consistency-enforcement.pdf" target="_blank">View</a>
-</div>
+<hr>
 
-<div class="paper-card">
-  <h4>Distributed Decision Systems</h4>
-  <p>Deterministic Consensus Model</p>
-  <a href="../papers/distributed-decision-systems.pdf" target="_blank">View</a>
-</div>
+<h2 style="text-align:center;">Overview</h2>
 
-</div>
-
----
-
-## 🤖 AI Systems
-
-<p>
-AI systems are effective at generation, but require deterministic layers for reliable execution.
+<p style="text-align:center; max-width:720px; margin:auto;">
+Manthan is grounded in the idea that systems must not only compute,
+but make correct and enforceable decisions.
+<br><br>
+This requires a shift from probabilistic generation to deterministic evaluation.
 </p>
 
-<div class="papers-grid">
+<br>
 
-<div class="paper-card">
-  <h4>AI Alignment Infrastructure</h4>
-  <p>Enforcing Verifiable Behavior in Autonomous Systems</p>
-  <a href="../papers/ai-alignment-decision-infrastructure.pdf" target="_blank">View</a>
+<hr>
+
+<h2 style="text-align:center;">Focus Areas</h2>
+
+<div style="text-align:center; line-height:1.8;">
+Decision consistency<br>
+Auditability and traceability<br>
+Enforcement systems<br>
+Distributed decision architectures
 </div>
 
-</div>
+<br>
 
----
+<hr>
 
-## 🏛️ Governance & Compliance
+<h2 style="text-align:center;">Papers</h2>
 
-<p>
-These works explore how deterministic decision systems enable auditability, compliance, and control.
+<p style="text-align:center;">
+The following papers explore the principles behind Manthan:
 </p>
 
-<div class="papers-grid">
+<ul>
+  <li>Decision Infrastructure</li>
+  <li>Decision Auditability</li>
+  <li>Decision Consistency</li>
+  <li>Distributed Decision Systems</li>
+  <li>Manthan OS</li>
+</ul>
 
-<div class="paper-card">
-  <h4>Auditability & Compliance</h4>
-  <p>Framework for Verifiable Governance</p>
-  <a href="../papers/decision-auditability-compliance.pdf" target="_blank">View</a>
-</div>
+<br>
 
-<div class="paper-card">
-  <h4>Auditability (Formal)</h4>
-  <p>Formal Model for Verifiable Governance</p>
-  <a href="../papers/decision-auditability-formal.pdf" target="_blank">View</a>
-</div>
+<hr>
 
-</div>
+<h2 style="text-align:center;">Philosophy</h2>
 
----
+<p style="text-align:center; max-width:720px; margin:auto;">
+Modern systems rely on computation.<br>
+Future systems must rely on correct decisions.
+<br><br>
+<strong>Decisions must be deterministic, explainable, and enforceable.</strong>
+</p>
 
-## Conclusion
+<br>
 
-AI can generate.
+<hr>
 
-But systems must decide.
+<h2 style="text-align:center;">Why This Matters</h2>
 
-Manthan defines the missing layer:
+<p style="text-align:center; max-width:720px; margin:auto;">
+As systems become more autonomous, the cost of incorrect decisions increases.
+<br><br>
 
-> Deterministic. Traceable. Enforceable.
+Without a deterministic decision layer:
+</p>
+
+<ul>
+  <li>Systems become unpredictable</li>
+  <li>Compliance breaks</li>
+  <li>Trust erodes</li>
+</ul>
+
+<br>
+
+<p style="text-align:center; max-width:720px; margin:auto;">
+Manthan addresses this by introducing decision infrastructure as a first-class system layer.
+</p>
+
+<br>
+
+<hr>
+
+<h2 style="text-align:center;">Summary</h2>
+
+<p style="text-align:center; max-width:720px; margin:auto;">
+Manthan is not just a product.<br>
+It is a shift in how systems are designed.
+<br><br>
+<strong>From computation → to decision infrastructure.</strong>
+</p>

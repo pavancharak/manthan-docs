@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://pavancharak.github.io/manthan-docs/architecture/">
+        <link rel="canonical" href="https://pavancharak.github.io/manthan-docs/support/">
       
       
-        <link rel="prev" href="../pr-gate/">
-      
-      
-        <link rel="next" href="../decision-engine/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>Architecture - Manthan</title>
+        <title>Support - Manthan</title>
       
     
     
@@ -107,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architecture
+              Support
             
           </span>
         </div>
@@ -217,13 +213,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../architecture/" class="md-tabs__link">
           
   
   
@@ -453,29 +447,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -493,7 +484,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -508,17 +499,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
         
   
   
@@ -534,7 +518,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -750,115 +733,345 @@
 
 
 
-<h1 style="text-align:center;">Architecture</h1>
+<!DOCTYPE html>
 
-<p style="text-align:center; font-size:18px;">
-Deterministic system architecture for decision execution.
-</p>
+<html lang="en">
 
-<p><br></p>
-<hr>
+<head>
 
-<h2 style="text-align:center;">System Layers</h2>
+&#x20; <meta charset="UTF-8" />
 
-<pre>
-contracts/
-packages/core/
-registry/
-api/
-enforcement/
-</pre>
+&#x20; <title>Support — Manthan</title>
 
-<p style="text-align:center;">
-Each layer has a fixed responsibility. No overlap. No mutation.
-</p>
+&#x20; <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<p><br></p>
-<hr>
 
-<h2 style="text-align:center;">Layer Responsibilities</h2>
 
-<p style="text-align:center; max-width:720px; margin:auto;">
+&#x20; <style>
 
-<strong>Contracts</strong><br>
-Defines rules, inputs, outputs, and constraints.<br><br>
+&#x20;   :root {
 
-<strong>Core Engine</strong><br>
-Executes deterministic decision pipeline.<br><br>
+&#x20;     --bg: #0b0f14;
 
-<strong>Registry</strong><br>
-Loads and validates contracts.<br><br>
+&#x20;     --card: #11161d;
 
-<strong>API</strong><br>
-Receives events and builds input payloads.<br><br>
+&#x20;     --border: #1f2933;
 
-<strong>Enforcement</strong><br>
-Applies decisions to GitHub (block / approve).
-</p>
+&#x20;     --text: #e6edf3;
 
-<p><br></p>
-<hr>
+&#x20;     --muted: #8b949e;
 
-<h2 style="text-align:center;">Execution Flow</h2>
+&#x20;     --accent: linear-gradient(90deg, #58a6ff, #f97316);
 
-<pre>
-Event → Registry → Engine → Trace → Enforcement
-</pre>
+&#x20;   }
 
-<p style="text-align:center;">
-Execution is linear, deterministic, and fail-fast.
-</p>
 
-<p><br></p>
-<hr>
 
-<h2 style="text-align:center;">Key Principles</h2>
+&#x20;   body {
 
-<div style="text-align:center; line-height:1.8;">
-No layer overrides another<br>
-Contract is the single source of truth<br>
-No runtime mutation<br>
-No external influence on decisions
-</div>
+&#x20;     margin: 0;
 
-<p><br></p>
-<hr>
+&#x20;     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-<h2 style="text-align:center;">Determinism Guarantee</h2>
+&#x20;     background: radial-gradient(circle at top, #0f1620, #0b0f14);
 
-<p style="text-align:center; max-width:720px; margin:auto;">
-The system ensures:
-</p>
+&#x20;     color: var(--text);
 
-<ul>
-  <li>Same input → same output</li>
-  <li>No randomness</li>
-  <li>No hidden state</li>
-  <li>No external dependencies in decision logic</li>
-</ul>
+&#x20;     display: flex;
 
-<p><br></p>
-<hr>
+&#x20;     align-items: center;
 
-<h2 style="text-align:center;">Why This Architecture Matters</h2>
+&#x20;     justify-content: center;
 
-<p style="text-align:center; max-width:720px; margin:auto;">
-Traditional systems mix logic, data, and enforcement.<br><br>
+&#x20;     min-height: 100vh;
 
-Manthan separates them cleanly, making decisions:
-<br><br>
-<strong>traceable, auditable, and enforceable.</strong>
-</p>
+&#x20;     text-align: center;
 
-<p><br></p>
-<hr>
+&#x20;   }
 
-<h2 style="text-align:center;">Summary</h2>
 
-<p style="text-align:center; max-width:720px; margin:auto;">
-Manthan is built as a deterministic system where each layer has a single responsibility,
-ensuring consistent and reliable decision execution.
-</p>
+
+&#x20;   .container {
+
+&#x20;     max-width: 800px;
+
+&#x20;     padding: 40px 20px;
+
+&#x20;   }
+
+
+
+&#x20;   h1 {
+
+&#x20;     font-size: 42px;
+
+&#x20;     margin-bottom: 10px;
+
+&#x20;   }
+
+
+
+&#x20;   .subtitle {
+
+&#x20;     background: var(--accent);
+
+&#x20;     -webkit-background-clip: text;
+
+&#x20;     -webkit-text-fill-color: transparent;
+
+&#x20;     font-weight: 600;
+
+&#x20;     margin-bottom: 20px;
+
+&#x20;   }
+
+
+
+&#x20;   p {
+
+&#x20;     color: var(--muted);
+
+&#x20;     margin-bottom: 30px;
+
+&#x20;     font-size: 16px;
+
+&#x20;   }
+
+
+
+&#x20;   .card {
+
+&#x20;     background: var(--card);
+
+&#x20;     border: 1px solid var(--border);
+
+&#x20;     border-radius: 14px;
+
+&#x20;     padding: 30px;
+
+&#x20;     margin-top: 20px;
+
+&#x20;   }
+
+
+
+&#x20;   .buttons {
+
+&#x20;     display: flex;
+
+&#x20;     gap: 12px;
+
+&#x20;     flex-wrap: wrap;
+
+&#x20;     justify-content: center;
+
+&#x20;     margin-top: 20px;
+
+&#x20;   }
+
+
+
+&#x20;   .button {
+
+&#x20;     padding: 12px 18px;
+
+&#x20;     border-radius: 8px;
+
+&#x20;     text-decoration: none;
+
+&#x20;     font-weight: 600;
+
+&#x20;     font-size: 14px;
+
+&#x20;     border: 1px solid var(--border);
+
+&#x20;     transition: all 0.2s ease;
+
+&#x20;   }
+
+
+
+&#x20;   .primary {
+
+&#x20;     background: var(--accent);
+
+&#x20;     color: white;
+
+&#x20;     border: none;
+
+&#x20;   }
+
+
+
+&#x20;   .secondary {
+
+&#x20;     background: #161b22;
+
+&#x20;     color: var(--text);
+
+&#x20;   }
+
+
+
+&#x20;   .button:hover {
+
+&#x20;     transform: translateY(-2px);
+
+&#x20;     opacity: 0.95;
+
+&#x20;   }
+
+
+
+&#x20;   .note {
+
+&#x20;     margin-top: 25px;
+
+&#x20;     font-size: 14px;
+
+&#x20;     color: var(--muted);
+
+&#x20;     line-height: 1.6;
+
+&#x20;   }
+
+
+
+&#x20;   .highlight {
+
+&#x20;     color: #e6edf3;
+
+&#x20;     font-weight: 600;
+
+&#x20;   }
+
+
+
+&#x20;   .footer {
+
+&#x20;     margin-top: 60px;
+
+&#x20;     font-size: 13px;
+
+&#x20;     color: #6e7681;
+
+&#x20;   }
+
+&#x20; </style>
+
+</head>
+
+
+
+<body>
+
+&#x20; <div class="container">
+
+
+
+&#x20;   <h1>Support</h1>
+
+&#x20;   <div class="subtitle">Deterministic Systems Require Deterministic Reports</div>
+
+
+
+&#x20;   <p>
+
+&#x20;     Manthan enforces decisions as system truth.
+
+&#x20;     If something behaves unexpectedly, it must be reproducible.
+
+&#x20;   </p>
+
+
+
+&#x20;   <div class="card">
+
+
+
+&#x20;     <div class="buttons">
+
+
+
+&#x20;       <a class="button primary"
+
+&#x20;          href="https://github.com/dip-protocol/manthanos/issues/new?template=bug\_report.md"
+
+&#x20;          target="\_blank">
+
+&#x20;         🐞 Report Bug
+
+&#x20;       </a>
+
+
+
+&#x20;       <a class="button secondary"
+
+&#x20;          href="https://github.com/dip-protocol/manthanos/issues/new?template=contract\_issue.md"
+
+&#x20;          target="\_blank">
+
+&#x20;         ⚙️ Contract Issue
+
+&#x20;       </a>
+
+
+
+&#x20;       <a class="button secondary"
+
+&#x20;          href="https://github.com/dip-protocol/manthanos/issues/new?template=feature\_request.md"
+
+&#x20;          target="\_blank">
+
+&#x20;         💡 Feature Request
+
+&#x20;       </a>
+
+
+
+&#x20;     </div>
+
+
+
+&#x20;     <div class="note">
+
+&#x20;       <span class="highlight">Include:</span><br>
+
+&#x20;       • Pull request link<br>
+
+&#x20;       • Contract reference<br>
+
+&#x20;       • Decision output<br>
+
+&#x20;       • Trace<br><br>
+
+
+
+&#x20;       Same input should produce the same result.<br>
+
+&#x20;       If it does not, this is a system fault.
+
+&#x20;     </div>
+
+
+
+&#x20;   </div>
+
+
+
+&#x20;   <div class="footer">
+
+&#x20;     Manthan — Decision Infrastructure
+
+&#x20;   </div>
+
+
+
+&#x20; </div>
+
+</body>
+
+</html>
 
 
 

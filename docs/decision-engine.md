@@ -1,180 +1,146 @@
-# Decision Engine
+<h1 style="text-align:center;">Decision Engine</h1>
 
-The Decision Engine is the **core deterministic computation layer** of Manthan.
+<p style="text-align:center; font-size:18px;">
+Deterministic execution core of Manthan.
+</p>
 
-It evaluates canonical input against **versioned rules** and produces a **single, predictable decision**.
+<br>
 
----
+<hr>
 
-## Core Principle
+<h2 style="text-align:center;">Purpose</h2>
 
-> Same Input + Same Rules → Same Decision
+<p style="text-align:center; max-width:720px; margin:auto;">
+The decision engine evaluates inputs against contracts and produces:
+<br><br>
+<strong>a deterministic outcome with a full execution trace.</strong>
+</p>
 
----
+<br>
 
-## Position in System
+<hr>
 
-```mermaid
-flowchart LR
+<h2 style="text-align:center;">Execution Pipeline</h2>
 
-C[Canonical Input] --> R[Rule Evaluation] --> M[Match Resolution] --> D[Decision]
+<pre>
+contract_validation
+→ determinism_check
+→ boundary_check
+→ intent_alignment
+→ base_rules
+</pre>
 
-classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-class C,R,M,D main;
-```
+<p style="text-align:center;">
+Each step is executed in a fixed order.  
+Failure at any step stops execution immediately.
+</p>
 
----
+<br>
 
-## Input
+<hr>
 
-The engine operates ONLY on canonicalized input.
+<h2 style="text-align:center;">Step Breakdown</h2>
 
-### Properties
+<p style="text-align:center; max-width:720px; margin:auto;">
 
-- Deterministic structure  
-- Stable ordering  
-- No ambiguity  
+<strong>contract_validation</strong><br>
+Ensures contract structure and rules are valid.<br><br>
 
----
+<strong>determinism_check</strong><br>
+Prevents forbidden patterns and non-deterministic behavior.<br><br>
 
-## Rule Model
+<strong>boundary_check</strong><br>
+Ensures execution stays within defined system boundaries.<br><br>
 
-Rules are defined inside contracts.
+<strong>intent_alignment</strong><br>
+Validates that changes match declared intent.<br><br>
 
-### Example
+<strong>base_rules</strong><br>
+Applies core rule evaluation defined by the contract.
+</p>
 
-```yaml
-rules:
-  - condition: "amount > 10000"
-    action: "reject"
+<br>
 
-  - condition: "country == 'high_risk'"
-    action: "reject"
+<hr>
 
-  - condition: "true"
-    action: "approve"
-```
+<h2 style="text-align:center;">Execution Properties</h2>
 
----
+<div style="text-align:center; line-height:1.8;">
+Fixed step order<br>
+Fail-fast execution<br>
+No randomness<br>
+No external calls<br>
+No hidden state
+</div>
 
-## Execution Rules
+<br>
 
-The engine MUST follow strict deterministic behavior:
+<hr>
 
-### 1. Fixed Order
-Rules are evaluated **top → bottom**
+<h2 style="text-align:center;">Output Structure</h2>
 
-### 2. First Match Wins
-- First TRUE condition → decision  
-- Remaining rules ignored  
-
-### 3. No Randomness
-- No probabilistic outputs  
-- No model inference  
-
-### 4. No Side Effects
-- Pure function  
-- No external calls  
-
----
-
-## Evaluation Flow
-
-```mermaid
-flowchart LR
-
-A[Rule 1] -->|true| D[Decision]
-A -->|false| B[Rule 2]
-B -->|true| D
-B -->|false| C[Rule 3]
-C --> D
-
-classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-class A,B,C,D main;
-```
-
----
-
-## Example Execution
-
-### Input
-
-```json
+<pre>
 {
-  "amount": 12000,
-  "country": "low_risk"
+  decision: {
+    status: "pass | fail",
+    failedStep: "..."
+  },
+  trace: {
+    evaluationSteps: [...]
+  }
 }
-```
+</pre>
 
----
+<br>
 
-### Evaluation
+<hr>
 
-- Rule 1 → TRUE  
-- Decision = reject  
-- Execution stops  
+<h2 style="text-align:center;">Determinism Guarantee</h2>
 
----
+<p style="text-align:center; max-width:720px; margin:auto;">
+For the same:
+<br>
+Input + Contract
+<br><br>
+The engine will always produce:
+<br><br>
+<strong>the exact same output.</strong>
+</p>
 
-### Output
+<br>
 
-```json
-{
-  "decision": "reject",
-  "reason": "amount threshold exceeded"
-}
-```
+<hr>
 
----
+<h2 style="text-align:center;">What This Is NOT</h2>
 
-## Deterministic Properties
+<div style="text-align:center; line-height:1.8;">
+Not AI generation<br>
+Not probabilistic reasoning<br>
+Not heuristic scoring<br>
+Not rule guessing
+</div>
 
-| Property | Guarantee |
-|----------|----------|
-| Execution order | Fixed |
-| Rule evaluation | Deterministic |
-| Output | Stable |
-| State | Stateless |
+<br>
 
----
+<hr>
 
-## Constraints
+<h2 style="text-align:center;">What This IS</h2>
 
-The Decision Engine MUST:
+<div style="text-align:center; line-height:1.8;">
+Deterministic evaluation<br>
+Contract-driven execution<br>
+Fully traceable reasoning<br>
+Enforced decision outcomes
+</div>
 
-- Use canonical input  
-- Execute rules in fixed order  
-- Stop at first match  
-- Produce exactly one decision  
+<br>
 
----
+<hr>
 
-## What It Does NOT Do
+<h2 style="text-align:center;">Summary</h2>
 
-- No learning  
-- No probabilistic scoring  
-- No external API calls  
-- No hidden state  
-
----
-
-## System Role
-
-The Decision Engine:
-
-- Defines the final decision  
-- Acts as the system authority  
-- Guarantees determinism  
-
----
-
-## Summary
-
-The Decision Engine is a **pure deterministic rule evaluator**.
-
----
-
-## Core Statement
-
-> The engine does not infer.  
-> It executes rules deterministically.
+<p style="text-align:center; max-width:720px; margin:auto;">
+The decision engine ensures that every decision in Manthan is:
+<br><br>
+<strong>deterministic, explainable, and auditable by design.</strong>
+</p>

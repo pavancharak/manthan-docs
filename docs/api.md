@@ -1,405 +1,146 @@
-# API Reference
+<h1 style="text-align:center;">API</h1>
 
-Manthan exposes a **deterministic decision API**.
+<p style="text-align:center; font-size:18px;">
+External interface for interacting with Manthan.
+</p>
 
----
+<br>
 
-## Endpoint
+<hr>
 
-```http
-POST /v1/decision
-```
+<h2 style="text-align:center;">Purpose</h2>
 
----
+<p style="text-align:center; max-width:720px; margin:auto;">
+The API receives events, executes the decision engine, and returns results.
+<br><br>
+It acts as the entry point into the system.
+</p>
 
-## Request
+<br>
 
-### Headers
+<hr>
 
-```http
-Content-Type: application/json
-```
+<h2 style="text-align:center;">Endpoints</h2>
 
----
+<pre>
+GET /health
+POST /internal/event
+</pre>
 
-### Body Schema
+<br>
 
-```json
+<hr>
+
+<h2 style="text-align:center;">Health Check</h2>
+
+<pre>
+GET /health
+</pre>
+
+<p style="text-align:center;">
+Returns system status.
+</p>
+
+<pre>
 {
-  "contract_id": "string",
-  "contract_version": "string",
-  "input": {}
+  "status": "ok"
 }
-```
+</pre>
 
----
+<br>
 
-### Field Definitions
+<hr>
 
-| Field | Type | Description |
-|------|------|-------------|
-| contract_id | string | Unique identifier of contract |
-| contract_version | string | Immutable version |
-| input | object | Raw decision input |
+<h2 style="text-align:center;">Event Processing</h2>
 
----
+<pre>
+POST /internal/event
+</pre>
 
-## Example Request
+<p style="text-align:center;">
+Processes incoming events (e.g. GitHub PR).
+</p>
 
-```json
+<br>
+
+<hr>
+
+<h2 style="text-align:center;">Input</h2>
+
+<p style="text-align:center;">
+Structured event payload.
+</p>
+
+<pre>
 {
-  "contract_id": "risk-evaluation",
-  "contract_version": "v1.0",
-  "input": {
-    "amount": 15000,
-    "country": "high_risk"
-  }
+  eventPayload: { ... },
+  contractId: "..."
 }
-```
+</pre>
 
----
+<br>
 
-## Execution Flow
+<hr>
 
-```mermaid
-flowchart LR
+<h2 style="text-align:center;">Output</h2>
 
-I[Input] --> C[Canonicalization] --> H[Hash] --> D[Decision Engine] --> L[Intelligence] --> O[Output]
-
-classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-class I,C,H,D,L,O main;
-```
-
----
-
-## Response
-
-### Success Response
-
-```json
+<pre>
 {
-  "decision": "reject",
-  "reason": "amount threshold exceeded",
-  "confidence": 0.98,
-  "contract_version": "v1.0",
-  "hash": "abc123xyz"
+  decision: {
+    status: "pass | fail",
+    failedStep: "..."
+  },
+  trace: { ... },
+  explanation: { ... }
 }
-```
+</pre>
 
----
+<br>
 
-### Field Definitions
+<hr>
 
-| Field | Type | Description |
-|------|------|-------------|
-| decision | string | Final decision |
-| reason | string | Explanation |
-| confidence | number | Computed score |
-| contract_version | string | Version used |
-| hash | string | Deterministic input hash |
+<h2 style="text-align:center;">Behavior</h2>
 
----
+<div style="text-align:center; line-height:1.8;">
+Receives event<br>
+Loads contract<br>
+Runs decision engine<br>
+Generates explanation<br>
+Returns result
+</div>
 
-## Deterministic Guarantee
+<br>
 
-For every request:
+<hr>
 
-```text
-Same contract + Same input → Same response
-```
+<h2 style="text-align:center;">Determinism</h2>
 
----
+<p style="text-align:center; max-width:720px; margin:auto;">
+The API does not introduce any non-determinism.
+<br><br>
+It strictly passes inputs to the engine and returns outputs.
+</p>
 
-## Error Responses
+<br>
 
-### Invalid Contract
+<hr>
 
-```json
-{
-  "error": "contract_not_found"
-}
-```
+<h2 style="text-align:center;">Constraints</h2>
 
----
+<div style="text-align:center; line-height:1.8;">
+No mutation of contract<br>
+No external logic injection<br>
+No randomness<br>
+No hidden processing
+</div>
 
-### Invalid Input
+<br>
 
-```json
-{
-  "error": "invalid_input"
-}
-```
+<hr>
 
----
+<h2 style="text-align:center;">Summary</h2>
 
-### Version Mismatch
-
-```json
-{
-  "error": "contract_version_not_found"
-}
-```
-
----
-
-## Constraints
-
-- Contracts MUST be immutable  
-- Execution order MUST be fixed  
-- No randomness allowed  
-- No external state dependency  
-
----
-
-## Idempotency
-
-Requests are **idempotent**:
-
-```text
-Same request → Same response → Always
-```
-
----
-
-## Example cURL
-
-```bash
-curl -X POST http://localhost:3000/v1/decision \
-  -H "Content-Type: application/json" \
-  -d '{
-    "contract_id": "risk-evaluation",
-    "contract_version": "v1.0",
-    "input": {
-      "amount": 15000,
-      "country": "high_risk"
-    }
-  }'
-```
-
----
-
-## System Behavior
-
-- No hidden state  
-- No time dependency  
-- Fully deterministic execution  
-
----
-
-## Summary
-
-Manthan API provides:
-
-- Deterministic decisions  
-- Versioned contracts  
-- Auditable outputs  
-- Enforceable actions  
-
----
-
-## Core Principle
-
-> The API does not "predict".  
-> It **decides deterministically**.# API Reference
-
-Manthan exposes a **deterministic decision API**.
-
----
-
-## Endpoint
-
-```http
-POST /v1/decision
-```
-
----
-
-## Request
-
-### Headers
-
-```http
-Content-Type: application/json
-```
-
----
-
-### Body Schema
-
-```json
-{
-  "contract_id": "string",
-  "contract_version": "string",
-  "input": {}
-}
-```
-
----
-
-### Field Definitions
-
-| Field | Type | Description |
-|------|------|-------------|
-| contract_id | string | Unique identifier of contract |
-| contract_version | string | Immutable version |
-| input | object | Raw decision input |
-
----
-
-## Example Request
-
-```json
-{
-  "contract_id": "risk-evaluation",
-  "contract_version": "v1.0",
-  "input": {
-    "amount": 15000,
-    "country": "high_risk"
-  }
-}
-```
-
----
-
-## Execution Flow
-
-```mermaid
-flowchart LR
-
-I[Input] --> C[Canonicalization] --> H[Hash] --> D[Decision Engine] --> L[Intelligence] --> O[Output]
-
-classDef main fill:#020617,stroke:#60a5fa,stroke-width:3px,color:#ffffff;
-class I,C,H,D,L,O main;
-```
-
----
-
-## Response
-
-### Success Response
-
-```json
-{
-  "decision": "reject",
-  "reason": "amount threshold exceeded",
-  "confidence": 0.98,
-  "contract_version": "v1.0",
-  "hash": "abc123xyz"
-}
-```
-
----
-
-### Field Definitions
-
-| Field | Type | Description |
-|------|------|-------------|
-| decision | string | Final decision |
-| reason | string | Explanation |
-| confidence | number | Computed score |
-| contract_version | string | Version used |
-| hash | string | Deterministic input hash |
-
----
-
-## Deterministic Guarantee
-
-For every request:
-
-```text
-Same contract + Same input → Same response
-```
-
----
-
-## Error Responses
-
-### Invalid Contract
-
-```json
-{
-  "error": "contract_not_found"
-}
-```
-
----
-
-### Invalid Input
-
-```json
-{
-  "error": "invalid_input"
-}
-```
-
----
-
-### Version Mismatch
-
-```json
-{
-  "error": "contract_version_not_found"
-}
-```
-
----
-
-## Constraints
-
-- Contracts MUST be immutable  
-- Execution order MUST be fixed  
-- No randomness allowed  
-- No external state dependency  
-
----
-
-## Idempotency
-
-Requests are **idempotent**:
-
-```text
-Same request → Same response → Always
-```
-
----
-
-## Example cURL
-
-```bash
-curl -X POST http://localhost:3000/v1/decision \
-  -H "Content-Type: application/json" \
-  -d '{
-    "contract_id": "risk-evaluation",
-    "contract_version": "v1.0",
-    "input": {
-      "amount": 15000,
-      "country": "high_risk"
-    }
-  }'
-```
-
----
-
-## System Behavior
-
-- No hidden state  
-- No time dependency  
-- Fully deterministic execution  
-
----
-
-## Summary
-
-Manthan API provides:
-
-- Deterministic decisions  
-- Versioned contracts  
-- Auditable outputs  
-- Enforceable actions  
-
----
-
-## Core Principle
-
-> The API does not "predict".  
-> It **decides deterministically**.
+<p style="text-align:center; max-width:720px; margin:auto;">
+The API provides a deterministic interface to the Manthan system,
+ensuring that every decision request produces a consistent and traceable result.
+</p>

@@ -1,141 +1,170 @@
+<div class="hero">
+
+  <h1>Manthan</h1>
+
+  <p class="hero-subtitle">
+    Decision Infrastructure
+  </p>
+
+  <p class="hero-description">
+    Every system runs on decisions.<br>
+    <strong>Manthan makes them deterministic, auditable, and enforceable.</strong>
+  </p>
+
+  <div class="hero-actions">
+    <a href="https://github.com/apps/manthan-pr-gate" target="_blank" class="btn-primary">
+      Install PR Gate
+    </a>
+
+    <a href="https://manthanos.fly.dev/health" target="_blank" class="btn-secondary">
+        Live System
+    </a>
+  </div>
+
+</div>
+
+<br><br>
+
+---
+
+## The Problem
+
 <p align="center">
-  <img src="assets/banner.png" alt="Manthan Banner" width="100%" style="border-radius:12px;">
+  <img src="assets/problem.png" width="70%">
 </p>
-
-<br>
-
-<h1 style="margin-bottom: 10px;">Manthan</h1>
-
-<p style="font-size:22px; text-align:center;">
-<strong>Decision Infrastructure for Trusted Systems</strong>
-</p>
-
-<p style="text-align:center; font-size:18px; margin-top:10px;">
-Most systems optimize for performance.<br>
-<strong>Manthan optimizes for trust.</strong>
-</p>
-
-<br>
-
-<hr>
-
-<h2 style="text-align:center;">The Problem</h2>
 
 <p style="text-align:center; max-width:720px; margin:auto;">
-AI systems operate in probabilistic generation.<br>
-The same input can produce different outputs.<br>
+Modern systems — especially AI — operate in probabilistic generation.<br>
+The same input can produce different outputs.<br><br>
+
 There is no traceability. No enforcement.
 </p>
 
-<p style="text-align:center; margin-top:12px;">
+<p style="text-align:center;">
 <strong>This makes them unfit for critical systems.</strong>
 </p>
 
 <br>
 
-<hr>
+---
 
-<h2 style="text-align:center;">The Shift</h2>
+## The Shift
 
-<p style="text-align:center;">
-AI operates in <strong>generation mode</strong>.<br>
-Manthan operates in <strong>decision mode</strong>.
+<p align="center">
+  <img src="assets/shift.png" width="70%">
 </p>
 
-<br>
+<div style="display:flex; justify-content:center; gap:80px; flex-wrap:wrap; text-align:center;">
 
-<div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; text-align:center;">
-  <div>
-    <p><strong>Generation</strong></p>
-    <p>Possibilities</p>
-    <p>Suggestions</p>
-    <p>Probabilistic</p>
-  </div>
+<div>
+<p><strong>Generation</strong></p>
+<p>Possibilities</p>
+<p>Suggestions</p>
+<p>Probabilistic</p>
+</div>
 
-  <div>
-    <p><strong>Decision</strong></p>
-    <p>Outcomes</p>
-    <p>Enforcement</p>
-    <p>Deterministic</p>
-  </div>
+<div>
+<p><strong>Decision</strong></p>
+<p>Outcomes</p>
+<p>Enforcement</p>
+<p>Deterministic</p>
+</div>
+
 </div>
 
 <br>
 
-<hr>
+---
 
-<h2 style="text-align:center;">Explore</h2>
+## How Manthan Works
+
+<p align="center">
+  <img src="assets/architecture.png" width="70%">
+</p>
+
+<pre>
+Input → Contract → Engine → Trace → Enforcement
+</pre>
+
+<pre>
+contract_validation
+→ determinism_check
+→ boundary_check
+→ intent_alignment
+→ base_rules
+</pre>
+
+<p style="text-align:center;">
+Fail-fast. Fully traceable. No hidden logic.
+</p>
+
+<br>
+
+---
+
+## What You Get
+
+<p align="center">
+  <img src="assets/outcome.png" width="70%">
+</p>
+
+<div style="text-align:center; line-height:1.8;">
+Deterministic decision<br>
+Full execution trace<br>
+Human-readable explanation<br>
+Enforced outcome
+</div>
+
+<br>
+
+---
+
+## Live System
+
+<p style="text-align:center;">
+Manthan v0.2 is deployed and running.
+</p>
+
+<p style="text-align:center;">
+<a href="https://manthanos.fly.dev/health" target="_blank">
+Check system health →
+</a>
+</p>
+
+<br>
+
+---
+
+## Explore
 
 <div style="text-align:center; line-height:2;">
   <a href="system/"><strong>System</strong></a><br>
+  <a href="architecture/">Architecture</a><br>
+  <a href="contracts/">Contracts</a><br>
+  <a href="decision-engine/">Decision Engine</a><br>
+  <a href="pr-gate/">PR Gate</a><br>
   <a href="papers/">Research</a>
 </div>
 
 <br>
 
-<hr>
+---
 
-<h2 style="text-align:center;">Use</h2>
-
-<p style="text-align:center;">
-🚀 <a href="https://github.com/apps/manthan-pr-gate" target="_blank">
-Try Manthan (GitHub App)
-</a>
-</p>
-
-<br>
-
-<hr>
-
-<h2 style="text-align:center;">Thinking</h2>
-
-<p style="text-align:center;">
-📖 <a href="https://manthansystems.substack.com/" target="_blank">
-Read Manthan on Substack →
-</a>
-</p>
-
-<br>
-
-<hr>
-
-<h2 style="text-align:center;">Contact</h2>
-
-<p style="text-align:center; line-height:1.8;">
-📧 <a href="mailto:founder@manthan.systems">founder@manthan.systems</a><br>
-
-🔗 <a href="https://www.linkedin.com/in/pavancharak/" target="_blank">
-LinkedIn
-</a><br>
-
-🚀 <a href="https://github.com/apps/manthan-pr-gate" target="_blank">
-GitHub App
-</a><br>
-
-📖 <a href="https://manthansystems.substack.com/" target="_blank">
-Substack
-</a>
-</p>
-
-<br>
-
-<hr>
-
-<h2 style="text-align:center;">Who This Is For</h2>
+## Who This Is For
 
 <p style="text-align:center; max-width:720px; margin:auto;">
-Engineers, founders, and teams building systems<br>
-where correctness, auditability, and enforcement are non-negotiable.
+Engineers and teams building systems where correctness, auditability, and enforcement are non-negotiable.
 </p>
 
 <br>
 
-<hr>
+---
 
-<h2 style="text-align:center;">Closing</h2>
+## Closing
 
 <p style="text-align:center; max-width:720px; margin:auto;">
-Manthan is not another AI system.<br>
-It is the layer that makes decisions in software systems<br>
-<strong>traceable, auditable, and enforceable by design.</strong>
+Software runs on code.<br>
+Systems run on decisions.<br><br>
+
+<strong>Manthan makes those decisions reliable infrastructure.</strong>
 </p>
